@@ -1,9 +1,8 @@
 import { AboutSection } from "@/components/home/sections/about-section";
 import { BusinessSection } from "@/components/home/sections/business-section";
 
-import { Gallery } from "@/components/gallery";
+import { Gallery } from "@/components/home/sections/gallery";
 import { Hero } from "@/components/home/sections/hero";
-import { TryAshrae } from "@/components/try-ashrae";
 import NewsBlogsSection from "@/components/home/sections/news-blogs-section";
 import { TrustedBrandsSection } from "@/components/home/sections/trusted-brands-section";
 import { WhyChooseUs } from "@/components/home/sections/why-choose-us";
@@ -20,7 +19,6 @@ export default function Page() {
       <WhyChooseUs />
       <TrustedBrandsSection />
       <Gallery />
-      <TryAshrae />
     </main>
   );
 }
