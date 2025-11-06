@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-visible" id="hero">
+    <section className="relative min-h-screen overflow-hidden" id="hero">
       <div
         className="blur-[12rem] h-52 w-52 bg-main/60 absolute top-[20%] right-[5%] will-change-transform"
         style={{ transform: "translateZ(0)" }} // Force GPU layer

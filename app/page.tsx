@@ -1,11 +1,12 @@
 import { AboutSection } from "@/components/home/sections/about-section";
 import { BusinessSection } from "@/components/home/sections/business-section";
-import { BlogSection } from "@/components/blog-section";
-import { WhyChooseUs } from "@/components/why-choose-us";
+
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/home/sections/hero";
 import { TryAshrae } from "@/components/try-ashrae";
 import NewsBlogsSection from "@/components/home/sections/news-blogs-section";
+import { TrustedBrandsSection } from "@/components/home/sections/trusted-brands-section";
+import { WhyChooseUs } from "@/components/home/sections/why-choose-us";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       </div>
       <NewsBlogsSection />
       <WhyChooseUs />
+      <TrustedBrandsSection />
       <Gallery />
       <TryAshrae />
     </main>
