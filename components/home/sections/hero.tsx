@@ -8,16 +8,24 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden" id="hero">
+    <section className="relative min-h-screen overflow-visible" id="hero">
       <div
-        className="blur-[12rem] h-52 w-52 bg-[#A9802C]/60 absolute top-[20%] right-[5%] will-change-transform"
+        className="blur-[12rem] h-52 w-52 bg-main/60 absolute top-[20%] right-[5%] will-change-transform"
         style={{ transform: "translateZ(0)" }} // Force GPU layer
       />
-      <div className="container mx-auto px-6 py-52 relative z-10 flex flex-col items-center text-center justify-center">
-        <h1 className="font-mokoto text-[20rem] mask-b-to-80% text-gray-500/15 absolute top-[10%] left-1/2 -translate-x-1/2">
-          ASHR
-        </h1>
 
+      {/* Large ASHR background text - moved outside container for better positioning */}
+      <h1
+        className="font-mokoto text-[25rem] text-gray-500/15 absolute top-[10%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
+        style={{
+          lineHeight: "1",
+          whiteSpace: "nowrap",
+        }}
+      >
+        ASHR
+      </h1>
+
+      <div className="container mx-auto px-6 py-52 relative z-10 flex flex-col items-center text-center justify-center">
         {/* badge */}
         <div className="bg-blue-200/10 border-2 border-white drop-shadow-xl rounded-xl backdrop-blur-sm p-2 gap-2 items-center inline-flex">
           <span className="bg-white p-2 rounded-md w-[2.5rem] h-[2.5rem] flex items-center justify-center">
@@ -28,7 +36,7 @@ export function Hero() {
           </p>
         </div>
 
-        <h1 className="text-6xl text-center md:text-7xl lg:text-8xl font-kapital font-medium leading-none  pt-10 text-black/70 font-bold">
+        <h1 className="text-6xl text-center md:text-7xl lg:text-8xl font-kapital font-medium leading-none pt-10 text-black/70 font-bold">
           DRiVING INNOVATION
           <br />
           ACROSS INDUSTRIES
@@ -54,7 +62,7 @@ export function Hero() {
           </GoldShineButton>
           <Link
             href="/#our-businesses"
-            className="block w-full text-center py-3 px-4 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main  text-sm font-medium transition-all duration-300"
+            className="block w-full text-center py-3 px-4 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm font-medium transition-all duration-300"
           >
             EXPLORE MORE
           </Link>
