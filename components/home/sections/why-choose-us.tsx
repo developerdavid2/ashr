@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="relative py-32 overflow-hidden">
+    <section id="why-choose-us" className="relative py-44 overflow-hidden">
       <div className="container px-6 mx-auto relative z-10 max-w-7xl">
         {/* Large background text */}
-        <h1 className="font-mokoto text-[15rem] text-gray-500/8 absolute -top-20 left-0 pointer-events-none select-none z-0 leading-none">
+        <h1 className="font-mokoto text-[15rem] text-gray-500/8 absolute -top-20 left-0 pointer-events-none select-none z-0 leading-none mask-b-to-80%">
           WHY
         </h1>
 

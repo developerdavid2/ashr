@@ -191,12 +191,12 @@ export function Gallery() {
       id="home-gallery"
       className="bg-main relative py-32 overflow-hidden pt-32"
     >
-      <div className="relative z-10">
+      <div className="relative z-10 pt-30">
         {/* Large GALLERY background text */}
-        <h1 className="font-mokoto text-[15rem] text-gray-300/8 absolute -top-20 right-0 pointer-events-none select-none z-0 leading-none">
+        <h1 className="font-mokoto text-[15rem] text-gray-300/8 absolute -top-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 leading-none mask-b-to-80%">
           GALLERY
         </h1>
-        <h2 className="text-white font-bold font-kapital text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-end">
+        <h2 className="text-white font-bold font-kapital text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-center">
           GALLERY
         </h2>
 

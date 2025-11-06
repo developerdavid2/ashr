@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, X } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
-// ---- types
 interface FooterLink {
   label: string;
   href: string;
@@ -13,9 +13,8 @@ interface FooterGroup {
   links: FooterLink[];
 }
 
-// ---- data
 const socialLinks = [
-  { icon: X, href: "#" },
+  { icon: FaXTwitter, href: "#" },
   { icon: Instagram, href: "#" },
   { icon: Linkedin, href: "#" },
   { icon: Facebook, href: "#" },

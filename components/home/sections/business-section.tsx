@@ -41,7 +41,7 @@ export function BusinessSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="business" className="relative py-20">
+    <section id="business" className="relative py-44">
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-8">
           Our Business
