@@ -110,7 +110,7 @@ export function MasonryGallery({
   };
 
   return (
-    <div className="w-full mx-auto relative overflow-hidden [--masonry-gap:0.8rem]">
+    <div className="w-full mx-auto relative overflow-hidden [--masonry-gap:0.8rem] opacity-70">
       {/* Mobile */}
       <div
         className={`grid grid-cols-2 gap-[var(--masonry-gap)] md:hidden ${animated ? "h-[600px] overflow-hidden" : ""}`}
