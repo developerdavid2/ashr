@@ -52,7 +52,7 @@ export function AboutSection() {
           {/* Right Column - Stats & Image */}
           <div className="space-y-8">
             {/* Stats Card */}
-            <div className="hidden lg:flex bg-white/40 backdrop-blur-md border border-white/60 p-8 rounded-lg shadow-xl">
+            <div className="hidden lg:flex lg:flex-col bg-white/40 backdrop-blur-md border border-white/60 p-8 rounded-lg shadow-xl">
               <div className="flex items-start gap-3 mb-4">
                 <ArrowUpRight className="w-5 h-5 text-[#A9802C] mt-1" />
                 <div>
