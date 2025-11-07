@@ -113,7 +113,7 @@ export function MasonryGallery({
     <div className="w-full mx-auto relative overflow-hidden [--masonry-gap:0.8rem] opacity-70">
       {/* Mobile */}
       <div
-        className={`grid grid-cols-2 gap-[var(--masonry-gap)] md:hidden ${animated ? "h-[600px] overflow-hidden" : ""}`}
+        className={`grid grid-cols-2 md:hidden ${animated ? "h-[600px] overflow-hidden" : ""}`}
       >
         {mobileColumns.map((column, index) =>
           renderColumn(column, index, index % 2 === 1),
@@ -122,7 +122,7 @@ export function MasonryGallery({
 
       {/* Tablet */}
       <div
-        className={`hidden md:grid lg:hidden grid-cols-3 gap-[var(--masonry-gap)] ${animated ? "h-[600px] overflow-hidden" : ""}`}
+        className={`hidden md:grid lg:hidden grid-cols-3 ${animated ? "h-[600px] overflow-hidden" : ""}`}
       >
         {tabletColumns.map((column, index) =>
           renderColumn(column, index, index % 2 === 1),
@@ -131,7 +131,7 @@ export function MasonryGallery({
 
       {/* Desktop */}
       <div
-        className={`hidden lg:grid xl:hidden grid-cols-4 gap-[var(--masonry-gap)] ${animated ? "h-[700px] overflow-hidden" : ""}`}
+        className={`hidden lg:grid xl:hidden grid-cols-4 ${animated ? "h-[700px] overflow-hidden" : ""}`}
       >
         {desktopColumns.map((column, index) =>
           renderColumn(column, index, index % 2 === 1),
@@ -140,7 +140,7 @@ export function MasonryGallery({
 
       {/* XL */}
       <div
-        className={`hidden xl:grid 2xl:hidden grid-cols-5 gap-[var(--masonry-gap)] ${animated ? "h-[700px] overflow-hidden" : ""}`}
+        className={`hidden xl:grid 2xl:hidden grid-cols-5 ${animated ? "h-[700px] overflow-hidden" : ""}`}
       >
         {xlColumns.map((column, index) =>
           renderColumn(column, index, index % 2 === 1),
@@ -149,7 +149,7 @@ export function MasonryGallery({
 
       {/* 2XL */}
       <div
-        className={`hidden 2xl:grid grid-cols-6 gap-[var(--masonry-gap)] ${animated ? "h-[1200px] overflow-hidden" : ""}`}
+        className={`hidden 2xl:grid grid-cols-6 ${animated ? "h-[1200px] overflow-hidden" : ""}`}
       >
         {xxlColumns.map((column, index) =>
           renderColumn(column, index, index % 2 === 1),

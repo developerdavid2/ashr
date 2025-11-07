@@ -44,10 +44,10 @@ const footerGroups: FooterGroup[] = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-black text-white border-t border-white/10 py-32 overflow-hidden">
-      {/* Large ASHR background text - moved outside container for better positioning */}
+    <footer className="relative bg-black text-white border-t border-white/10 py-20 sm:py-28 overflow-hidden">
+      {/* Large BG text */}
       <h1
-        className="font-mokoto text-[15rem] text-gray-500/15 absolute -bottom-[11%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
+        className="font-mokoto text-[7rem] sm:text-[10rem] lg:text-[15rem] text-gray-500/15 absolute -bottom-[14%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
         style={{
           lineHeight: "1",
           whiteSpace: "nowrap",
@@ -55,38 +55,39 @@ export function Footer() {
       >
         ASHR GROUP
       </h1>
+
       {/* CTA header */}
-      <div className="container mx-auto px-6 pb-24 relative">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 pb-16 sm:pb-24 relative">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h2 className="font-kapital-stencil text-5xl leading-tight mb-4">
+            <h2 className="font-kapital-stencil text-3xl sm:text-4xl lg:text-5xl leading-tight mb-3">
               TRY ASHR TODAY
             </h2>
-            <p className="text-white/70 font-poppins max-w-sm">
+            <p className="text-white/70 font-poppins max-w-sm text-sm sm:text-base">
               Get in touch with ASHR Group or any of our businesses
             </p>
           </div>
 
           <Link
             href="/contact"
-            className="mt-6 md:mt-0 inline-flex items-center justify-center px-8 py-4 rounded-lg
-            font-poppins border border-white/40 backdrop-blur-md bg-white/10 hover:bg-white hover:text-black
-            transition"
+            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg
+        font-poppins border border-white/40 backdrop-blur-md bg-white/10 hover:bg-white hover:text-black
+        transition"
           >
             CONTACT US
           </Link>
         </div>
 
-        <div className="mt-12 border-t border-white/20" />
+        <div className="mt-10 sm:mt-12 border-t border-white/20" />
       </div>
 
       {/* MAIN FOOTER */}
-      <div className="container mx-auto px-6 pb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12">
           {/* company block */}
-          <div className="col-span-2">
-            <h3 className="font-kapital text-2xl mb-4">ASHR GROUP</h3>
-            <p className="text-white/60 font-poppins max-w-sm leading-relaxed">
+          <div className="sm:col-span-2">
+            <h3 className="font-kapital text-2xl mb-3">ASHR GROUP</h3>
+            <p className="text-white/60 font-poppins max-w-sm leading-relaxed text-sm sm:text-base">
               Building trust, quality and innovation for modern living across
               Africa.
             </p>
@@ -110,10 +111,10 @@ export function Footer() {
           {/* loop link groups */}
           {footerGroups.map((group, idx) => (
             <div key={idx}>
-              <h4 className="font-poppins font-semibold mb-4">
+              <h4 className="font-poppins font-semibold mb-3 text-base">
                 {group.heading}
               </h4>
-              <ul className="space-y-2 font-poppins text-white/60">
+              <ul className="space-y-2 font-poppins text-white/60 text-sm sm:text-base">
                 {group.links.map((lnk) => (
                   <li key={lnk.href}>
                     <Link className="hover:text-[#A9802C]" href={lnk.href}>
@@ -127,10 +128,10 @@ export function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className="border-t border-white/20 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/50 font-poppins">
+        <div className="border-t border-white/20 mt-10 sm:mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-white/50 font-poppins gap-4">
           <p>© 2025 ASHR Group. All rights reserved.</p>
 
-          <div className="flex space-x-8 mt-4 md:mt-0">
+          <div className="flex space-x-8">
             <Link className="hover:text-white" href="/privacy">
               Privacy Policy
             </Link>

@@ -48,7 +48,7 @@ export function BlogCard({ item }: { item: BlogItem }) {
       <div className="group/card relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-black overflow-hidden transition duration-300 hover:shadow-2xl">
         <div className="flex flex-col sm:flex-row gap-0 sm:gap-6">
           {/* IMAGE - Left side */}
-          <div className="relative w-full sm:w-48 h-48 sm:h-auto flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
+          <div className="relative w-full sm:w-40 md:w-48 h-40 sm:h-auto flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
             <Image
               src={item.image}
               alt={item.title}
@@ -58,12 +58,12 @@ export function BlogCard({ item }: { item: BlogItem }) {
           </div>
 
           {/* CONTENT - Right side */}
-          <div className="flex-1 p-6 relative z-20 flex flex-col justify-between">
+          <div className="flex-1 p-4 sm:p-5 md:p-6 relative z-20 flex flex-col justify-between">
             <div>
               {/* Category and Read Time */}
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                 <span
-                  className="px-3 py-1 text-xs font-medium rounded-full border border-gray-300 bg-white/90 backdrop-blur-sm text-gray-700
+                  className="px-2.5 py-1 sm:px-3 sm:py-1 text-[0.65rem] sm:text-xs font-medium rounded-full border border-gray-300 bg-white/90 backdrop-blur-sm text-gray-700
                 transition-all duration-300
                 group-hover/card:bg-[#A9802C]
                 group-hover/card:border-[#A9802C]
@@ -71,13 +71,13 @@ export function BlogCard({ item }: { item: BlogItem }) {
                 >
                   {item.category}
                 </span>
-                <span className="text-xs text-gray-500 group-hover/card:text-gray-400 transition-colors duration-300">
+                <span className="text-[0.65rem] sm:text-xs text-gray-500 group-hover/card:text-gray-400 transition-colors duration-300">
                   {item.readTime}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-semibold leading-tight text-[#131313] group-hover/card:text-white mb-3">
+              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-tight text-[#131313] group-hover/card:text-white mb-2 sm:mb-3">
                 <span
                   className="[--u:0%] group-hover/card:[--u:100%]"
                   style={{
@@ -96,8 +96,8 @@ export function BlogCard({ item }: { item: BlogItem }) {
             </div>
 
             {/* Footer */}
-            <div className="flex items-center justify-between mt-4">
-              <p className="text-xs text-gray-500 group-hover/card:text-gray-400 transition-colors duration-300">
+            <div className="flex items-center justify-between mt-3 sm:mt-4">
+              <p className="text-[0.65rem] sm:text-xs text-gray-500 group-hover/card:text-gray-400 transition-colors duration-300">
                 {new Date(item.date).toLocaleDateString("en-US", {
                   month: "long",
                   day: "numeric",
@@ -106,8 +106,8 @@ export function BlogCard({ item }: { item: BlogItem }) {
               </p>
 
               {/* Arrow */}
-              <div className="w-10 h-10 rounded-full bg-gray-200 group-hover/card:bg-white flex items-center justify-center transition-all duration-300">
-                <ArrowUpRight className="w-5 h-5 text-[#131313] group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-transform duration-300" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 group-hover/card:bg-white flex items-center justify-center transition-all duration-300">
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#131313] group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -119,21 +119,22 @@ export function BlogCard({ item }: { item: BlogItem }) {
 
 export default function BlogsSection() {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20 font-poppins">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-kapital font-bold uppercase">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 font-poppins">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kapital font-bold uppercase">
             Blogs
           </h2>
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 py-4 px-6 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-sm font-medium transition-all duration-300 group"
+            className="inline-flex items-center gap-2 py-3 px-5 sm:py-4 sm:px-6 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
           >
             EXPLORE MORE BLOGS
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 sm:gap-6">
           {blogItems.map((item) => (
             <BlogCard key={item.id} item={item} />
           ))}

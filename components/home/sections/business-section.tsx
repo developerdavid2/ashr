@@ -6,7 +6,7 @@ const businesses = [
   {
     title: "ASHR Run and Drive",
     description:
-      "Trusted car sales and automotive solutions for your lifestyle.",
+      "Trusted car sales and automotive solutions tailored to your lifestyle and budget.",
     image: "/home-business/ashr.jpeg",
     logo: "/logos/ashr-run-drive.PNG",
     link: "/businesses/ashr-run-drive",
@@ -41,12 +41,15 @@ export function BusinessSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="business" className="relative py-44">
-      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-        <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-8">
+    <section
+      id="home-businesses"
+      className="relative py-24 sm:py-32 md:py-40 lg:py-44"
+    >
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+        <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-4 sm:mb-6 md:mb-8">
           Our Business
         </h2>
-        <p className="mb-12 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed font-poppins text-center">
+        <p className="mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl font-light max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed font-poppins text-center px-4">
           ASHR Group delivers premium automotive, interior, ceramic and
           industrial solutions engineered for reliability and performance.
         </p>

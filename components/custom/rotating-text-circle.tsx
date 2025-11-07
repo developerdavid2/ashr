@@ -11,7 +11,7 @@ export function RotatingTextCircle({ text, logoSrc }: RotatingTextCircleProps) {
   const letters = text.split("");
 
   return (
-    <div className="hidden md:flex relative w-[140px] h-[140px]  items-center justify-center">
+    <div className="hidden lg:flex relative w-[140px] h-[140px]  items-center justify-center">
       {/* center logo */}
       <div className="absolute inset-0 flex items-center justify-center">
         <Image

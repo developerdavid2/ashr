@@ -5,26 +5,24 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
 
 export function HeroCarousel() {
   const plugin = React.useRef(
     Autoplay({
-      delay: 2800,
+      delay: 7000,
       stopOnInteraction: false,
     }),
   );
 
   const images = [
-    "/home-hero/basin.png",
-    "/home-hero/interior.webp",
-    "/home-hero/car.png",
-    "/home-hero/futuristic-product-device.jpg",
+    "/home-hero/hero-ceramic.png",
+    "/home-hero/hero-interior.webp",
+    "/home-hero/hero-car.png",
+    "/home-hero/hero-gully.png",
   ];
 
   const [api, setApi] = React.useState<CarouselApi>();
@@ -53,15 +51,15 @@ export function HeroCarousel() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative w-full h-[380px] overflow-hidden rounded-xl">
-                <Image src={src} alt="hero" fill className="object-cover" />
+              <div className="relative w-full h-[500px] overflow-hidden rounded-xl">
+                <Image src={src} alt="hero" fill className="object-cover " />
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        <CarouselPrevious />
-        <CarouselNext />
+        {/*<CarouselPrevious />*/}
+        {/*<CarouselNext />*/}
       </Carousel>
 
       {/* dots */}
