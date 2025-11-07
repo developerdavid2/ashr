@@ -3,9 +3,10 @@ import { BusinessSection } from "@/components/home/sections/business-section";
 
 import { Gallery } from "@/components/home/sections/gallery";
 import { Hero } from "@/components/home/sections/hero";
-import NewsBlogsSection from "@/components/home/sections/news-blogs-section";
+import NewsSection from "@/components/home/sections/news-section";
 import { TrustedBrandsSection } from "@/components/home/sections/trusted-brands-section";
 import { WhyChooseUs } from "@/components/home/sections/why-choose-us";
+import BlogsSection from "@/components/home/sections/blogs-section";
 
 export default function Page() {
   return (
@@ -15,7 +16,8 @@ export default function Page() {
         <BusinessSection />
         <AboutSection />
       </div>
-      <NewsBlogsSection />
+      <NewsSection />
+      <BlogsSection />
       <WhyChooseUs />
       <TrustedBrandsSection />
       <Gallery />
