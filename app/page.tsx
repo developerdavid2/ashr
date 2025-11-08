@@ -10,7 +10,7 @@ import BlogsSection from "@/components/home/sections/blogs-section";
 
 export default function Page() {
   return (
-    <main className="min-h-screen font-inter">
+    <main className="min-h-screen font-poppins">
       <Hero />
       <div className="bg-gray-200/40">
         <BusinessSection />

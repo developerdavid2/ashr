@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Separator } from "@/components/ui/separator";
-import ScrollVelocity from "@/components/custom/scroll-velocity";
+import { ScrollVelocity } from "@/components/custom/scroll-velocity";
 
 export const TrustedBrandsSection = () => {
   return (

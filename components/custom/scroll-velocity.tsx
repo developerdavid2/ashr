@@ -192,5 +192,3 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     </section>
   );
 };
-
-export default ScrollVelocity;
