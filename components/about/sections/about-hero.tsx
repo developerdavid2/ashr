@@ -1,15 +1,11 @@
-import { IoShieldCheckmarkSharp } from "react-icons/io5";
-import { RotatingTextCircle } from "@/components/custom/rotating-text-circle";
-import { GoldShineButton } from "@/components/custom/gold-shine-button";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { HeroCarousel } from "@/components/home/sections/hero-carousel";
 import * as React from "react";
-import { ArrowUpRight } from "lucide-react";
 
 export function AboutHero() {
   return (
-    <section className="relative overflow-hidden pt-10" id="about-hero">
+    <section
+      className="relative overflow-hidden  pt-24 sm:pt-32 md:pt-40"
+      id="about-hero"
+    >
       {/* Large ABOUT background text - Responsive sizing */}
       <h1
         className="font-mokoto text-[8rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] text-gray-500/15 absolute top-[15%] md:top-[20%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"

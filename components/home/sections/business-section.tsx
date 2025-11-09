@@ -1,5 +1,5 @@
 "use client";
-import { BusinessInfoCard } from "@/components/custom/our-businesses/business-info-card";
+import { BusinessInfoCard } from "@/components/our-businesses/business-info-card";
 import { useState } from "react";
 
 const businesses = [
@@ -16,7 +16,7 @@ const businesses = [
     description:
       "Modern interiors and lifestyle solutions that redefine spaces.",
     image: "/home-business/interior.jpeg",
-    logo: "/logos/ashr-logo.PNG",
+    logo: "/logos/ashr-design-logo.png",
     link: "/businesses/ashr-designs",
   },
   {

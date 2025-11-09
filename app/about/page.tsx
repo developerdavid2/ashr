@@ -1,11 +1,11 @@
 import React from "react";
 import { AboutHero } from "@/components/about/sections/about-hero";
-import { BusinessSection } from "@/components/home/sections/business-section";
-import { AboutSection } from "@/components/home/sections/about-section";
 import { AboutOverview } from "@/components/about/sections/about-overview";
 import { AboutMissionVision } from "@/components/about/sections/about-mission-vision";
 import { CoreValues } from "@/components/about/sections/about-core-values";
-import { AboutLeadershipSection } from "@/components/about/sections/about-leadership";
+import { AboutLeadership } from "@/components/about/sections/about-leadership";
+import { AboutCSRSection } from "@/components/about/sections/about-csr";
+import AboutCTASection from "@/components/about/sections/about-cta-section";
 
 export default function Page() {
   return (
@@ -17,9 +17,9 @@ export default function Page() {
         <AboutMissionVision />
       </div>
       <CoreValues />
-      <AboutLeadershipSection />
-      {/*  CSR*/}
-      {/*  CTA*/}
+      <AboutLeadership />
+      <AboutCSRSection />
+      <AboutCTASection />
     </main>
   );
 }

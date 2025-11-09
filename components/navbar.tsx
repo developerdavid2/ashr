@@ -1,6 +1,6 @@
 "use client";
 
-import { MobileMenu } from "@/components/custom/navbar/navigation-mobile";
+import { MobileMenu } from "@/components/navbar/navigation-mobile";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,7 +11,7 @@ import {
 import {
   BusinessMegaMenu,
   NewsMegaMenu,
-} from "@/components/custom/navbar/sub-card-link";
+} from "@/components/navbar/sub-card-link";
 import { useState } from "react";
 import Logo from "@/components/custom/logo";
 import Link from "next/link";
@@ -107,7 +107,7 @@ export function Navbar() {
                     className="relative"
                   >
                     <NavigationMenuTrigger className="text-base font-medium text-gray-700 hover:text-[#D4AF37] data-[state=open]:text-[#D4AF37] uppercase bg-transparent">
-                      News & Blogs
+                      News & Updates | Blogs
                     </NavigationMenuTrigger>
 
                     <NavigationMenuContent

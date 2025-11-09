@@ -48,7 +48,7 @@ export const AboutMissionVision = () => {
         {/* Content Grid - MISSION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <div className="w-full">
-            <div className="p-5 sm:p-6 rounded-2xl shadow-xl">
+            <div className="rounded-2xl shadow-xl">
               <div className="flex flex-col space-y-4 items-start gap-2 mb-3 sm:mb-4 text-white">
                 <ArrowUpRight className="w-6 h-6 sm:w-7 sm:h-7 md:w-10 md:h-10 text-white" />
                 <h2 className="font-kapital font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
@@ -90,7 +90,7 @@ export const AboutMissionVision = () => {
           </div>
           {/*right column - Text */}
           <div className="w-full order-1 lg:order-2">
-            <div className="p-5 sm:p-6 rounded-2xl shadow-xl">
+            <div className="rounded-2xl shadow-xl">
               <div className="flex flex-col space-y-4 items-start gap-2 mb-3 sm:mb-4 text-white">
                 <ArrowUpRight className="w-6 h-6 sm:w-7 sm:h-7 md:w-10 md:h-10 text-white" />
                 <h2 className="font-kapital font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
