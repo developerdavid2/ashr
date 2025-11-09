@@ -8,7 +8,7 @@ const businesses = [
     description:
       "Trusted car sales and automotive solutions tailored to your lifestyle and budget.",
     image: "/home-business/ashr.jpeg",
-    logo: "/logos/ashr-run-drive.PNG",
+    logo: "/logos/ashr-run-drive.png",
     link: "/businesses/ashr-run-drive",
   },
   {
