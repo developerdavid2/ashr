@@ -80,7 +80,7 @@ export const AboutMissionVision = () => {
           {/* Left Column - Image */}
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[600px] xl:h-[900px] overflow-hidden rounded-xl shadow-lg mix-blend-darken order-2 lg:order-1">
             <Image
-              src="/logos/ashr-logo.PNG"
+              src="/logos/ashr-logo.png"
               alt="ASHR Group - About Us"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
