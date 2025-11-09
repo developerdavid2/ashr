@@ -31,11 +31,11 @@ export function AboutHero() {
               ABOUT ASHR GROUP
             </p>
             <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
-              <span className="text-black/50 font-bold">EXCELLENCE</span>
+              <span className="text-black/50 font-bold">INNOVATION</span>
               <span className="font-poppins text-black/50 font-bold"> . </span>
-              <span className="text-black/50 font-light">MEETS</span>
+              <span className="text-black/50 font-light">TRUST</span>
               <span className="font-poppins text-black/50 font-bold"> . </span>
-              <span className="text-[#A9802C] font-bold">INNOVATION</span>
+              <span className="text-[#A9802C] font-bold">GROWTH</span>
             </h2>
           </div>
 
