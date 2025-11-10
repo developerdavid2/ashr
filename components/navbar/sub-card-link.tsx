@@ -110,7 +110,7 @@ export const BusinessMegaMenu: React.FC = () => {
           </p>
         </div>
         <a
-          href="/our-businesses"
+          href="/businesses"
           className="px-6 py-3 text-center rounded-xl text-[#131313] bg-gray-200/40 font-semibold hover:bg-gradient-to-br hover:from-[#E4C777]/70 hover:to-[#A9802C] hover:text-white transition-all duration-300"
         >
           All Businesses

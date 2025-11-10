@@ -1,8 +1,8 @@
 import React from "react";
 import CTASection from "@/components/custom/cta-section";
 
-export const AboutCTASection = () => {
+export const BusinessCTASection = () => {
   return <CTASection />;
 };
 
-export default AboutCTASection;
+export default BusinessCTASection;
