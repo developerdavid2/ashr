@@ -19,25 +19,25 @@ export type NewsItem = {
 export const BUSINESS_ITEMS: BusinessItem[] = [
   {
     title: "ASHR Run N Drive",
-    href: "/ashr-n-drive",
+    href: "/businesses/ashr-run-drive",
     logo: "ashr-run-drive.png",
     icon: TrendingUp,
   },
   {
     title: "ASHR Design",
-    href: "/ashr-design",
+    href: "/businesses/ashr-design",
     logo: "ashr-design-logo.png",
     icon: Palette,
   },
   {
     title: "High Taste Ceramics",
-    href: "/high-taste-ceramics",
+    href: "/businesses/high-taste-ceramics",
     logo: "ceramics-white.png",
     icon: Package,
   },
   {
     title: "Simtex Manhole Cover",
-    href: "/simtex-manhole-cover",
+    href: "/businesses/simtex-manhole-cover",
     logo: "simtex-white.webp",
     icon: Settings,
   },
