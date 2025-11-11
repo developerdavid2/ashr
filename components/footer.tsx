@@ -47,7 +47,7 @@ export function Footer() {
     <footer className="relative bg-black text-white border-t border-white/10 py-20 sm:py-28 overflow-hidden">
       {/* Large BG text */}
       <h1
-        className="font-mokoto text-[7rem] sm:text-[10rem] lg:text-[15rem] text-gray-500/15 absolute -bottom-[14%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
+        className=" max-w-7xl container mx-auto font-mokoto text-[7rem] sm:text-[10rem] lg:text-[15rem] text-gray-500/15 absolute -bottom-[14%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
         style={{
           lineHeight: "1",
           whiteSpace: "nowrap",
@@ -57,7 +57,7 @@ export function Footer() {
       </h1>
 
       {/* CTA header */}
-      <div className="container mx-auto px-4 sm:px-6 pb-16 sm:pb-24 relative">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-16 sm:pb-24 relative">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h2 className="font-kapital-stencil text-3xl sm:text-4xl lg:text-5xl leading-tight mb-3">
@@ -82,7 +82,7 @@ export function Footer() {
       </div>
 
       {/* MAIN FOOTER */}
-      <div className="container mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 pb-12 sm:pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12">
           {/* company block */}
           <div className="sm:col-span-2">

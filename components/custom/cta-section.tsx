@@ -28,8 +28,8 @@ export function CTASection({
   description = "At ASHR Group, we are not just building businesses — we are building trust, innovation, and a better future.",
   primaryHref = "/contact",
   primaryLabel = "GET IN TOUCH",
-  secondaryHref = "/#home-businesses",
-  secondaryLabel = "EXPLORE MORE",
+  secondaryHref,
+  secondaryLabel,
   className,
 }: CTASectionProps) {
   return (
@@ -72,12 +72,14 @@ export function CTASection({
               {primaryLabel}
             </GoldShineButton>
 
-            <Link
-              href={secondaryHref}
-              className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
-            >
-              {secondaryLabel}
-            </Link>
+            {secondaryHref && secondaryLabel && (
+              <Link
+                href={secondaryHref}
+                className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
+              >
+                {secondaryLabel}
+              </Link>
+            )}
           </div>
         </div>
       </div>

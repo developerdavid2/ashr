@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
@@ -15,8 +15,7 @@ export interface BusinessType {
 const businesses: BusinessType[] = [
   {
     name: "ASHR Run and Drive",
-    description:
-      "Trusted automotive dealer specializing in SUVs, fleet vehicles, sourcing & optimized delivery.",
+    description: "Car dealership, sales of individual & fleet vehicles.",
     image: "/home-business/ashr.jpeg",
     logo: "/logos/ashr-run-drive.png",
     href: "/businesses/ashr-run-and-drive",
@@ -24,24 +23,23 @@ const businesses: BusinessType[] = [
   {
     name: "ASHR Designs",
     description:
-      "Premium interior solutions – kitchens, wardrobes, doors, paints, lighting & spatial experience design.",
-    image: "/home-business/ceramics.jpeg",
+      "Interior solutions: kitchens, wardrobes, doors, lighting, paint, ",
+    image: "/home-business/interior.jpeg",
     logo: "/logos/ashr-design-logo.png",
     href: "/businesses/ashr-run-and-drive",
   },
   {
     name: "Simtex Manhole Cover",
-    description:
-      "Fiber Reinforced Plastic (FRP) manhole & gully covers engineered for durability and safety.",
-    image: "/home-business/interior.jpeg",
+    description: "Fiber Reinforced Plastic manhole covers & gully covers.",
+    image: "/home-business/manhole.jpeg",
     logo: "/logos/simtex-white.webp",
     href: "/businesses/ashr-run-and-drive",
   },
   {
     name: "High Taste Ceramics",
-    description:
-      "Luxury tiles, sanitary wares, and bathroom fittings curated to elevate modern living.",
-    image: "/home-business/manhole.jpeg",
+    description: "Tiles, sanitary wares, bathroom fittings, lifestyle ceramics",
+
+    image: "/home-business/ceramics.jpeg",
     logo: "/logos/ceramics-white.png",
     href: "/businesses/ashr-run-and-drive",
   },
@@ -66,11 +64,11 @@ export function BusinessCard({
       />
 
       {/* dark fade overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
 
       {/* top-right logo bubble */}
       <div className="absolute top-8 right-8">
-        <div className="bg-white/10 backdrop-blur-md border border-white/20  p-3 flex items-center justify-center size-24 rounded-full overflow-hidden">
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 p-3 flex items-center justify-center size-24 rounded-full overflow-hidden">
           <Image
             src={business.logo}
             alt={`${business.name} logo`}
@@ -81,8 +79,8 @@ export function BusinessCard({
       </div>
 
       {/* content */}
-      <div className="absolute bottom-0 left-0 right-0 p-8">
-        <h3 className="text-4xl font-bold text-white mb-3 font-mokoto">
+      <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-0 lg:translate-y-16 lg:group-hover:translate-y-0 transition-transform duration-500 ease-out">
+        <h3 className="text-2xl md:text-3x font-bold text-white/85 mb-3 font-mokoto">
           {business.name}
         </h3>
 
@@ -90,10 +88,10 @@ export function BusinessCard({
           {business.description}
         </p>
 
-        {/* Mobile & tablet always visible */}
-        <div className="translate-y-0 lg:translate-y-30 lg:group-hover:translate-y-0 transition-transform duration-500 ease-out">
+        {/* Mobile & tablet always visible, lg and up: hidden until hover */}
+        <div className="block lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
           <Link
-            href={business.href}
+            href={business.href || "#"}
             className="inline-flex items-center gap-2 py-3 sm:py-4 px-5 sm:px-6 text-white border-2 border-white hover:text-white hover:bg-[#A9802C] hover:border-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
           >
             EXPLORE MORE
@@ -107,8 +105,8 @@ export function BusinessCard({
 
 export function BusinessesGrid() {
   return (
-    <section className=" bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="bg-white mb-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* BIG CARD 1 (top-left) */}
         <div className="lg:col-span-2">
           <BusinessCard business={businesses[0]} index={0} />
