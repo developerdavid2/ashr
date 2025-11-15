@@ -4,6 +4,7 @@ import { AshrRunDriveAbout } from "@/components/businesses/ashr-run-drive/sectio
 import { AshrRunDriveOffer } from "@/components/businesses/ashr-run-drive/sections/what-we-offer";
 import { AshrRunDriveGallery } from "@/components/businesses/ashr-run-drive/sections/ashr-run-gallery";
 import AshrRunDriveNewsAndBlogs from "@/components/businesses/ashr-run-drive/sections/ashr-run-latest";
+import { AshrRunDriveCTA } from "@/components/businesses/ashr-run-drive/sections/ashr-run-drive-cta";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
         <AshrRunDriveGallery />
       </div>
       <AshrRunDriveNewsAndBlogs />
+      <AshrRunDriveCTA />
     </main>
   );
 };

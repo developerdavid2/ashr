@@ -22,8 +22,8 @@ export const GoldShineButton = ({
       onClick={onClick}
       className={`
         inline-flex justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium
-        text-white/80
-        bg-gradient-to-br from-[#E4C777]/70 via-[30%] via-[#D1A73B] to-[#A9802C]
+        text-white/90
+        bg-gradient-to-br from-[#E4C777]/70 via-[30%] via-[#A9802D] to-[#A9802C]
         shadow relative
         before:absolute before:inset-0 before:rounded-[inherit]
         before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.45)_50%,transparent_75%,transparent_100%)]
