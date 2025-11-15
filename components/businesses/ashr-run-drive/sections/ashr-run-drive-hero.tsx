@@ -52,14 +52,14 @@ export const AshrRunDriveHero = () => {
           <div className="flex gap-3 sm:gap-4 justify-center h-full w-full max-w-md sm:max-w-none px-4 mb-8 sm:mb-10 md:mb-12">
             <Link
               href="/news"
-              className="inline-flex items-center gap-2 py-3 px-5 sm:py-4 sm:px-6 bg-main text-white border-2  hover:bg-[#A9802C] text-xs sm:text-sm md:text-base font-medium transition-all duration-300 group rounded"
+              className="inline-flex items-center gap-2 py-3 px-6 bg-black/50 text-white border-2  hover:bg-[#A9802C] text-xs sm:text-sm md:text-base font-medium transition-all duration-300 group rounded"
             >
               GET IN TOUCH
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
             <Link
               href={"/#our-businesses"}
-              className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
+              className="block w-full sm:w-auto text-center py-3 px-6 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
             >
               EXPLORE MORE
             </Link>
