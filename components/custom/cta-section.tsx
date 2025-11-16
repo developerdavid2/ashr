@@ -57,7 +57,7 @@ export function CTASection({
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light mb-10 sm:mb-12">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-light mb-10 sm:mb-12">
             {description}
           </p>
 

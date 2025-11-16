@@ -23,7 +23,7 @@ export const AshrRunDriveOffer = () => {
           <h2 className="font-kapital font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white">
             WHAT WE OFFER
           </h2>
-          <p className="max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light leading-relaxed font-poppins text-gray-200">
+          <p className="max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed font-poppins text-gray-200">
             From individual car sales to comprehensive fleet solutions, flexible
             financing to professional maintenance— we provide end-to-end
             automotive services that get you on the road with confidence.
@@ -67,7 +67,7 @@ export const AshrRunDriveOffer = () => {
           {/* Card 2: Financing Solutions */}
           <div className="bg-neutral-800 lg:col-span-4 relative overflow-hidden rounded-xl p-8 h-[350px] lg:h-[265px]">
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#9F8E6D]">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#C9A961]">
                 <CreditCard className="w-6 h-6 text-white" strokeWidth={2} />
               </div>
             </div>
@@ -84,7 +84,7 @@ export const AshrRunDriveOffer = () => {
           {/*CARD 3*/}
           <div className="lg:col-span-4 relative overflow-hidden rounded-xl p-8 flex flex-col justify-center h-[350px] lg:h-[265px] bg-black/40">
             <div className="text-7xl md:text-8xl font-bold mb-2">
-              <ShieldCheck className="text-[#9F8E6D] size-20" />
+              <ShieldCheck className="text-[#C9A961] size-20" />
             </div>
 
             <p className="text-gray-300 leading-relaxed">
@@ -108,7 +108,7 @@ export const AshrRunDriveOffer = () => {
 
             {/* Glassmorphism overlay at bottom */}
             <div className="absolute bottom-0 left-0 right-0 p-8 backdrop-blur-2xl bg-white/10 border-t border-white/20">
-              <div className="w-12 h-12 rounded-full bg-[#9F8E6D] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#C9A961] flex items-center justify-center mb-4">
                 <Car className="w-6 h-6 text-white" strokeWidth={2} />
               </div>
 
@@ -126,7 +126,7 @@ export const AshrRunDriveOffer = () => {
           {/*CARD 5*/}
 
           <div className="bg-neutral-800 lg:col-span-6 relative overflow-hidden rounded-xl p-8 h-[350px] flex flex-col justify-center">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-[#9F8E6D]">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-[#C9A961]">
               <RefreshCw className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
 
@@ -155,7 +155,7 @@ export const AshrRunDriveOffer = () => {
 
             {/* Glassmorphism overlay at bottom */}
             <div className="absolute w-[60%] inset-y-0 left-0 p-8 backdrop-blur-2xl bg-white/10 border-t border-white/20 pt-20">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[#9F8E6D]">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[#C9A961]">
                 <Wrench className="w-6 h-6 text-white" strokeWidth={2} />
               </div>
 
@@ -172,7 +172,7 @@ export const AshrRunDriveOffer = () => {
         <div className="mt-16 lg:mt-20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 py-3 sm:py-4 px-5 sm:px-6 text-[#9F8E6D] border-2 border-[#9F8E6D] hover:text-white hover:bg-[#9F8E6D] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
+            className="inline-flex items-center gap-2 py-3 sm:py-4 px-5 sm:px-6 text-[#C9A961] border-2 border-[#C9A961] hover:text-white hover:bg-[#C9A961] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
           >
             EXPLORE ASHR RUN AND DRIVE
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

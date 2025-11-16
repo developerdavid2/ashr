@@ -24,73 +24,74 @@ type BlogItem = {
   href: string;
 };
 
-// News Data for ASHR Run and Drive
+// News Data for ASHR Design
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    title: "ASHR Run and Drive Adds 2025 SUV Collection",
-    category: "Automotive",
-    date: "2025-11-10",
+    title: "ASHR Designs Opens Expanded Showroom in Lekki",
+    category: "Interior Design",
+    date: "2025-11-02",
     image:
-      "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&h=600&fit=crop",
-    href: "/news/2025-suv-collection",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    href: "/news/showroom-expansion",
   },
   {
     id: 2,
-    title: "New Flexible Payment Plans Now Available",
-    category: "Automotive",
-    date: "2025-10-28",
+    title: "New Luxury Kitchen Collection Launched",
+    category: "Interior Design",
+    date: "2025-10-18",
     image:
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
-    href: "/news/flexible-payment-plans",
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=800&fit=crop",
+    href: "/news/luxury-kitchen-collection",
   },
   {
     id: 3,
-    title: "Corporate Fleet Program Expanded",
-    category: "Automotive",
-    date: "2025-10-15",
+    title: "Free Design Consultations Now Available",
+    category: "Interior Design",
+    date: "2025-10-05",
     image:
-      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop",
-    href: "/news/fleet-program-expanded",
+      "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&h=600&fit=crop",
+    href: "/news/design-consultations",
+  },
+  {
+    id: 4,
+    title: "50+ Homes Transformed This Year",
+    category: "Interior Design",
+    date: "2025-09-20",
+    image:
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80",
+    href: "/news/homes-transformed",
   },
 ];
 
-// Blog Data for ASHR Run and Drive
+// Blog Data for ASHR Design
 const blogItems: BlogItem[] = [
   {
     id: 1,
-    title: "10 Things to Check Before Buying a Used Car in Nigeria",
-    category: "Automotive",
-    readTime: "7 Min Read",
-    date: "2025-11-05",
+    title: "Small Kitchen, Big Impact: Maximizing Space in Nigerian Homes",
+    category: "Interior Design",
+    readTime: "6 Min Read",
+    date: "2025-11-08",
     image:
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop",
-    href: "/blogs/buying-used-car-checklist",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=700&fit=crop",
+    href: "/blogs/maximizing-small-kitchens",
   },
   {
     id: 2,
-    title: "Best SUVs for Nigerian Roads and Weather",
-    category: "Automotive",
-    readTime: "5 Min Read",
-    date: "2025-10-28",
+    title: "The Complete Guide to Home Lighting in 2025",
+    category: "Interior Design",
+    readTime: "8 Min Read",
+    date: "2025-10-25",
     image:
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop",
-    href: "/blogs/best-suvs-nigeria",
-  },
-  {
-    id: 3,
-    title: "How to Finance Your Car Purchase: A Complete Guide",
-    category: "Automotive",
-    readTime: "6 Min Read",
-    date: "2025-10-15",
-    image:
-      "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800&h=600&fit=crop",
-    href: "/blogs/car-financing-guide",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=600&fit=crop",
+    href: "/blogs/home-lighting-guide-2025",
   },
 ];
 
+// News Card Component
+
 // News Section
-export function AshrRunDriveNews() {
+export function AshrDesignsNews() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -100,8 +101,8 @@ export function AshrRunDriveNews() {
               LATEST <span style={{ color: "#A9802C" }}>NEWS</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl">
-              Stay updated with the latest announcements, new arrivals, and
-              updates from ASHR Run and Drive.
+              Explore updates on new collections, showroom expansions, and the
+              latest happenings at ASHR Designs.
             </p>
           </div>
 
@@ -125,18 +126,18 @@ export function AshrRunDriveNews() {
 }
 
 // Blogs Section
-export function AshrRunDriveBlogs() {
+export function AshrDesignsBlogs() {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 sm:mb-16">
           <div>
             <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-black/50 mb-4">
-              AUTOMOTIVE <span style={{ color: "#A9802C" }}>INSIGHTS</span>
+              DESIGN <span style={{ color: "#A9802C" }}>INSIGHTS</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl">
-              Expert advice, buying guides, and tips to help you make the best
-              automotive decisions.
+              Expert interior design guides, styling tips, and modern living
+              inspiration for your home.
             </p>
           </div>
 
@@ -160,11 +161,11 @@ export function AshrRunDriveBlogs() {
 }
 
 // Combined Export Component
-export default function AshrRunDriveNewsAndBlogs() {
+export default function AshrDesignsNewsAndBlogs() {
   return (
     <>
-      <AshrRunDriveNews />
-      <AshrRunDriveBlogs />
+      <AshrDesignsNews />
+      <AshrDesignsBlogs />
     </>
   );
 }

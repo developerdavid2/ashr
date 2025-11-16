@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export const AshrRunDriveHero = () => {
+export const AshrDesignsHero = () => {
   return (
     <section
       className="relative overflow-hidden pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20"
@@ -18,21 +18,18 @@ export const AshrRunDriveHero = () => {
         {/* Header Text */}
         <div className="flex flex-col items-center text-center mb-8 sm:mb-10 md:mb-12">
           <p className="text-xs sm:text-sm font-medium text-[#A9802C] tracking-wider mb-3 sm:mb-4 uppercase">
-            Car dealership, sales of individual & fleet vehicles.
+            Interior lifestyle solutions
           </p>
           <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
-            <span className="text-black/50 font-bold">ASHR RUN </span>
-            <span className="text-black/50 font-light font-kapital-stencil">
-              AND{" "}
-            </span>
-            <span className="text-[#A9802C] font-bold">DRIVE</span>
+            <span className="text-black/50 font-bold">ASHR </span>{" "}
+            <span className="text-[#A9802C] font-bold">DESIGNS</span>
           </h2>
         </div>
 
         {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative w-full max-w-[900px] aspect-[16/9] mx-auto overflow-hidden">
+        <div className="relative w-full max-w-[1000px] aspect-[16/9] mx-auto overflow-hidden">
           <Image
-            src="/our-businesses/ashr-run-drive-hero.webp"
+            src="/our-businesses/ashr-designs-hero.png"
             alt="ASHR Run and Drive Hero"
             fill
             className="object-cover"
@@ -42,8 +39,9 @@ export const AshrRunDriveHero = () => {
         {/* Description Text */}
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700 mb-4">
-            A diversified company delivering quality solutions across
-            automotive, interiors, ceramics, and industrial products.
+            Transform your home or office with luxury interiors that blend
+            style, function, and craftsmanship. From kitchens to complete space
+            finishing.
           </p>
           {/* CTA */}
           <div
@@ -57,19 +55,19 @@ export const AshrRunDriveHero = () => {
     text-xs sm:text-sm md:text-base font-medium transition-all duration-300
     group rounded"
             >
-              GET IN TOUCH
+              BOOK CONSULTATION
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
 
             <Link
-              href={"/#ashr-rundrive-offer"}
+              href={"/#ashr-designs-services"}
               className="w-full md:w-auto inline-flex items-center justify-center text-center py-3 px-6
     rounded-lg border-2 border-main/50 text-main/60 hover:bg-main/70 hover:text-white
     text-xs sm:text-sm md:text-base font-medium transition-all duration-300"
             >
               EXPLORE OUR SERVICES
             </Link>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </section>
