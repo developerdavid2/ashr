@@ -30,7 +30,7 @@ export const AshrDesignsHero = () => {
         <div className="relative w-full max-w-[1000px] aspect-[16/9] mx-auto overflow-hidden">
           <Image
             src="/our-businesses/ashr-designs-hero.png"
-            alt="ASHR Run and Drive Hero"
+            alt="ASHR Designs"
             fill
             className="object-cover"
           />

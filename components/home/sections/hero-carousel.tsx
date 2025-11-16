@@ -51,7 +51,7 @@ export function HeroCarousel() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative w-full h-[500px] overflow-hidden rounded-xl">
+              <div className="relative w-full max-w-[1000px] aspect-[16/9] mx-auto overflow-hidden">
                 <Image src={src} alt="hero" fill className="object-cover " />
               </div>
             </CarouselItem>
