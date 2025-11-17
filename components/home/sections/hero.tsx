@@ -10,7 +10,10 @@ import * as React from "react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden" id="home-hero">
+    <section
+      className="relative lg:min-h-screen overflow-hidden"
+      id="home-hero"
+    >
       {/* subtle glow */}
       <div
         className="blur-[12rem] h-52 w-52 bg-[#A9802C]/50 absolute top-[80%] right-[5%] rounded-full will-change-transform"
@@ -49,7 +52,10 @@ export function Hero() {
         </div>
 
         {/* Heading - Responsive */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-kapital leading-none pt-6 sm:pt-8 md:pt-10 text-black/70 font-bold px-4">
+        <h1
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight
+ font-kapital pt-6 sm:pt-8 md:pt-10 text-black/70 px-4"
+        >
           DRIVING INNOVATION
           <br />
           ACROSS INDUSTRIES
@@ -64,7 +70,7 @@ export function Hero() {
         </div>
 
         {/* Description - Mobile (hide on large because overlay handles it) */}
-        <p className="lg:hidden text-sm sm:text-base md:text-lg font-light max-w-xs sm:max-w-md md:max-w-xl mx-auto my-8 sm:my-10 md:my-12 leading-relaxed font-poppins px-4">
+        <p className="lg:hidden text-sm sm:text-base md:text-lg font-light max-w-full sm:max-w-md md:max-w-xl mx-auto my-8 sm:my-10 md:my-12 leading-relaxed font-poppins px-4">
           From automotive to interiors and industrial manufacturing, we deliver
           trusted solutions that elevate lifestyles and strengthen communities.
         </p>

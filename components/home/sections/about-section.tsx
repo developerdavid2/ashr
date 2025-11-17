@@ -9,7 +9,7 @@ export function AboutSection() {
       id="home-about"
       className="relative py-20 sm:py-28 md:py-36 lg:py-44 overflow-hidden"
     >
-      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-7xl">
+      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
         {/* Large ABOUT background text - Responsive */}
         <h1
           className="font-mokoto text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-500/8 absolute -top-10 sm:-top-12 md:-top-16 lg:-top-20 left-0 pointer-events-none select-none z-0 leading-none"
@@ -42,7 +42,7 @@ export function AboutSection() {
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700">
+              <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700">
                 ASHR Group is a diversified company with businesses in
                 automotive, interior design, ceramics, and industrial
                 manufacturing. Our mission is to deliver trusted solutions that

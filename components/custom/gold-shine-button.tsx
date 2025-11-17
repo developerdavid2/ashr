@@ -21,7 +21,7 @@ export const GoldShineButton = ({
       href={href}
       onClick={onClick}
       className={`
-        inline-flex justify-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium
+        inline-flex justify-center items-center whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium
         text-white/90
         bg-gradient-to-br from-[#E4C777]/70 via-[30%] via-[#A9802D] to-[#A9802C]
         shadow relative

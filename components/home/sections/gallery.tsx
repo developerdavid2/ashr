@@ -187,13 +187,10 @@ const galleryImages = [
 
 export function Gallery() {
   return (
-    <section
-      id="home-gallery"
-      className="bg-main relative py-32 overflow-hidden pt-32"
-    >
+    <section id="home-gallery" className="bg-main relative overflow-hidden">
       <div className="relative py-20 sm:py-28 md:py-36 lg:py-44 overflow-hidden ">
         {/* Large GALLERY background text */}
-        <h1 className="font-mokoto text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-300/8 absolute -top-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 leading-none mask-b-to-80%">
+        <h1 className="font-mokoto text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-300/15 absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 leading-none mask-b-to-80%">
           GALLERY
         </h1>
         <h2 className="text-white font-bold font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 text-center">
@@ -201,7 +198,7 @@ export function Gallery() {
         </h2>
 
         {/* Content */}
-        <div className="flex flex-col gap-16 items-start relative z-10 my-40">
+        <div className="flex flex-col gap-16 items-start relative z-10 ">
           <div className="absolute top-0 inset-x-0 w-full h-24 pointer-events-none bg-gradient-to-b from-main to-transparent z-30" />
           <div className="absolute bottom-0 inset-x-0 w-full h-24 pointer-events-none bg-gradient-to-t from-main to-transparent z-30" />
 

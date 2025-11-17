@@ -113,9 +113,9 @@ export function NewsCard({ item }: { item: NewsItem }) {
 export default function NewsSection() {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 font-poppins">
-      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kapital font-bold uppercase">
+      <div className="container mx-auto px-4 sm:px-6 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
+        <div className="flex items-center justify-between gap-4 sm:gap-0 mb-8 sm:mb-12">
+          <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase">
             News
           </h2>
           <Link

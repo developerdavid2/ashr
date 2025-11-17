@@ -1,8 +1,14 @@
+"use client";
+
 import { ArrowUpRight, Diamond, Headphones, Timer } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export function WhyChooseUs() {
+  const router = useRouter();
+
   return (
     <section
       id="why-choose-us"
@@ -65,7 +71,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* cell 2 - wide top */}
-          <div className="bg-white/40 backdrop-blur-md border border-black/5 p-5 sm:p-6 md:p-8 rounded-xl shadow-xl col-span-1 sm:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-start sm:justify-between gap-4">
+          <div className="bg-white/40 backdrop-blur-md border border-black/5 p-5 sm:p-6 md:p-8 rounded-xl shadow-xl col-span-1 sm:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-start sm:justify-between gap-4 ">
             <div className="flex flex-col items-center justify-center bg-gray-200/20 p-4 sm:p-5 md:p-6 rounded-xl">
               <div className="relative w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-3 sm:mb-4">
                 <Image
@@ -76,12 +82,12 @@ export function WhyChooseUs() {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-kapital font-bold text-2xl sm:text-3xl md:text-4xl text-gray-700 mb-3 sm:mb-4">
+              <h3 className="font-kapital font-bold text-2xl sm:text-3xl md:text-4xl text-gray-700">
                 ₦2.5B+
               </h3>
             </div>
-            <div className="p-2 sm:p-4 text-center sm:text-left">
-              <h4 className="font-poppins font-semibold text-lg sm:text-xl md:text-2xl text-gray-800 mb-2">
+            <div className="sm:p-4 text-center sm:text-left">
+              <h4 className="font-poppins font-semibold text-lg sm:text-xl md:text-2xl text-gray-800 ">
                 High-Value Deliveries
               </h4>
               <p className="text-xs sm:text-sm font-poppins text-gray-700 leading-relaxed">
@@ -103,7 +109,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* cell 4 */}
-          <div className="bg-white/40 backdrop-blur-md border border-white/60 p-5 sm:p-6 md:p-8 rounded-xl shadow-2xl">
+          <div className="bg-white/40 backdrop-blur-md border border-white/60 p-5 sm:p-6 md:p-8 rounded-xl shadow-2xl flex flex-col items-start justify-center">
             <Timer className="text-[#A9802C] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-4 sm:mb-5 md:mb-6" />
             <h3 className="font-kapital-stencil font-bold text-4xl sm:text-5xl md:text-6xl text-gray-700 mb-3 sm:mb-4">
               45%
@@ -114,7 +120,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* cell 5 */}
-          <div className="bg-gray-200/20 backdrop-blur-md border border-white/60 p-5 sm:p-6 md:p-8 rounded-xl drop-shadow-3xl/25">
+          <div className="bg-gray-200/20 backdrop-blur-md border border-white/60 p-5 sm:p-6 md:p-8 rounded-xl drop-shadow-3xl/25 flex flex-col items-start justify-center">
             <Headphones className="text-[#A9802C] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-4 sm:mb-5 md:mb-6" />
             <h3 className="font-kapital text-2xl sm:text-3xl md:text-4xl text-gray-700 mb-3 sm:mb-4">
               24/7 Support
@@ -137,6 +143,13 @@ export function WhyChooseUs() {
                 Start a conversation today & experience excellence first-hand.
               </p>
             </div>
+
+            <Button
+              className="rounded-xl w-fit bg-white text-[#A9802C] hover:text-white hover:bg-[#A9802C] flex lg:hidden"
+              onClick={() => router.push("/contact")}
+            >
+              LET'S TALK
+            </Button>
 
             <ArrowUpRight className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#A9802C] absolute right-3 top-3" />
           </Link>

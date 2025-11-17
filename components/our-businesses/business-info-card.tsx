@@ -80,8 +80,8 @@ export const BusinessInfoCard: React.FC<BusinessInfoCardProps> = ({
         {/* Content */}
         <div className="relative z-10 p-5 sm:p-6 flex flex-col min-h-[280px] sm:min-h-[320px]">
           {/* Logo Icon */}
-          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4 border border-white/20">
-            <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+          <div className="size-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4 border border-white/20">
+            <div className="relative size-20">
               <Image
                 src={logo}
                 alt={title}
