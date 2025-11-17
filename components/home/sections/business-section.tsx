@@ -24,8 +24,8 @@ const businesses = [
     description:
       "Durable FRP manhole & gully covers engineered for safety and strength.",
     image: "/home-business/manhole.jpeg",
-    logo: "/logos/simtex-white.webp",
-    link: "/businesses/simtex-manhole",
+    logo: "/logos/simtex-manhole-white.webp",
+    link: "/businesses/simtex-manhole-manhole",
   },
   {
     title: "High Taste Ceramics",

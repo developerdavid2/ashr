@@ -37,7 +37,7 @@ export const BUSINESS_ITEMS: BusinessItem[] = [
   },
   {
     title: "Simtex Manhole Cover",
-    href: "/businesses/simtex-manhole-cover",
+    href: "/businesses/simtex-manhole",
     logo: "simtex-white.webp",
     icon: Settings,
   },

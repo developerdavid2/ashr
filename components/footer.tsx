@@ -36,7 +36,7 @@ const footerGroups: FooterGroup[] = [
     links: [
       { label: "ASHR Run & Drive", href: "/run-and-drive" },
       { label: "ASHR Designs", href: "/ashr-designs" },
-      { label: "Simtex Manhole Covers", href: "/simtex" },
+      { label: "Simtex Manhole Covers", href: "/simtex-manhole" },
       { label: "High Taste Ceramics", href: "/high-taste" },
     ],
   },
