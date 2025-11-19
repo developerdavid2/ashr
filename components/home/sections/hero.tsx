@@ -28,7 +28,7 @@ export function Hero() {
 
       {/* Large ASHR background text - Responsive sizing */}
       <h1
-        className="font-mokoto text-[8rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] text-gray-500/15 absolute top-[10%] md:top-[10%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"
+        className="font-mokoto text-[8rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] text-gray-500/15 absolute top-[15%] md:top-[10%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"
         style={{
           lineHeight: 1,
           whiteSpace: "nowrap",
@@ -53,7 +53,7 @@ export function Hero() {
 
         {/* Heading - Responsive */}
         <h1
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight
  font-kapital pt-6 sm:pt-8 md:pt-10 text-black/70 px-4"
         >
           DRIVING INNOVATION
@@ -76,11 +76,11 @@ export function Hero() {
         </p>
 
         {/* Mobile CTAs (hidden on large because overlay provides CTAs) */}
-        <div className="flex gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none px-4 lg:hidden mb-8 sm:mb-10 md:mb-12">
+        <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none px-4 lg:hidden mb-8 sm:mb-10 md:mb-12">
           <GoldShineButton
             href="/contact"
             className={cn(
-              "!text-sm sm:!text-base md:!text-[1rem] w-full sm:w-auto",
+              "!text-sm sm:!text-base md:!text-[1rem] w-full sm:w-auto py-2 px-4 sm:px-8",
             )}
           >
             GET IN TOUCH
@@ -88,7 +88,7 @@ export function Hero() {
 
           <Link
             href="/#home-businesses"
-            className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
+            className="block w-full sm:w-auto text-center py-2 px-4 sm:px-8 rounded-xl border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
           >
             EXPLORE MORE
           </Link>

@@ -54,7 +54,7 @@ export const AboutMissionVision = () => {
                 <h2 className="font-kapital font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
                   OUR MISSION
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins uppercase">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light  leading-relaxed font-poppins uppercase">
                   To provide innovative and reliable solutions across multiple
                   industries while building lasting trust with our customers and
                   communities.
@@ -96,7 +96,7 @@ export const AboutMissionVision = () => {
                 <h2 className="font-kapital font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
                   OUR VISION
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins uppercase">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light  leading-relaxed font-poppins uppercase">
                   To be a leading group recognized for quality, innovation, and
                   impact in automotive, design, ceramics, and industrial
                   solutions across Africa.

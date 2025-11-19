@@ -149,11 +149,6 @@ export const CoreValues = () => {
             );
           })}
         </div>
-
-        {/* Bottom Decorative Line */}
-        <div className="mt-12 sm:mt-16 lg:mt-20">
-          <div className="h-px bg-gradient-to-r from-[#9F8E6D] via-gray-300 to-[#9F8E6D] opacity-30" />
-        </div>
       </div>
     </section>
   );

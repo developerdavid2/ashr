@@ -24,72 +24,72 @@ type BlogItem = {
   href: string;
 };
 
-// News Data for Simtex Manhole Cover
+// News Data for High Taste Ceramics
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    title: "Simtex Supplies 500+ Covers to Lekki Estate Project",
-    category: "Industrial",
-    date: "2025-10-30",
+    title: "2025 Italian Tile Collection Now in Stock",
+    category: "Ceramics",
+    date: "2025-11-05",
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-    href: "/news/lekki-estate-project",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    href: "/news/italian-tile-collection-2025",
   },
   {
     id: 2,
-    title: "Partnership with Lagos State Infrastructure Agency",
-    category: "Industrial",
-    date: "2025-10-12",
+    title: "Showroom Expansion: New Bathroom Display Section",
+    category: "Ceramics",
+    date: "2025-10-20",
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
-    href: "/news/lagos-state-partnership",
+      "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800&h=600&fit=crop",
+    href: "/news/showroom-expansion-bathroom",
   },
   {
     id: 3,
-    title: "New Heavy-Duty E600 Series Launched",
-    category: "Industrial",
-    date: "2025-09-25",
+    title: "Professional Installation Team Expanded",
+    category: "Ceramics",
+    date: "2025-10-08",
     image:
-      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
-    href: "/news/e600-series-launch",
+      "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&h=600&fit=crop",
+    href: "/news/installation-team-expanded",
   },
   {
     id: 4,
-    title: "Production Capacity Increased by 40%",
-    category: "Industrial",
-    date: "2025-09-08",
+    title: "Major Supply to Luxury Hotel Project",
+    category: "Ceramics",
+    date: "2025-09-28",
     image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-    href: "/news/production-expansion",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&h=600&fit=crop",
+    href: "/news/luxury-hotel-supply",
   },
 ];
 
-// Blog Data for Simtex Manhole Cover
+// Blog Data for High Taste Ceramics
 const blogItems: BlogItem[] = [
   {
     id: 1,
-    title: "Why Metal Manhole Covers Are Becoming Obsolete",
-    category: "Industrial",
-    readTime: "6 Min Read",
-    date: "2025-11-04",
+    title: "How to Choose the Perfect Tiles for Your Home",
+    category: "Ceramics",
+    readTime: "8 Min Read",
+    date: "2025-11-06",
     image:
-      "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&h=600&fit=crop",
-    href: "/blogs/metal-covers-obsolete",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+    href: "/blogs/choosing-perfect-tiles",
   },
   {
     id: 2,
-    title: "Understanding Load Ratings: A15 to E600 Explained",
-    category: "Industrial",
-    readTime: "5 Min Read",
-    date: "2025-10-20",
+    title: "Creating a Spa-Like Bathroom in Your Nigerian Home",
+    category: "Ceramics",
+    readTime: "6 Min Read",
+    date: "2025-10-22",
     image:
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop",
-    href: "/blogs/load-ratings-explained",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&h=600&fit=crop",
+    href: "/blogs/spa-like-bathroom",
   },
 ];
 
 // News Section
-export function SimtexNews() {
+export function HighTasteCeramicsNews() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -99,8 +99,8 @@ export function SimtexNews() {
               LATEST <span style={{ color: "#A9802C" }}>NEWS</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl">
-              Stay updated with the latest projects, partnerships, and product
-              innovations from Simtex Manhole Cover.
+              Stay updated with new arrivals, showroom updates, and the latest
+              luxury tile collections at High Taste Ceramics.
             </p>
           </div>
 
@@ -124,18 +124,18 @@ export function SimtexNews() {
 }
 
 // Blogs Section
-export function SimtexBlogs() {
+export function HighTasteCeramicsBlogs() {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 sm:mb-16">
           <div>
             <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-black/50 mb-4">
-              INDUSTRY <span style={{ color: "#A9802C" }}>INSIGHTS</span>
+              CERAMICS <span style={{ color: "#A9802C" }}>INSIGHTS</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl">
-              Expert technical guides, infrastructure insights, and FRP
-              technology innovations for modern urban development.
+              Expert guides on tile selection, bathroom design inspiration, and
+              luxury ceramic trends for modern homes.
             </p>
           </div>
 
@@ -159,11 +159,11 @@ export function SimtexBlogs() {
 }
 
 // Combined Export Component
-export default function SimtexNewsAndBlogs() {
+export default function HighTasteCeramicsNewsAndBlogs() {
   return (
     <>
-      <SimtexNews />
-      <SimtexBlogs />
+      <HighTasteCeramicsNews />
+      <HighTasteCeramicsBlogs />
     </>
   );
 }

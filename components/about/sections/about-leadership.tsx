@@ -71,12 +71,21 @@ export const AboutLeadership = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full py-52 overflow-hidden">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden">
+      {/* Large LEADERSHIP background text - Responsive */}
+      <h1
+        className="font-mokoto text-[5rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] text-gray-500/15 absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"
+        style={{
+          lineHeight: 1,
+          whiteSpace: "nowrap",
+          maskImage: "linear-gradient(to bottom, black 0%, transparent 80%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 0%, transparent 80%)",
+        }}
+      >
+        LEADERSHIP
+      </h1>
       <div className="container w-full max-w-7xl mx-auto">
-        {/* Large LEADERSHIP background text - Responsive */}
-        <h1 className="font-mokoto text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-500/8 absolute -top-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 leading-none mask-b-to-80%">
-          LEADERSHIP
-        </h1>
         {/* Title */}
         <div className="mb-12 text-center">
           <h2 className="font-kapital font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight ">

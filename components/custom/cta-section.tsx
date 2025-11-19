@@ -57,12 +57,12 @@ export function CTASection({
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-light mb-10 sm:mb-12">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light mb-10 sm:mb-12">
             {description}
           </p>
 
           {/* CTA */}
-          <div className="flex gap-3 sm:gap-4 justify-center h-full w-full max-w-md sm:max-w-none px-4 mb-8 sm:mb-10 md:mb-12">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none px-4 mb-8 sm:mb-10 md:mb-12">
             <GoldShineButton
               href={primaryHref}
               className={cn(
@@ -75,7 +75,7 @@ export function CTASection({
             {secondaryHref && secondaryLabel && (
               <Link
                 href={secondaryHref}
-                className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-lg border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
+                className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-xl border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
               >
                 {secondaryLabel}
               </Link>

@@ -49,7 +49,7 @@ export function BusinessSection() {
         <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-4 sm:mb-6 md:mb-8">
           Our Business
         </h2>
-        <p className="mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl font-light  leading-relaxed font-poppins text-center px-4">
+        <p className="mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed font-poppins text-center px-4">
           ASHR Group delivers premium automotive, interior, ceramic and
           industrial solutions engineered for reliability and performance.
         </p>
