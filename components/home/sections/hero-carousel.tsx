@@ -63,7 +63,8 @@ export function HeroCarousel() {
       </Carousel>
 
       {/* dots */}
-      <div className="flex justify-center mt-3 gap-2">
+
+      <div className="flex justify-center mt-5 gap-2">
         {images.map((_, index) => {
           const isActive = current === index;
 
@@ -72,12 +73,9 @@ export function HeroCarousel() {
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={`
-          h-2 w-2 rounded-full transition-all duration-300
-          ${isActive ? "bg-yellow-600 scale-125" : "bg-yellow-600/40 scale-100"}
+          h-2 rounded-full transition-all duration-500
+          ${isActive ? "w-8 bg-[#C9A961]" : "w-2 bg-black/30 hover:bg-white/50"}
         `}
-              style={{
-                transition: "transform 300ms cubic-bezier(0.22, 1, 0.36, 1)", // springish ease
-              }}
             />
           );
         })}

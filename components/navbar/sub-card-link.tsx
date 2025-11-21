@@ -4,7 +4,7 @@ import {
   NEWS_ITEMS,
   BusinessItem,
   NewsItem,
-} from "@/constants/navbar/navbar";
+} from "@/constants/navbar";
 import Image from "next/image";
 
 export const BusinessCard: React.FC<{ item: BusinessItem }> = ({ item }) => {

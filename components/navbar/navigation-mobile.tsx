@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
-import { BUSINESS_ITEMS } from "@/constants/navbar/navbar";
+import { BUSINESS_ITEMS } from "@/constants/navbar";
 import { GoldShineButton } from "@/components/custom/gold-shine-button";
 import {
   Sheet,

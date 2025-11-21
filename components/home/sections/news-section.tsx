@@ -84,7 +84,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
                   backgroundPosition: "0% 100%",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "var(--u) 2px",
-                  transition: "background-size .3s",
+                  transition: "background-size .5s",
                 }}
               >
                 {item.title}
