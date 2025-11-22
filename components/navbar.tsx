@@ -22,9 +22,6 @@ type ActiveMenu = "business" | "news" | null;
 export function Navbar() {
   const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
 
-  // Helpers to keep hover stable between trigger and content
-  // replace your openMenu + closeMenu with this:
-
   let closeTimer: NodeJS.Timeout | null = null;
 
   const openMenu = (menu: ActiveMenu) => {
@@ -47,15 +44,13 @@ export function Navbar() {
       {/* Overlay: shown whenever activeMenu != null */}
       {activeMenu && (
         <div
-          // overlay sits under mega menu (mega menu has z-50/z-150 in your code),
-          // adjust z-index if needed to ensure overlay is below the mega panel
           className="fixed inset-0 bg-black/40 z-[140] transition-opacity"
           onClick={closeMenu}
         />
       )}
 
       <nav className="fixed top-0 left-0 right-0 z-[200] bg-white/50 backdrop-blur-md font-poppins">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="container mx-auto px-2 sm:px-4 relative z-10 max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-7xl">
           <div className="flex items-center justify-between h-20">
             <Logo />
 
@@ -72,10 +67,8 @@ export function Navbar() {
 
                   {/* Businesses menu - wrapper tracks pointer enter/leave */}
                   <NavigationMenuItem
-                    // pointer events are better than mouseenter for reliability (works with touch + pointer)
                     onPointerEnter={() => openMenu("business")}
                     onPointerLeave={() => {
-                      // small timeout could be used, but pointerenter/leave on content handles it
                       closeMenu();
                     }}
                     className="relative"

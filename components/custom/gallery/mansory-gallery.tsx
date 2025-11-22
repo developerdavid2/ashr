@@ -22,7 +22,7 @@ export function MasonryGallery({
   images,
   animated = false,
   animationSpeed = "normal",
-  pauseOnHover = false,
+  pauseOnHover = true,
 }: MasonryGalleryProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -48,7 +48,7 @@ export function MasonryGallery({
       case "fast":
         return "20s";
       default:
-        return "40s";
+        return "50s";
     }
   };
 

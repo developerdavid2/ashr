@@ -47,34 +47,16 @@ const leadershipTeam = [
     role: "Innovation Director",
     image: "/leaders/leader-7.jpeg",
   },
-  // {
-  //   id: 8,
-  //   name: "Chinwe Eze",
-  //   role: "Marketing Director",
-  //   image: "/leaders/leader-8.jpeg",
-  // },
-  // {
-  //   id: 9,
-  //   name: "Robert Martinez",
-  //   role: "Business Development",
-  //   image: "/leaders/leader-9.jpeg",
-  // },
-  // {
-  //   id: 10,
-  //   name: "Aisha Mohammed",
-  //   role: "Human Resources Director",
-  //   image: "/leaders/leader-10.jpeg",
-  // },
 ];
 
 export const AboutLeadership = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28">
       {/* Large LEADERSHIP background text - Responsive */}
       <h1
-        className="font-mokoto text-[5rem] sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem] text-gray-500/15 absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"
+        className="font-mokoto pointer-events-none absolute top-0 left-1/2 z-0 -translate-x-1/2 text-[5rem] text-gray-500/15 select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem]"
         style={{
           lineHeight: 1,
           whiteSpace: "nowrap",
@@ -85,18 +67,18 @@ export const AboutLeadership = () => {
       >
         LEADERSHIP
       </h1>
-      <div className="container w-full max-w-7xl mx-auto">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Title */}
         <div className="mb-12 text-center">
-          <h2 className="font-kapital font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight ">
+          <h2 className="font-kapital text-main/90 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             Leadership Team
           </h2>
-          <p className="mt-3 text-black/60 mx-auto max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light leading-relaxed font-poppins">
+          <p className="font-poppins mx-auto mt-3 max-w-5xl text-sm leading-relaxed font-light text-gray-700 sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             Meet the minds driving ASHR Group.
           </p>
         </div>
 
-        <div className="hidden md:flex gap-4 overflow-x-auto no-scrollbar px-2">
+        <div className="no-scrollbar hidden gap-4 overflow-x-auto px-2 md:flex">
           {leadershipTeam.map((item, i) => (
             <LeadershipCard
               key={item.id}
@@ -109,7 +91,7 @@ export const AboutLeadership = () => {
         </div>
 
         {/* Mobile normal grid */}
-        <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 gap-6 px-2 mt-10">
+        <div className="mt-10 grid grid-cols-1 gap-6 px-2 sm:grid-cols-2 md:hidden">
           {leadershipTeam.map((item) => (
             <LeadershipCard
               key={item.id}

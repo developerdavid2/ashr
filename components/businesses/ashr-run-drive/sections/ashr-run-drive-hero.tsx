@@ -64,8 +64,8 @@ export const AshrRunDriveHero = () => {
             <Link
               href={"/#ashr-rundrive-offer"}
               className="w-full md:w-auto inline-flex items-center justify-center text-center py-3 px-6
-    rounded-lg border-2 border-main/50 text-main/60 hover:bg-main/70 hover:text-white
-    text-xs sm:text-sm md:text-base font-medium transition-all duration-300"
+    rounded-xl border-2 border-main/50 text-main/60 hover:bg-main/70 hover:border-none hover:text-white
+    text-xs sm:text-sm md:text-base font-medium transition-colors duration-300"
             >
               EXPLORE OUR SERVICES
             </Link>

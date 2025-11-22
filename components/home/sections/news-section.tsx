@@ -41,7 +41,7 @@ const newsItems: NewsItem[] = [
 export function NewsCard({ item }: { item: NewsItem }) {
   return (
     <Link href={item.href} className="block">
-      <div className="group/card relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-black overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-2xl h-[320px] sm:h-[350px]">
+      <div className="group/card relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-main/90 overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-2xl h-[320px] sm:h-[350px]">
         {/* IMAGE */}
         <div className="relative h-40 sm:h-48 w-full overflow-hidden">
           <Image
@@ -75,7 +75,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
         {/* CONTENT */}
         <div className="p-4 sm:p-6 relative z-20 flex flex-col justify-between h-[calc(320px-160px)] sm:h-[calc(350px-192px)]">
           <div>
-            <h3 className="text-base sm:text-xl font-semibold leading-tight text-[#131313] group-hover/card:text-white">
+            <h3 className="text-base sm:text-xl font-semibold leading-tight text-[#131313] group-hover/card:text-white line-clamp-2">
               <span
                 className="[--u:0%] group-hover/card:[--u:100%]"
                 style={{
@@ -112,10 +112,10 @@ export function NewsCard({ item }: { item: NewsItem }) {
 
 export default function NewsSection() {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 font-poppins">
-      <div className="container mx-auto px-4 sm:px-6 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-20 sm:py-28 md:py-36 font-poppins">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-screen-xl md:max-w-3xl lg:max-w-7xl">
         <div className="flex items-center justify-between gap-4 sm:gap-0 mb-8 sm:mb-12">
-          <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase">
+          <h2 className="font-bold text-main/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase">
             News
           </h2>
           <Link

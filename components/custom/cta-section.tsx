@@ -18,10 +18,10 @@ export interface CTASectionProps {
 export function CTASection({
   title = (
     <>
-      <span className="text-gray-400 font-light">BUILDING</span>{" "}
+      <span className="text-main/50 font-light">BUILDING</span>{" "}
       <span className="text-[#A9802C]">TRUST</span>
       <br className="hidden sm:block" />
-      <span className="text-gray-400 font-light"> INNOVATION &</span>{" "}
+      <span className="text-main/50 font-light"> INNOVATION &</span>{" "}
       <span className="text-[#A9802C]">FUTURE</span>
     </>
   ),
@@ -35,38 +35,31 @@ export function CTASection({
   return (
     <section
       className={cn(
-        "relative py-20 sm:py-28 lg:py-32 bg-gray-200/40 overflow-hidden",
+        "relative overflow-hidden bg-gray-200/30 py-20 sm:py-28 lg:py-32",
         className,
       )}
     >
-      {/* geometric lines */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-0 bottom-0 left-1/4 w-px bg-[#9F8E6D]" />
-        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#9F8E6D]" />
-        <div className="absolute top-0 bottom-0 left-3/4 w-px bg-[#9F8E6D]" />
-      </div>
-
       {/* glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#9F8E6D]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9F8E6D]/5 blur-3xl" />
 
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10 max-w-5xl">
+      <div className="relative z-10 container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Title */}
-          <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 sm:mb-8">
+          <h2 className="font-kapital mb-6 text-3xl leading-tight font-bold text-white sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl">
             {title}
           </h2>
 
           {/* Description */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light mb-10 sm:mb-12">
+          <p className="mx-auto mb-10 max-w-2xl text-sm leading-relaxed font-light text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
             {description}
           </p>
 
           {/* CTA */}
-          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none px-4 mb-8 sm:mb-10 md:mb-12">
+          <div className="mb-8 flex w-full max-w-md flex-col justify-center gap-3 px-4 sm:mb-10 sm:max-w-none sm:gap-4 md:mb-12 md:flex-row">
             <GoldShineButton
               href={primaryHref}
               className={cn(
-                "!text-sm sm:!text-base md:!text-[1rem] py-3 px-6 sm:px-8  w-full sm:w-auto flex flex-col items-center justify-center",
+                "flex w-full flex-col items-center justify-center px-6 py-3 !text-sm sm:w-auto sm:px-8 sm:!text-base md:!text-[1rem]",
               )}
             >
               {primaryLabel}
@@ -75,7 +68,7 @@ export function CTASection({
             {secondaryHref && secondaryLabel && (
               <Link
                 href={secondaryHref}
-                className="block w-full sm:w-auto text-center py-3 px-6 sm:px-8 rounded-xl border-2 border-main/50 text-main/60 hover:border-bg-main hover:text-main text-sm md:text-base font-medium transition-all duration-300"
+                className="border-main/50 text-main/60 hover:bg-main/90 block w-full rounded-xl border-2 px-4 py-2 text-center text-sm font-medium transition-all duration-300 hover:border-none hover:text-white sm:w-auto sm:px-8 md:text-base"
               >
                 {secondaryLabel}
               </Link>

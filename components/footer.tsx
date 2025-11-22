@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
+import Logo from "@/components/custom/logo";
 
 interface FooterLink {
   label: string;
@@ -27,17 +28,17 @@ const footerGroups: FooterGroup[] = [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about" },
       { label: "News", href: "/news" },
-      { label: "Blog", href: "/blog" },
+      { label: "Blogs", href: "/blogs" },
       { label: "Contact", href: "/contact" },
     ],
   },
   {
     heading: "Subsidiaries",
     links: [
-      { label: "ASHR Run & Drive", href: "/run-and-drive" },
+      { label: "ASHR Run & Drive", href: "/ashr-run-drive" },
       { label: "ASHR Designs", href: "/ashr-designs" },
       { label: "Simtex Manhole Covers", href: "/simtex-manhole" },
-      { label: "High Taste Ceramics", href: "/high-taste" },
+      { label: "High Taste Ceramics", href: "/high-taste-ceramics" },
     ],
   },
 ];
@@ -46,6 +47,7 @@ export function Footer() {
   return (
     <footer className="relative bg-black text-white border-t border-white/10 py-20 sm:py-28 overflow-hidden">
       {/* Large BG text */}
+
       <h1
         className=" max-w-7xl container mx-auto font-mokoto text-[7rem] sm:text-[10rem] lg:text-[15rem] text-gray-500/15 absolute -bottom-[14%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%"
         style={{
@@ -86,7 +88,12 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12">
           {/* company block */}
           <div className="sm:col-span-2">
-            <h3 className="font-kapital text-2xl mb-3">ASHR GROUP</h3>
+            <Link href="/" className="flex gap-2 items-center mb-3">
+              <Logo />
+              <h3 className="font-kapital-stencil font-bold text-2xl">
+                ASHR GROUP
+              </h3>
+            </Link>
             <p className="text-white/60 font-poppins max-w-sm leading-relaxed text-sm sm:text-base">
               Building trust, quality and innovation for modern living across
               Africa.
@@ -115,10 +122,10 @@ export function Footer() {
                 {group.heading}
               </h4>
               <ul className="space-y-2 font-poppins text-white/60 text-sm sm:text-base">
-                {group.links.map((lnk) => (
-                  <li key={lnk.href}>
-                    <Link className="hover:text-[#A9802C]" href={lnk.href}>
-                      {lnk.label}
+                {group.links.map((link) => (
+                  <li key={link.href}>
+                    <Link className="hover:text-[#A9802C]" href={link.href}>
+                      {link.label}
                     </Link>
                   </li>
                 ))}

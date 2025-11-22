@@ -7,9 +7,9 @@ export function AboutSection() {
   return (
     <section
       id="home-about"
-      className="relative py-20 sm:py-28 md:py-36 lg:py-44 overflow-hidden"
+      className="relative py-20 sm:py-28 md:py-36 overflow-hidden"
     >
-      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-screen-xl md:max-w-3xl lg:max-w-7xl">
         {/* Large ABOUT background text - Responsive */}
         <h1
           className="font-mokoto text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-500/8 absolute -top-10 sm:-top-12 md:-top-16 lg:-top-20 left-0 pointer-events-none select-none z-0 leading-none"
@@ -33,9 +33,9 @@ export function AboutSection() {
                 ABOUT US
               </p>
               <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
-                <span className="text-gray-400 font-light">EXCELLENCE</span>
+                <span className="text-main/90 font-light">EXCELLENCE</span>
                 <br />
-                <span className="text-gray-400 font-light">MEETS</span>
+                <span className="text-main/90 font-light">MEETS</span>
                 <br />
                 <span className="text-[#A9802C] font-bold">INNOVATION</span>
               </h2>
@@ -52,7 +52,7 @@ export function AboutSection() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 py-2 px-4 sm:px-8 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
+              className="inline-flex items-center px-4 py-2 sm:py-4 sm:px-6 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
             >
               DISCOVER OUR STORY
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -80,14 +80,14 @@ export function AboutSection() {
             </div>
 
             {/* Image - Responsive height */}
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-xl shadow-lg">
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-xl shadow-lg lg:mb-0">
               <Image
                 src="/home-about/about-company.webp"
                 alt="ASHR Group - About Us"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
-                priority
+                loading="lazy"
               />
             </div>
 

@@ -11,7 +11,7 @@ const Logo = () => {
           alt="ASHR Logo"
           width={50}
           height={50}
-          loading="lazy"
+          loading="eager"
         />
       </Link>
     </div>

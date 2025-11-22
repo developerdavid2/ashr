@@ -48,26 +48,26 @@ export const CoreValues = () => {
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-28">
       {/* Subtle background decoration */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-[#9F8E6D]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#9F8E6D]/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 h-72 w-72 rounded-full bg-[#9F8E6D]/5 blur-3xl" />
+      <div className="absolute bottom-20 left-10 h-96 w-96 rounded-full bg-[#9F8E6D]/5 blur-3xl" />
 
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10 max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Header Section */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-12">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
             {/* Left: Main Heading */}
             <div className="flex-1">
-              <p className="text-xs sm:text-sm font-medium tracking-[0.2em] text-[#A9802C] uppercase mb-4 sm:mb-6">
+              <p className="mb-4 text-xs font-medium tracking-[0.2em] text-[#A9802C] uppercase sm:mb-6 sm:text-sm">
                 Core Values
               </p>
-              <h2 className="font-kapital-stencil text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-none">
-                <span className="text-gray-400">EXCELLENCE</span>
+              <h2 className="font-kapital-stencil text-3xl leading-none sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                <span className="text-main/50">EXCELLENCE</span>
                 <br />
-                <span className="text-gray-400">MEETS</span>
+                <span className="text-main/50">MEETS</span>
                 <br />
-                <span className=" font-bold text-[#A9802C]">INTEGRITY</span>
+                <span className="font-bold text-[#A9802C]">INTEGRITY</span>
               </h2>
             </div>
 
@@ -76,7 +76,7 @@ export const CoreValues = () => {
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="mt-1 flex-shrink-0">
                   <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-[#9F8E6D]"
+                    className="h-5 w-5 text-[#9F8E6D] sm:h-6 sm:w-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ export const CoreValues = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-light">
+                  <p className="text-sm leading-relaxed font-light text-gray-600 sm:text-base lg:text-lg">
                     The principles that guide our decisions, shape our culture,
                     and define who we are as an organization. Every value
                     reflects our commitment to excellence.
@@ -109,15 +109,15 @@ export const CoreValues = () => {
 
             return (
               <div key={index} className="group">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-8 sm:py-10 lg:py-12">
+                <div className="grid grid-cols-1 gap-6 py-8 sm:py-10 lg:grid-cols-12 lg:gap-8 lg:py-12">
                   {/* Icon Column */}
-                  <div className="lg:col-span-2 flex items-start lg:justify-center">
+                  <div className="flex items-start lg:col-span-2 lg:justify-center">
                     <div
-                      className={`relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br ${value.color} p-[2px] group-hover:scale-110 transition-transform duration-300`}
+                      className={`relative h-16 w-16 rounded-full bg-gradient-to-br sm:h-20 sm:w-20 lg:h-24 lg:w-24 ${value.color} p-[2px] transition-transform duration-300 group-hover:scale-110`}
                     >
-                      <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                      <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
                         <Icon
-                          className="w-7 h-7 sm:w-9 sm:h-9 lg:w-11 lg:h-11 text-[#9F8E6D]"
+                          className="h-7 w-7 text-[#9F8E6D] sm:h-9 sm:w-9 lg:h-11 lg:w-11"
                           strokeWidth={1.5}
                         />
                       </div>
@@ -125,15 +125,15 @@ export const CoreValues = () => {
                   </div>
 
                   {/* Title Column */}
-                  <div className="lg:col-span-3 flex items-center">
-                    <h3 className="font-kapital text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-black leading-none tracking-tight">
+                  <div className="flex items-center lg:col-span-3">
+                    <h3 className="font-kapital text-main/90 text-2xl leading-none tracking-tight sm:text-3xl lg:text-4xl xl:text-5xl">
                       {value.title}
                     </h3>
                   </div>
 
                   {/* Description Column */}
-                  <div className="lg:col-span-7 flex items-center">
-                    <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-light">
+                  <div className="flex items-center lg:col-span-7">
+                    <p className="text-sm leading-relaxed font-light text-gray-600 sm:text-base lg:text-lg">
                       {value.description}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export const CoreValues = () => {
                 {/* Separator Line */}
                 {!isLastItem && (
                   <div className="relative h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent">
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#9F8E6D]" />
+                    <div className="absolute top-1/2 left-0 h-2 w-2 -translate-y-1/2 rounded-full bg-[#9F8E6D]" />
                   </div>
                 )}
               </div>

@@ -25,7 +25,7 @@ const businesses = [
       "Durable FRP manhole & gully covers engineered for safety and strength.",
     image: "/home-business/manhole.jpeg",
     logo: "/logos/simtex-white.webp",
-    link: "/businesses/simtex-manhole-manhole",
+    link: "/businesses/simtex-manhole",
   },
   {
     title: "High Taste Ceramics",
@@ -43,13 +43,14 @@ export function BusinessSection() {
   return (
     <section
       id="home-businesses"
-      className="relative py-16 sm:py-32 md:py-40 lg:py-44"
+      className="relative py-20 sm:py-28 md:py-36 lg:py-44"
     >
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
-        <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-4 sm:mb-6 md:mb-8">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-screen-xl md:max-w-3xl lg:max-w-7xl">
+        <h2 className="font-bold text-main/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase text-center mb-4 sm:mb-6 md:mb-8">
           Our Business
         </h2>
-        <p className="mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed font-poppins text-center px-4">
+
+        <p className="max-w-full sm:max-w-xl md:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed font-poppins text-center px-4">
           ASHR Group delivers premium automotive, interior, ceramic and
           industrial solutions engineered for reliability and performance.
         </p>

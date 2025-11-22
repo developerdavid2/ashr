@@ -98,7 +98,7 @@ export const BusinessInfoCard: React.FC<BusinessInfoCardProps> = ({
           </h3>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-white/90 mb-4 font-poppins leading-relaxed flex-grow">
+          <p className="text-sm md:text-base text-white/90 mb-4 font-poppins leading-relaxed flex-grow">
             {description}
           </p>
 

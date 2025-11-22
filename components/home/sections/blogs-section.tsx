@@ -45,7 +45,7 @@ const blogItems: BlogItem[] = [
 export function BlogCard({ item }: { item: BlogItem }) {
   return (
     <Link href={item.href} className="block">
-      <div className="group/card relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-black overflow-hidden transition duration-300 hover:shadow-2xl">
+      <div className="group/card relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-main/90 overflow-hidden transition duration-300 hover:shadow-2xl">
         <div className="flex flex-col sm:flex-row gap-0 sm:gap-6">
           {/* IMAGE - Left side */}
           <div className="relative w-full sm:w-40 md:w-48 h-40 sm:h-auto flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
@@ -119,8 +119,8 @@ export function BlogCard({ item }: { item: BlogItem }) {
 
 export default function BlogsSection() {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 font-poppins">
-      <div className="container mx-auto px-4 sm:px-6 max-w-full sm:max-w-md md:max-w-2xl lg:max-w-7xl">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-20 sm:py-28 md:py-36 font-poppins">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-screen-xl md:max-w-3xl lg:max-w-7xl">
         <div className="flex items-center justify-between gap-4 sm:gap-0 mb-8 sm:mb-12">
           <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-kapital uppercase">
             Blogs

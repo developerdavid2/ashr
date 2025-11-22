@@ -14,7 +14,7 @@ export function WhyChooseUs() {
       id="why-choose-us"
       className="relative py-20 sm:py-28 md:py-36 lg:py-44 overflow-hidden"
     >
-      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-7xl">
+      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-screen-xl md:max-w-3xl lg:max-w-7xl">
         {/* Large background text - Responsive */}
         <h1
           className="font-mokoto text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[15rem] text-gray-500/8 absolute -top-10 sm:-top-12 md:-top-16 lg:-top-20 left-0 pointer-events-none select-none z-0 leading-none"
@@ -33,18 +33,18 @@ export function WhyChooseUs() {
             Why Choose Us
           </p>
           <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
-            <span className="text-gray-400 font-light">EXPERIENCE</span>
+            <span className="text-main/50 font-light">EXPERIENCE</span>
             <br />
-            <span className="text-gray-400 font-light">BUILT ON</span>
+            <span className="text-main/50 font-light">BUILT ON</span>
             <br />
             <span className="text-[#A9802C] font-bold">TRUST & IMPACT</span>
           </h2>
         </div>
 
         {/* BENTO GRID - Responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 auto-rows-[220px] sm:auto-rows-[240px] md:auto-rows-[260px] relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 auto-rows-[220px] sm:auto-rows-[300px] lg:auto-rows-[260px] relative z-10">
           {/* cell 1 - tall left w image + inner glass content */}
-          <div className="row-span-1 sm:row-span-2 lg:row-span-2 rounded-xl shadow-2xl/50 overflow-hidden flex flex-col bg-white/60 backdrop-blur-lg border border-white/70 relative">
+          <div className="row-span-1 lg:row-span-2 rounded-xl shadow-2xl/50 overflow-hidden flex flex-col bg-white/60 backdrop-blur-lg border border-white/70 relative">
             {/* inset image */}
             <div className="relative w-full h-full">
               <Image
@@ -71,7 +71,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* cell 2 - wide top */}
-          <div className="bg-white/40 backdrop-blur-md border border-black/5 p-5 sm:p-6 md:p-8 rounded-xl shadow-xl col-span-1 sm:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center justify-start sm:justify-between gap-4 ">
+          <div className="bg-white/40 backdrop-blur-md border border-black/5 p-5 sm:p-6 md:p-8 rounded-xl shadow-xl col-span-1 lg:col-span-2 flex flex-col lg:flex-row items-center justify-start sm:justify-between gap-4 h-full">
             <div className="flex flex-col items-center justify-center bg-gray-200/20 p-4 sm:p-5 md:p-6 rounded-xl">
               <div className="relative w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-3 sm:mb-4">
                 <Image
@@ -79,15 +79,15 @@ export function WhyChooseUs() {
                   alt="coin"
                   fill
                   className="object-contain"
-                  loading="lazy"
+                  loading="eager"
                 />
               </div>
-              <h3 className="font-kapital font-bold text-2xl sm:text-3xl md:text-4xl text-gray-700">
+              <h3 className="font-kapital font-bold text-2xl sm:text-3xl lg:text-4xl text-main/90">
                 ₦2.5B+
               </h3>
             </div>
-            <div className="sm:p-4 text-center sm:text-left">
-              <h4 className="font-poppins font-semibold text-lg sm:text-xl md:text-2xl text-gray-800 ">
+            <div className="text-center sm:text-left">
+              <h4 className="font-poppins font-semibold text-lg sm:text-xl lg:text-2xl text-gray-800 ">
                 High-Value Deliveries
               </h4>
               <p className="text-xs sm:text-sm font-poppins text-gray-700 leading-relaxed">
@@ -133,7 +133,7 @@ export function WhyChooseUs() {
           {/* CTA cell */}
           <Link
             href="/contact"
-            className="bg-black text-white p-5 sm:p-6 md:p-8 rounded-xl shadow-xl flex flex-col justify-between transition-all hover:opacity-80 relative"
+            className="bg-main text-white p-5 sm:p-6 md:p-8 rounded-xl shadow-xl flex flex-col justify-between transition-all hover:opacity-80 relative"
           >
             <div>
               <h3 className="font-kapital text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
