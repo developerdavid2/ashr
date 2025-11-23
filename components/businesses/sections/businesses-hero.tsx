@@ -8,7 +8,7 @@ export function BusinessesHero() {
     >
       {/* Large ABOUT background text - Responsive sizing */}
       <h1
-        className="font-mokoto text-[8rem] sm:text-[12rem] md:text-[16rem] text-gray-500/15 absolute top-[15%] md:top-[20%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0"
+        className="font-mokoto pointer-events-none absolute top-[20%] left-1/2 z-0 -translate-x-1/2 text-[6rem] text-gray-500/15 select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem]"
         style={{
           lineHeight: 1,
           whiteSpace: "nowrap",
@@ -20,20 +20,20 @@ export function BusinessesHero() {
         BUSINESSES
       </h1>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center justify-center">
+      <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-4 text-center sm:px-6">
         <div className="space-y-6 sm:space-y-8">
           <div>
-            <p className="text-xs sm:text-sm font-medium text-[#A9802C] tracking-wider uppercase mb-3 sm:mb-4">
+            <p className="mb-3 text-xs font-medium tracking-wider text-[#A9802C] uppercase sm:mb-4 sm:text-sm">
               WHO WE ARE
             </p>
-            <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-6">
-              <span className="text-black/50 font-bold">DIVERSIFIED</span>{" "}
-              <span className="text-[#A9802C] font-bold">EXCELLENCE</span>
+            <h2 className="font-kapital mb-4 text-4xl leading-tight sm:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
+              <span className="text-main/80 font-bold">DIVERSIFIED</span>{" "}
+              <span className="font-bold text-[#A9802C]">EXCELLENCE</span>
             </h2>
           </div>
 
-          <div className="space-y-4 sm:space-y-6 max-w-4xl mx-auto">
-            <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700">
+          <div className="mx-auto max-w-4xl space-y-4 sm:space-y-6">
+            <p className="font-poppins text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Our businesses are independently strong — but united by one
               standard: engineering trust, delivering quality, and shaping
               better experiences across Africa.

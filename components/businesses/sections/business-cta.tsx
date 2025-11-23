@@ -6,10 +6,10 @@ export const BusinessCTASection = () => {
     <CTASection
       title={
         <>
-          <span className="text-gray-400 font-light">INVESTING IN</span>{" "}
-          <span className="text-[#A9802C]">IDEAS</span>
+          <span className="text-main/50 font-light">INVESTING IN</span>{" "}
+          <span className="text-[#A9802C]">IDEAS </span>
           <br className="hidden sm:block" />
-          <span className="text-gray-400 font-light">CREATING</span>{" "}
+          <span className="text-main/50 font-light">CREATING</span>{" "}
           <span className="text-[#A9802C]">VALUE</span>
         </>
       }

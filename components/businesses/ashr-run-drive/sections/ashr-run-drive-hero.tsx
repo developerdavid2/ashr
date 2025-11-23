@@ -1,74 +1,70 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { scrollToSection } from "@/lib/utils";
 
 export const AshrRunDriveHero = () => {
   return (
     <section
-      className="relative overflow-hidden pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20"
+      className="relative overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20"
       id="ashr-run-drive-hero"
     >
       {/* Large ASHR background text */}
-      <h1 className="font-mokoto text-[8rem] sm:text-[12rem] md:text-[16rem] lg:text-[25rem] text-gray-500/15 absolute top-[25%] md:top-[20%] left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 mask-b-to-80%">
+      <h1 className="font-mokoto pointer-events-none absolute top-[25%] left-1/2 z-0 -translate-x-1/2 mask-b-to-80% text-[8rem] text-gray-500/15 select-none sm:text-[12rem] md:top-[20%] md:text-[16rem] lg:text-[25rem]">
         ASHR
       </h1>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
         {/* Header Text */}
-        <div className="flex flex-col items-center text-center mb-8 sm:mb-10 md:mb-12">
-          <p className="text-xs sm:text-sm font-medium text-[#A9802C] tracking-wider mb-3 sm:mb-4 uppercase">
+        <div className="mb-8 flex flex-col items-center text-center sm:mb-10 md:mb-12">
+          <p className="mb-3 text-xs font-medium tracking-wider text-[#A9802C] uppercase sm:mb-4 sm:text-sm">
             Car dealership, sales of individual & fleet vehicles.
           </p>
-          <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
-            <span className="text-black/50 font-bold">ASHR RUN </span>
-            <span className="text-black/50 font-light font-kapital-stencil">
+          <h2 className="font-kapital mb-4 text-4xl leading-tight sm:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
+            <span className="text-main/90 font-bold">ASHR RUN </span>
+            <span className="font-kapital-stencil text-main/90 font-light">
               AND{" "}
             </span>
-            <span className="text-[#A9802C] font-bold">DRIVE</span>
+            <span className="font-bold text-[#A9802C]">DRIVE</span>
           </h2>
         </div>
 
         {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative w-full max-w-[900px] aspect-[16/9] mx-auto overflow-hidden">
+        <div className="relative mx-auto aspect-[16/9] w-full max-w-[900px] overflow-hidden">
           <Image
             src="/our-businesses/ashr-run-drive-hero.webp"
             alt="ASHR Run and Drive Hero"
             fill
             className="object-cover"
+            priority={true}
           />
         </div>
 
         {/* Description Text */}
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700 mb-4">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-poppins mb-4 text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
             A diversified company delivering quality solutions across
             automotive, interiors, ceramics, and industrial products.
           </p>
           {/* CTA */}
-          <div
-            className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center items-center h-full w-full
-  px-4 mb-8 sm:mb-10 md:mb-12"
-          >
+          <div className="mb-8 flex h-full w-full flex-col items-center justify-center gap-3 px-4 sm:mb-10 sm:gap-4 md:mb-12 md:flex-row">
             <Link
               href="/contact"
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 py-3 px-6
-    bg-[#A9802C] text-white border-2 hover:bg-[#A9802C]/60
-    text-xs sm:text-sm md:text-base font-medium transition-all duration-300
-    group rounded"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded border-2 bg-[#A9802C] px-6 py-3 text-xs font-medium text-white transition-all duration-300 hover:bg-[#A9802C]/60 sm:text-sm md:w-auto md:text-base"
             >
               GET IN TOUCH
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
 
-            <Link
-              href={"/#ashr-rundrive-offer"}
-              className="w-full md:w-auto inline-flex items-center justify-center text-center py-3 px-6
-    rounded-xl border-2 border-main/50 text-main/60 hover:bg-main/70 hover:border-none hover:text-white
-    text-xs sm:text-sm md:text-base font-medium transition-colors duration-300"
+            <button
+              onClick={() => scrollToSection("ashr-run-drive-offer")}
+              className="text-main/60 block w-full rounded-xl bg-[#F4F5F6] px-4 py-3 text-center text-sm font-medium transition-all duration-300 hover:text-[#A9802C] sm:w-auto sm:px-8 md:text-base"
             >
               EXPLORE OUR SERVICES
-            </Link>
+            </button>
           </div>{" "}
         </div>
       </div>

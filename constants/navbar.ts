@@ -24,7 +24,7 @@ export const BUSINESS_ITEMS: BusinessItem[] = [
     icon: TrendingUp,
   },
   {
-    title: "ASHR Design",
+    title: "ASHR Designs",
     href: "/businesses/ashr-designs",
     logo: "ashr-design-logo.png",
     icon: Palette,

@@ -84,7 +84,7 @@ export function Hero() {
 
           <button
             onClick={() => scrollToSection("home-businesses")}
-            className="border-main/50 text-main/60 hover:bg-main/90 block w-full rounded-xl border-2 px-4 py-2 text-center text-sm font-medium transition-all duration-300 hover:border-none hover:text-white sm:w-auto sm:px-8 md:text-base"
+            className="text-main/60 block w-full rounded-xl bg-[#F4F5F6] px-4 py-3 text-center text-sm font-medium transition-all duration-300 hover:text-[#A9802C] sm:w-auto sm:px-8 md:text-base"
           >
             EXPLORE MORE
           </button>
@@ -122,7 +122,7 @@ export function Hero() {
 
               <button
                 onClick={() => scrollToSection("home-businesses")}
-                className="border-main/50 text-main/60 hover:bg-main/90 block w-full rounded-xl border-2 px-4 py-2 text-center text-sm font-medium transition-all duration-300 hover:border-none hover:text-white sm:w-auto sm:px-8 md:text-base"
+                className="text-main/60 block w-full rounded-xl bg-[#F4F5F6] px-4 py-3 text-center text-sm font-medium transition-all duration-300 hover:text-[#A9802C] sm:w-auto sm:px-8 md:text-base"
               >
                 EXPLORE MORE
               </button>

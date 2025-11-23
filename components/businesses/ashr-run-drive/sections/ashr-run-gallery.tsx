@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { Marquee } from "@/components/ui/marquee";
+import Image from "next/image";
+import { useState } from "react";
 
 // Marquee Component
 
@@ -101,7 +99,7 @@ export const AshrRunDriveGallery = () => {
 
   const ImageCard = ({ image, columnIndex, imageIndex }: any) => (
     <div
-      className="relative overflow-hidden rounded-2xl group cursor-pointer transition-all duration-300"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl transition-all duration-300"
       style={{
         filter:
           hoveredImage === `${columnIndex}-${imageIndex}`
@@ -116,14 +114,14 @@ export const AshrRunDriveGallery = () => {
         alt={image.alt}
         width={image.width}
         height={image.height}
-        className="w-full h-auto rounded-2xl "
+        className="h-auto w-full rounded-2xl"
         loading="lazy"
       />
 
       {/* Overlay on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end p-6">
+      <div className="absolute inset-0 flex items-end rounded-2xl bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="text-white">
-          <h4 className="text-xl font-bold mb-1">{image.alt}</h4>
+          <h4 className="mb-1 text-xl font-bold">{image.alt}</h4>
           <p className="text-sm text-white/80">View Details →</p>
         </div>
       </div>
@@ -131,15 +129,21 @@ export const AshrRunDriveGallery = () => {
   );
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10 max-w-7xl mb-16">
+    <section
+      className="relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
+      id="ashr-run-drive-gallery"
+    >
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Header */}
-        <div className="flex flex-col space-y-6 mb-12 sm:mb-16">
-          <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white">
-            OUR <span style={{ color: "#C9A961" }}>INVENTORY</span>
+        <div className="mb-12 flex flex-col space-y-6 sm:mb-16">
+          <h2 className="font-kapital text-3xl leading-tight font-light text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            OUR{" "}
+            <span className="font-bold" style={{ color: "#C9A961" }}>
+              INVENTORY
+            </span>
           </h2>
 
-          <p className="max-w-4xl text-base sm:text-lg md:text-xl font-light leading-relaxed text-gray-300">
+          <p className="font-poppins max-w-5xl text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
             Explore our curated selection of premium vehicles. From luxury SUVs
             to executive sedans, every car in our showroom is verified,
             inspected, and ready for you.
@@ -148,7 +152,7 @@ export const AshrRunDriveGallery = () => {
       </div>
 
       {/* Mobile Gallery - 2 Columns */}
-      <div className="relative sm:hidden justify-center items-center mx-auto container w-full flex gap-3 overflow-hidden h-[600px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_5%,black_95%,transparent_100%)]">
+      <div className="relative container mx-auto flex h-[600px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_5%,black_95%,transparent_100%)] sm:hidden">
         {/* Column 1 */}
         <Marquee pauseOnHover vertical className="[--duration:25s]">
           {vehicleImages[0].map((image, idx) => (
@@ -175,7 +179,7 @@ export const AshrRunDriveGallery = () => {
       </div>
 
       {/* Tablet Gallery - 3 Columns */}
-      <div className="relative hidden sm:flex lg:hidden justify-center items-center mx-auto container w-full gap-4 overflow-hidden h-[800px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_4%,black_96%,transparent_100%)]">
+      <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_4%,black_96%,transparent_100%)] sm:flex lg:hidden">
         {/* Column 1 */}
         <Marquee pauseOnHover vertical className="[--duration:30s]">
           {vehicleImages[0].map((image, idx) => (
@@ -214,7 +218,7 @@ export const AshrRunDriveGallery = () => {
       </div>
 
       {/* Desktop Gallery - 4 Columns */}
-      <div className="relative hidden lg:flex justify-center items-center mx-auto container w-full gap-4 overflow-hidden h-[1000px] [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)]">
+      <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)] lg:flex">
         {/* Column 1 - Scrolling Down */}
         <Marquee pauseOnHover vertical className="[--duration:35s]">
           {vehicleImages[0].map((image, idx) => (
@@ -262,20 +266,6 @@ export const AshrRunDriveGallery = () => {
             />
           ))}
         </Marquee>
-      </div>
-
-      {/* Bottom CTA */}
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10 max-w-7xl mt-16">
-        <div className="text-center">
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-3 text-white uppercase text-sm sm:text-base font-semibold px-8 sm:px-10 py-4 sm:py-5 rounded-xl transition-all duration-300 shadow-xl"
-            style={{ backgroundColor: "#C9A961" }}
-          >
-            <span>View Full Inventory</span>
-            <ArrowUpRight className="size-4 sm:size-5" />
-          </Link>
-        </div>
       </div>
     </section>
   );

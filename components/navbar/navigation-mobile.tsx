@@ -55,7 +55,7 @@ export const MobileMenu = () => {
         <Button
           variant="outline"
           size="icon"
-          className="lg:hidden h-10 w-10 bg-white border-gray-200 hover:bg-gray-50"
+          className="h-10 w-10 border-gray-200 bg-white hover:bg-gray-50 lg:hidden"
         >
           <Menu className="h-5 w-5" />
           <span className="sr-only">Open menu</span>
@@ -64,10 +64,10 @@ export const MobileMenu = () => {
 
       <SheetContent
         side="right"
-        className="w-full max-w-sm bg-white p-0 font-poppins overflow-y-auto z-[250]"
+        className="font-poppins z-[250] w-full max-w-sm overflow-y-auto bg-white p-0"
       >
         <div className="p-6 pt-8">
-          <SheetHeader className="flex flex-row items-center justify-between mb-10">
+          <SheetHeader className="mb-10 flex flex-row items-center justify-between">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
           </SheetHeader>
 
@@ -76,7 +76,7 @@ export const MobileMenu = () => {
             <SheetClose asChild>
               <a
                 href="/about"
-                className="block px-5 py-4 rounded-xl hover:bg-gray-100 font-semibold text-lg transition-all duration-200 text-main/90"
+                className="text-main/90 block rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 hover:bg-gray-100"
               >
                 ABOUT US
               </a>
@@ -86,11 +86,11 @@ export const MobileMenu = () => {
             <div>
               <button
                 onClick={() => toggleSection("business")}
-                className="w-full flex items-center justify-between px-5 py-4 rounded-xl hover:bg-gray-100 font-semibold text-lg transition-all duration-200 text-main/90"
+                className="text-main/90 flex w-full items-center justify-between rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 hover:bg-gray-100"
               >
                 <span>OUR BUSINESSES</span>
                 <ChevronDown
-                  className={`w-6 h-6 transition-transform duration-500 ${
+                  className={`h-6 w-6 transition-transform duration-500 ${
                     expandedSection === "business" ? "rotate-180" : ""
                   }`}
                 />
@@ -105,7 +105,7 @@ export const MobileMenu = () => {
                     exit="closed"
                     className="overflow-hidden"
                   >
-                    <div className="pt-3 space-y-2 pl-6 border-l-2 border-[#C9A961]/30 ml-5">
+                    <div className="ml-5 space-y-2 border-l-2 border-[#C9A961]/30 pt-3 pl-6">
                       {BUSINESS_ITEMS.map((item, idx) => {
                         const IconComponent = item.icon;
                         return (
@@ -113,10 +113,10 @@ export const MobileMenu = () => {
                             <SheetClose asChild>
                               <a
                                 href={item.href}
-                                className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-[#C9A961]/5 transition-all duration-300 group"
+                                className="group flex items-center gap-4 rounded-xl px-5 py-4 transition-all duration-300 hover:bg-[#C9A961]/5"
                               >
                                 {IconComponent && (
-                                  <IconComponent className="w-6 h-6 text-[#C9A961] group-hover:scale-110 transition-transform" />
+                                  <IconComponent className="h-6 w-6 text-[#C9A961] transition-transform group-hover:scale-110" />
                                 )}
                                 <span className="font-medium text-gray-800">
                                   {item.title}
@@ -131,7 +131,7 @@ export const MobileMenu = () => {
                         <SheetClose asChild>
                           <a
                             href="/businesses"
-                            className="block text-center py-4 rounded-xl border-2 border-[#C9A961] text-[#C9A961] font-bold hover:bg-[#C9A961] hover:text-white transition-all duration-400 shadow-lg hover:shadow-[#C9A961]/30"
+                            className="block rounded-xl border-2 border-[#C9A961] py-4 text-center font-bold text-[#C9A961] shadow-lg transition-all duration-400 hover:bg-[#C9A961] hover:text-white hover:shadow-[#C9A961]/30"
                           >
                             ALL BUSINESSES
                           </a>
@@ -147,11 +147,11 @@ export const MobileMenu = () => {
             <div>
               <button
                 onClick={() => toggleSection("news")}
-                className="w-full flex items-center justify-between px-5 py-4 rounded-xl hover:bg-gray-100 font-semibold text-lg transition-all duration-200 text-main/90"
+                className="text-main/90 flex w-full items-center justify-between rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 hover:bg-gray-100"
               >
                 <span>NEWS & BLOGS</span>
                 <ChevronDown
-                  className={`w-6 h-6 transition-transform duration-500 ${
+                  className={`h-6 w-6 transition-transform duration-500 ${
                     expandedSection === "news" ? "rotate-180" : ""
                   }`}
                 />
@@ -166,14 +166,14 @@ export const MobileMenu = () => {
                     exit="closed"
                     className="overflow-hidden"
                   >
-                    <div className="pt-3 space-y-2 pl-6 border-l-2 border-[#C9A961]/30 ml-5">
+                    <div className="ml-5 space-y-2 border-l-2 border-[#C9A961]/30 pt-3 pl-6">
                       <motion.div variants={itemVariants}>
                         <SheetClose asChild>
                           <a
                             href="/news"
-                            className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-[#C9A961]/5 transition-all duration-300 group"
+                            className="group flex items-center gap-4 rounded-xl px-5 py-4 transition-all duration-300 hover:bg-[#C9A961]/5"
                           >
-                            <NewspaperIcon className="w-6 h-6 text-[#C9A961] group-hover:scale-110 transition-transform" />
+                            <NewspaperIcon className="h-6 w-6 text-[#C9A961] transition-transform group-hover:scale-110" />
                             <span className="font-medium text-gray-800">
                               News
                             </span>
@@ -185,9 +185,9 @@ export const MobileMenu = () => {
                         <SheetClose asChild>
                           <a
                             href="/blogs"
-                            className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-[#C9A961]/5 transition-all duration-300 group"
+                            className="group flex items-center gap-4 rounded-xl px-5 py-4 transition-all duration-300 hover:bg-[#C9A961]/5"
                           >
-                            <PencilIcon className="w-6 h-6 text-[#C9A961] group-hover:scale-110 transition-transform" />
+                            <PencilIcon className="h-6 w-6 text-[#C9A961] transition-transform group-hover:scale-110" />
                             <span className="font-medium text-gray-800">
                               Blogs
                             </span>
@@ -204,7 +204,7 @@ export const MobileMenu = () => {
             <SheetClose asChild>
               <a
                 href="/faq"
-                className="block px-5 py-4 rounded-xl hover:bg-gray-100 font-semibold text-lg transition-all duration-200 text-main/90"
+                className="text-main/90 block rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 hover:bg-gray-100"
               >
                 FAQ
               </a>
@@ -216,7 +216,7 @@ export const MobileMenu = () => {
                 <div className="px-4">
                   <GoldShineButton
                     href="/contact"
-                    className="w-full text-lg py-4"
+                    className="w-full py-4 text-lg"
                   >
                     CONTACT US
                   </GoldShineButton>

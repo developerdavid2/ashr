@@ -56,7 +56,7 @@ export const AboutLeadership = () => {
     <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28">
       {/* Large LEADERSHIP background text - Responsive */}
       <h1
-        className="font-mokoto pointer-events-none absolute top-0 left-1/2 z-0 -translate-x-1/2 text-[5rem] text-gray-500/15 select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem]"
+        className="font-mokoto pointer-events-none absolute top-0 left-1/2 z-0 -translate-x-1/2 text-[5rem] text-gray-500/15 select-none sm:text-[8rem] lg:text-[16rem]"
         style={{
           lineHeight: 1,
           whiteSpace: "nowrap",

@@ -8,11 +8,11 @@ import { AshrDesignsCTA } from "@/components/businesses/ashr-designs/sections/as
 
 const Page = () => {
   return (
-    <main className="min-h-screen font-poppins ">
+    <main className="font-poppins min-h-screen">
       <AshrDesignsHero />
       <AshrDesignsAbout logo="/logos/ashr-design-logo.png" />
-      <div className="bg-main min-h-[1500px] relative overflow-hidden">
-        <div className="absolute top-[0%] right-[40%] rotate-[30deg] w-32 h-[150%] bg-gradient-to-b from-neutral-200 via-white to-transparent blur-[100px] sm:blur-[170px] opacity-10 z-[50]"></div>
+      <div className="bg-main relative min-h-[1500px] overflow-hidden rounded-t-[2rem] lg:rounded-t-[5rem]">
+        <div className="absolute top-[0%] right-[40%] z-[50] h-[150%] w-32 rotate-[30deg] bg-gradient-to-b from-neutral-200 via-white to-transparent opacity-10 blur-[100px] sm:blur-[170px]"></div>
         <AshrDesignsOffer />
         <AshrDesignsGallery />
       </div>
