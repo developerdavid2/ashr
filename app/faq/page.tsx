@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { GoldShineButton } from "@/components/custom/gold-shine-button";
 
 // FAQ Data
 const faqs = [
@@ -46,7 +47,7 @@ const faqs = [
 // Gallery Images (horizontal masonry)
 const galleryImages = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  "https://images.unsplash.com/photo-1618221195710-ddb4537d2a66?w=800&q=80",
+  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
   "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80",
   "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=80",
   "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80",
@@ -61,7 +62,7 @@ export default function FAQPage() {
   return (
     <>
       {/* HERO - Same DNA as News/Blog */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <section className="font-poppins relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
         <h1
           className="font-mokoto pointer-events-none absolute top-[15%] left-1/2 z-0 -translate-x-1/2 text-[8rem] whitespace-nowrap text-gray-500/12 select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem]"
           style={{
@@ -74,18 +75,20 @@ export default function FAQPage() {
           FAQ
         </h1>
 
-        <div className="relative z-10 container mx-auto px-6 py-32 text-center lg:py-52">
+        <div className="relative z-10 container mx-auto px-6 py-32 pb-10 text-center lg:pt-52">
           <div className="mx-auto max-w-5xl">
             <span className="mb-8 inline-block rounded-full border border-[#A9802C]/30 bg-[#A9802C]/10 px-6 py-3 text-xs font-medium tracking-widest text-[#A9802C] uppercase backdrop-blur-xl">
               Answers to Your Questions
             </span>
-            <h2 className="font-kapital text-5xl leading-none sm:text-6xl md:text-7xl lg:text-8xl">
-              <span className="text-black/50">FREQUENTLY</span>{" "}
-              <span className="text-[#A9802C]">ASKED</span>
+            <h2 className="font-kapital mb-4 text-4xl leading-tight font-bold sm:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
+              <span className="text-main/80">FREQUENTLY</span>{" "}
+              <span className="font-kapital-stencil text-[#A9802C]">
+                ASKED{" "}
+              </span>
               <br className="hidden sm:block" />
-              <span className="text-black/50">QUESTIONS</span>
+              <span className="text-black/80">QUESTIONS</span>
             </h2>
-            <p className="mx-auto mt-8 max-w-3xl text-xl font-light text-gray-600">
+            <p className="font-poppins text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Everything you need to know about partnering with, purchasing
               from, or experiencing the ASHR standard of excellence.
             </p>
@@ -94,7 +97,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ ACCORDION - Core Values Inspired */}
-      <section className="bg-white py-20 lg:py-32">
+      <section className="overflow-hidden bg-white py-16 lg:py-32">
         <div className="container mx-auto max-w-5xl px-6 lg:px-8">
           <div className="space-y-0">
             {faqs.map((faq, index) => {
@@ -110,12 +113,12 @@ export default function FAQPage() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="w-full py-10 text-left transition-colors duration-500 group-hover:bg-gray-50/50 lg:py-14"
                   >
-                    <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+                    <div className="grid grid-cols-12 items-center gap-8">
                       {/* Icon */}
-                      <div className="flex justify-center lg:col-span-2">
+                      <div className="col-span-2 flex justify-center">
                         <div
                           className={cn(
-                            "h-16 w-16 rounded-full bg-gradient-to-br from-[#A9802C] to-[#C9A961] p-1 transition-transform duration-500",
+                            "size-6 rounded-full bg-gradient-to-br from-[#A9802C] to-[#C9A961] p-1 transition-transform duration-500 sm:size-10 lg:size-16",
                             isOpen && "scale-110",
                           )}
                         >
@@ -130,14 +133,14 @@ export default function FAQPage() {
                       </div>
 
                       {/* Question */}
-                      <div className="lg:col-span-8">
-                        <h3 className="font-kapital pr-10 text-2xl leading-tight text-black lg:text-4xl">
+                      <div className="col-span-8">
+                        <h3 className="font-kapital text-main/80 text-xl leading-tight sm:text-2xl lg:pr-10 lg:text-4xl">
                           {faq.question}
                         </h3>
                       </div>
 
                       {/* Right Arrow Indicator */}
-                      <div className="flex justify-end lg:col-span-2">
+                      <div className="hidden justify-end lg:col-span-2 lg:flex">
                         <ArrowRight
                           className={cn(
                             "h-8 w-8 text-[#A9802C] transition-transform duration-500",
@@ -155,8 +158,8 @@ export default function FAQPage() {
                       isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
                     )}
                   >
-                    <div className="px-0 pb-12 lg:px-28 lg:pb-16">
-                      <p className="text-lg leading-relaxed font-light text-gray-600">
+                    <div className="px-8 pb-12 lg:px-28 lg:pb-16">
+                      <p className="font-poppins text-base leading-relaxed font-light text-gray-600 sm:text-lg">
                         {faq.answer}
                       </p>
                     </div>
@@ -173,67 +176,87 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* HORIZONTAL MASONRY GALLERY */}
-      <section className="bg-gray-50 py-20 lg:py-28">
-        <div className="container mx-auto px-6">
-          <h2 className="font-kapital mb-16 text-center text-5xl lg:text-6xl">
-            Experience <span className="text-[#A9802C]">Excellence</span>
+      {/* HORIZONTAL MASONRY GALLERY - Now Mobile-Perfect */}
+      <section className="overflow-hidden bg-gray-50 py-16 lg:py-28">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-kapital text-main/80 mb-8 text-center text-3xl leading-tight font-light sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            Experience{" "}
+            <span className="font-bold text-[#A9802C]">Excellence</span>
           </h2>
 
-          <div className="relative">
-            <Marquee pauseOnHover className="[--duration:45s]">
-              {galleryImages.map((src, i) => (
-                <div
-                  key={i}
-                  className="group relative mx-4 h-96 w-80 overflow-hidden rounded-3xl shadow-2xl"
-                >
-                  <Image
-                    src={src}
-                    alt="ASHR Project"
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          {/* First Row - Forward */}
+          <Marquee
+            pauseOnHover
+            className="[--duration:40s] [--gap:0.5rem] md:[--gap:1rem]"
+          >
+            {galleryImages.map((src, i) => (
+              <div
+                key={i}
+                className="group hover:shadow-3xl relative mx-2 h-64 w-64 overflow-hidden rounded-xl shadow-2xl transition-all duration-500 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
+              >
+                <Image
+                  src={src}
+                  alt="ASHR Excellence"
+                  fill
+                  className="object-cover transition-transform duration-1000"
+                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 33vw"
+                />
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <p className="text-lg font-medium text-white">
+                    ASHR Project {i + 1}
+                  </p>
                 </div>
-              ))}
-            </Marquee>
+              </div>
+            ))}
+          </Marquee>
 
-            <Marquee pauseOnHover reverse className="mt-8 [--duration:50s]">
-              {[...galleryImages].reverse().map((src, i) => (
-                <div
-                  key={i}
-                  className="group relative mx-4 h-80 w-96 overflow-hidden rounded-3xl shadow-2xl"
-                >
-                  <Image
-                    src={src}
-                    alt="ASHR Project"
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                </div>
-              ))}
-            </Marquee>
-          </div>
+          {/* Second Row - Reverse */}
+          <Marquee
+            pauseOnHover
+            reverse
+            className="mt-3 [--duration:40s] [--gap:0.5rem] md:[--gap:1rem]"
+          >
+            {[...galleryImages].reverse().map((src, i) => (
+              <div
+                key={i}
+                className="group hover:shadow-3xl relative mx-2 h-56 w-72 overflow-hidden rounded-xl shadow-2xl transition-all duration-500 sm:h-64 sm:w-80 md:h-80 md:w-96 lg:h-96 lg:w-[28rem]"
+              >
+                <Image
+                  src={src}
+                  alt="ASHR Excellence"
+                  fill
+                  className="object-cover transition-transform duration-1000"
+                  sizes="(max-width: 640px) 75vw, (max-width: 1024px) 45vw, 35vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </div>
+            ))}
+          </Marquee>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-black py-24 text-white lg:py-32">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="font-kapital mb-8 text-6xl leading-none lg:text-8xl">
-            STILL HAVE <span className="text-[#C9A961]">QUESTIONS?</span>
+      <section className="bg-main py-24 text-white lg:py-32">
+        <div className="relative z-10 container mx-auto max-w-screen-xl px-4 text-center sm:px-6 md:max-w-3xl lg:max-w-7xl">
+          <h2 className="font-kapital text-3xl leading-tight font-light text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            STILL HAVE{" "}
+            <span className="font-bold text-[#C9A961]">QUESTIONS?</span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-xl text-gray-300">
+          <p className="font-poppins mx-auto mt-4 mb-8 max-w-5xl text-center text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
             Our team is ready to provide personalized answers and guide you
             toward the perfect solution.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-4 rounded-xl bg-[#A9802C] px-10 py-5 font-semibold tracking-wider uppercase shadow-2xl transition-all duration-300 hover:bg-[#8a6a22] hover:shadow-[#C9A961]/30"
-          >
-            Get in Touch
-            <ArrowRight className="h-6 w-6" />
-          </Link>
+
+          <div className="font-poppins mb-8 flex w-full max-w-md flex-col justify-center gap-3 px-4 sm:mb-10 sm:max-w-none sm:gap-4 md:mb-12 md:flex-row">
+            <GoldShineButton
+              href="/contact"
+              className={cn(
+                "flex w-full flex-col items-center justify-center px-6 py-3 !text-sm sm:w-auto sm:px-8 sm:!text-base md:!text-[1rem]",
+              )}
+            >
+              GET IN TOUCH
+            </GoldShineButton>
+          </div>
         </div>
       </section>
     </>
