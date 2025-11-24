@@ -77,16 +77,18 @@ export function FeaturedNewsCarousel() {
   }, [api]);
 
   return (
-    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-main font-poppins">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+    <section className="bg-main font-poppins relative overflow-hidden py-16 md:py-24 lg:py-32">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-20">
           {/* Left: Heading */}
-          <div className="flex flex-col lg:col-span-4 justify-center lg:sticky lg:top-24 h-fit">
-            <h2 className="font-kapital font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-none text-white mb-4">
+          <div className="flex h-fit flex-col justify-center lg:sticky lg:top-24 lg:col-span-4">
+            <h2 className="font-kapital mb-4 text-3xl leading-none font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
               FEATURED{" "}
-              <span className="text-[#C9A961] block mt-2">UPDATES</span>
+              <span className="mt-2 block font-bold text-[#C9A961]">
+                UPDATES
+              </span>
             </h2>
-            <p className="max-w-5xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light leading-relaxed font-poppins text-gray-200">
+            <p className="font-poppins max-w-5xl text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
               Stay ahead with the latest breakthroughs, launches, and milestones
               from across the ASHR Group ecosystem.
             </p>
@@ -107,20 +109,20 @@ export function FeaturedNewsCarousel() {
                 {featuredItems.map((item, index) => (
                   <CarouselItem
                     key={index}
-                    className="pl-6 basis-full sm:basis-1/2 lg:basis-1/2"
+                    className="basis-full pl-6 sm:basis-1/2 lg:basis-1/2"
                   >
                     <Link
                       href={`/news/${item.slug}`}
-                      className="block group h-full"
+                      className="group block h-full"
                     >
-                      <div className="relative h-full min-h-72 lg:min-h-[520px] bg-neutral-800/60 rounded-xl overflow-hidden drop-shadow-3xl transition-all duration-500 hover:drop-shadow-3xl hover:bg-neutral-700/70">
+                      <div className="drop-shadow-3xl hover:drop-shadow-3xl relative h-full min-h-72 overflow-hidden rounded-xl bg-neutral-800/60 transition-all duration-500 hover:bg-neutral-700/70 lg:min-h-[520px]">
                         {/* Content */}
-                        <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-center h-full">
-                          <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-widest uppercase bg-[#C9A961]/20 text-gold rounded-full mb-4 w-fit">
+                        <div className="absolute inset-0 flex h-full flex-col justify-center p-8 lg:p-10">
+                          <span className="text-gold mb-4 inline-block w-fit rounded-full bg-[#C9A961]/20 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase">
                             {item.category}
                           </span>
 
-                          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-white transition-colors line-clamp-2">
+                          <h3 className="mb-4 line-clamp-2 text-xl font-bold text-white transition-colors group-hover:text-white md:text-2xl">
                             <span
                               className="[--u:0%] group-hover:[--u:100%]"
                               style={{
@@ -137,21 +139,21 @@ export function FeaturedNewsCarousel() {
                             </span>
                           </h3>
 
-                          <p className="max-w-5xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-gray-200">
+                          <p className="max-w-5xl text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg">
                             {item.description}
                           </p>
 
                           {/* CTA */}
-                          <div className="md:mt-10 flex items-center gap-3 text-white font-medium opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-500">
-                            <span className="text-sm uppercase tracking-widest">
+                          <div className="flex translate-y-6 items-center gap-3 font-medium text-white opacity-0 transition-all duration-500 group-hover:translate-y-3 group-hover:opacity-100 md:mt-10 lg:group-hover:translate-y-0">
+                            <span className="text-sm tracking-widest uppercase">
                               Read Story
                             </span>
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-3 transition-transform duration-300" />
+                            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-3" />
                           </div>
 
                           {/* Floating + */}
-                          <div className="absolute top-8 right-8 w-14 h-14 bg-[#C9A961] backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/10">
-                            <Plus className="w-7 h-7 text-white" />
+                          <div className="absolute top-8 right-8 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[#C9A961] opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100">
+                            <Plus className="h-7 w-7 text-white" />
                           </div>
                         </div>
                       </div>
@@ -163,7 +165,7 @@ export function FeaturedNewsCarousel() {
 
             {/* Dynamic Dots */}
             {count > 0 && (
-              <div className="flex justify-center gap-3 mt-10">
+              <div className="mt-10 flex justify-center gap-3">
                 {Array.from({ length: count }).map((_, index) => (
                   <button
                     key={index}

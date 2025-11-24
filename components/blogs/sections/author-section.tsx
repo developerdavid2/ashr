@@ -26,20 +26,20 @@ const authors = [
 
 export default function AuthorSection() {
   return (
-    <section className="py-24 bg-main text-white font-poppins">
+    <section className="bg-main font-poppins py-16 text-white md:py-24">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="font-kapital font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-neutral-200">
+        <h2 className="font-kapital text-3xl leading-tight font-bold text-neutral-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           Meet Our Voices
         </h2>
-        <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto mb-8">
+        <p className="font-poppins mx-auto mt-4 mb-8 max-w-5xl text-center text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
           Thought leaders shaping luxury, innovation, and sustainability across
           Africa.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           {authors.map((a) => (
             <div key={a.name} className="group cursor-pointer">
-              <div className="relative size-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/10 group-hover:border-[#C9A961] transition-colors">
+              <div className="relative mx-auto mb-6 size-20 overflow-hidden rounded-full border-4 border-white/10 transition-colors group-hover:border-[#C9A961] lg:size-32">
                 <Image
                   src={a.avatar}
                   alt={a.name}
@@ -47,8 +47,8 @@ export default function AuthorSection() {
                   className="object-cover"
                 />
               </div>
-              <h4 className="font-semibold text-lg">{a.name}</h4>
-              <p className="text-gray-400 text-sm">{a.role}</p>
+              <h4 className="text-sm font-semibold md:text-lg">{a.name}</h4>
+              <p className="text-xs text-gray-400 md:text-sm">{a.role}</p>
             </div>
           ))}
         </div>

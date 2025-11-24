@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { ArrowUpRight, Settings, Shield, Truck, Weight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,25 +8,19 @@ export const SimtexOffer = () => {
   return (
     <section
       id="simtex-offer"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28"
     >
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10 max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Header Content */}
-        <div className="flex flex-col space-y-4 sm:space-y-6 mb-8 sm:mb-10 lg:mb-12">
-          <div className="inline-block w-fit">
-            <div
-              className="w-12 h-12 rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "#C9A961" }}
-            >
-              <Shield className="w-6 h-6 text-white" strokeWidth={2} />
-            </div>
-          </div>
-
-          <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white">
-            WHAT WE <span style={{ color: "#C9A961" }}>OFFER</span>
+        <div className="mb-8 flex flex-col space-y-4 sm:mb-10 sm:space-y-6 lg:mb-12">
+          <h2 className="font-kapital text-4xl leading-tight font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            OUR{" "}
+            <span className="font-bold" style={{ color: "#C9A961" }}>
+              SERVICES
+            </span>
           </h2>
 
-          <p className="max-w-5xl text-base sm:text-lg md:text-xl font-light leading-relaxed text-gray-300">
+          <p className="font-poppins max-w-5xl text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
             Premium Fiber Reinforced Plastic (FRP) manhole and gully covers
             engineered for durability, safety, and long-term performance. From
             residential estates to heavy industrial applications, we deliver
@@ -36,42 +29,42 @@ export const SimtexOffer = () => {
         </div>
 
         {/* Bento Grid - 5 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12 lg:gap-6">
           {/* Card 1: FRP Manhole Covers - Large Image Card */}
-          <div className="md:col-span-2 lg:col-span-7 lg:row-span-2 group relative overflow-hidden rounded-xl h-[450px] sm:h-[500px] md:h-[550px] lg:h-[620px]">
-            <div className="relative w-full h-full">
+          <div className="group relative h-[450px] overflow-hidden rounded-xl sm:h-[500px] md:col-span-2 md:h-[550px] lg:col-span-7 lg:row-span-2 lg:h-[620px]">
+            <div className="relative h-full w-full">
               <Image
                 src="/businesses/simtex-1.jpeg"
                 alt="FRP Manhole Cover Installation"
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                 sizes="(max-width:768px) 100vw, (max-width:1024px) 100vw, 60vw"
                 loading="lazy"
               />
             </div>
 
             {/* Bottom Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 backdrop-blur-xl bg-white/10 border-t border-white/20">
-              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="absolute right-0 bottom-0 left-0 border-t border-white/20 bg-white/10 p-6 backdrop-blur-xl sm:p-8">
+              <div className="mb-4 flex items-center gap-3 sm:mb-6 sm:gap-4">
                 <div
-                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center backdrop-blur-md bg-white/10 border border-white/20"
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md sm:h-14 sm:w-14"
                   style={{ backgroundColor: "#C9A961" }}
                 >
                   <Shield
-                    className="w-6 h-6 sm:w-7 sm:h-7 text-white"
+                    className="h-6 w-6 text-white sm:h-7 sm:w-7"
                     strokeWidth={2}
                   />
                 </div>
-                <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold bg-white/10 backdrop-blur-md border border-white/20 text-white">
+                <div className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md sm:px-4 sm:py-2">
                   A15 to E600 Rated
                 </div>
               </div>
 
-              <h3 className="font-kapital text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+              <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
                 FRP MANHOLE COVERS
               </h3>
 
-              <p className="text-white/90 text-sm sm:text-base leading-relaxed max-w-xl">
+              <p className="max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
                 Heavy-duty covers for underground utility access. From
                 pedestrian areas to highways, we have the right load rating for
                 your application.
@@ -80,126 +73,125 @@ export const SimtexOffer = () => {
           </div>
 
           {/* Card 2: Load Ratings - Stats Card */}
-          <div className="lg:col-span-5 relative overflow-hidden rounded-xl p-6 sm:p-8 min-h-[280px] md:h-[300px] flex flex-col justify-center bg-neutral-800">
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+          <div className="relative flex min-h-[280px] flex-col justify-center overflow-hidden rounded-xl bg-neutral-800 p-6 sm:p-8 md:h-[300px] lg:col-span-5">
+            <div className="mb-4 flex items-center gap-3 sm:mb-6">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
+                className="flex h-12 w-12 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#C9A961" }}
               >
-                <Weight className="w-6 h-6 text-white" strokeWidth={2} />
+                <Weight className="h-6 w-6 text-white" strokeWidth={2} />
               </div>
             </div>
 
-            <h3 className="font-kapital text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+            <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
               A15 → E600
             </h3>
 
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-sm leading-relaxed text-gray-300 sm:text-base">
               Complete load rating range from pedestrian areas to heavy
               industrial zones.
             </p>
           </div>
 
           {/* Card 3: Theft-Proof Technology - Black Stat Card */}
-          <div className="lg:col-span-5 relative overflow-hidden rounded-xl p-6 sm:p-8 min-h-[280px] md:h-[300px] flex flex-col justify-center bg-black">
-            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="relative flex min-h-[280px] flex-col justify-center overflow-hidden rounded-xl bg-black p-6 sm:p-8 md:h-[300px] lg:col-span-5">
+            <div className="mb-4 flex items-center gap-3 sm:mb-6 sm:gap-4">
               <div
-                className="text-5xl sm:text-6xl md:text-7xl font-bold"
+                className="text-5xl font-bold sm:text-6xl md:text-7xl"
                 style={{ color: "#C9A961" }}
               >
                 0%
               </div>
             </div>
 
-            <h3 className="font-kapital text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">
+            <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
               THEFT RATE
             </h3>
 
-            <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
+            <p className="text-xs leading-relaxed text-gray-300 sm:text-sm">
               No scrap metal value means zero theft motivation. 10,000+
               installations with zero theft incidents.
             </p>
           </div>
 
           {/* Card 4: Gully Trap Covers - Image Card */}
-          <div className="lg:col-span-4 group relative overflow-hidden rounded-xl row-start-3 row-end-4">
-            <div className="relative w-full h-full">
+          <div className="group relative row-start-3 row-end-4 min-h-[500px] overflow-hidden rounded-xl lg:col-span-4">
+            <div className="relative h-full w-full">
               <Image
                 src="/businesses/simtex-4.jpeg"
                 alt="Gully Trap Covers"
                 fill
-                className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="object-cover object-top grayscale transition-all duration-700 group-hover:grayscale-0"
                 sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 35vw"
                 loading="lazy"
               />
             </div>
 
             {/* Bottom Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 backdrop-blur-xl bg-black/30 border-t border-white/20">
+            <div className="absolute right-0 bottom-0 left-0 border-t border-white/20 bg-black/30 p-6 backdrop-blur-xl sm:p-8">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-3 sm:mb-4"
+                className="mb-3 flex h-12 w-12 items-center justify-center rounded-full sm:mb-4"
                 style={{ backgroundColor: "#C9A961" }}
               >
-                <Truck className="w-6 h-6 text-white" strokeWidth={2} />
+                <Truck className="h-6 w-6 text-white" strokeWidth={2} />
               </div>
 
-              <h3 className="font-kapital text-2xl sm:text-3xl font-bold text-white mb-2">
+              <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
                 GULLY TRAP
                 <br />
                 COVERS
               </h3>
 
-              <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
+              <p className="text-xs leading-relaxed text-white/80 sm:text-sm">
                 Durable drainage access covers for streets and compounds.
               </p>
             </div>
           </div>
 
           {/* Card 5: Custom Solutions & Installation - Content Card */}
-          <div className="lg:col-span-8 relative overflow-hidden rounded-xl p-6 sm:p-8 md:p-10 min-h-[400px] md:h-[600px] lg:h-[500px] flex flex-col justify-center bg-neutral-800">
-            <div className="flex flex-wrap items-center gap-3 mb-4 sm:mb-6">
+          <div className="relative flex min-h-[400px] flex-col justify-center overflow-hidden rounded-xl bg-neutral-800 p-6 sm:p-8 md:h-[600px] md:p-10 lg:col-span-8 lg:h-[500px]">
+            <div className="mb-4 flex flex-wrap items-center gap-3 sm:mb-6">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
+                className="flex h-12 w-12 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#C9A961" }}
               >
-                <Settings className="w-6 h-6 text-white" strokeWidth={2} />
+                <Settings className="h-6 w-6 text-white" strokeWidth={2} />
               </div>
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold border border-[#C9A961] bg-amber-600/10 text-[#C9A961]">
+              <div className="inline-block rounded-full border border-[#C9A961] bg-amber-600/10 px-3 py-1.5 text-xs font-semibold text-[#C9A961] sm:px-4 sm:py-2">
                 Custom Manufacturing
               </div>
             </div>
 
-            <h3 className="font-kapital text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
               CUSTOM SOLUTIONS & INSTALLATION SERVICES
             </h3>
 
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mb-6">
-              Need non-standard sizes or special requirements? We manufacture
-              custom dimensions, specific load ratings, and provide professional
-              installation by certified technicians.
+            <p className="mb-6 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base">
+              We manufacture custom dimensions, specific load ratings, and
+              provide professional installation by certified technicians.
             </p>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              <div className="text-center p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-center sm:p-4">
+                <div className="mb-1 text-xl font-bold text-white lg:text-2xl">
                   Custom
                 </div>
                 <div className="text-xs text-gray-400">Dimensions</div>
               </div>
-              <div className="text-center p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-center sm:p-4">
+                <div className="mb-1 text-xl font-bold text-white lg:text-2xl">
                   Logo
                 </div>
                 <div className="text-xs text-gray-400">Embossing</div>
               </div>
-              <div className="text-center p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-center sm:p-4">
+                <div className="mb-1 text-xl font-bold text-white lg:text-2xl">
                   Colour
                 </div>
                 <div className="text-xs text-gray-400">Options</div>
               </div>
-              <div className="text-center p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-center sm:p-4">
+                <div className="mb-1 text-xl font-bold text-white lg:text-2xl">
                   Pro
                 </div>
                 <div className="text-xs text-gray-400">Installation</div>
@@ -209,16 +201,13 @@ export const SimtexOffer = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 flex flex-col sm:flex-row items-center gap-4">
+        <div className="mt-10 lg:mt-20">
           <Link
             href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 sm:py-5 px-8 sm:px-10 border-2 text-sm font-semibold transition-all duration-300 group rounded-xl hover:bg-[#C9A961] hover:text-white text-gray-300"
-            style={{
-              borderColor: "#C9A961",
-            }}
+            className="group inline-flex items-center rounded border-2 border-[#C9A961] px-5 py-3 text-xs font-medium text-[#C9A961] transition-all duration-300 hover:bg-[#C9A961] hover:text-white sm:px-6 sm:py-4 sm:text-sm"
           >
-            REQUEST PROJECT QUOTE
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            REQUEST PROJECT QUOTA
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
       </div>

@@ -106,7 +106,7 @@ export function AshrDesignsNews() {
                 NEWS
               </span>
             </h2>
-            <p className="max-w-2xl text-lg text-gray-600">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Explore updates on new collections, showroom expansions, and the
               latest happenings at ASHR Designs.
             </p>
@@ -147,7 +147,7 @@ export function AshrDesignsBlogs() {
                 INSIGHTS
               </span>
             </h2>
-            <p className="max-w-2xl text-lg text-gray-600">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Expert interior design guides, styling tips, and modern living
               inspiration for your home.
             </p>

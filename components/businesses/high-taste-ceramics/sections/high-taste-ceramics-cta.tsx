@@ -5,10 +5,10 @@ export function HighTasteCeramicsCta() {
     <CTASection
       title={
         <>
-          <span className="text-gray-400 font-light">READY TO</span>{" "}
-          <span className="text-[#A9802C]">LIGHT</span>
-          <br className="hidden sm:block" />
-          <span className="text-gray-400 font-light">UP</span>{" "}
+          <span className="font-light text-gray-400">READY TO</span>{" "}
+          <span className="text-[#A9802C]">LIGHT </span>
+          <br />
+          <span className="font-light text-gray-400">UP</span>{" "}
           <span className="text-[#A9802C]">YOUR SPACE</span>
         </>
       }

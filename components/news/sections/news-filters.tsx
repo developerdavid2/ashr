@@ -11,6 +11,8 @@ const categories = [
   "Industrial",
   "Ceramics",
   "Interiors",
+  "Strategy & Growth",
+  "Events",
 ] as const;
 
 type Props = {
@@ -27,7 +29,7 @@ export default function NewsFilters({
   onSearchChange,
 }: Props) {
   return (
-    <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-12 font-poppins">
+    <div className="font-poppins mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">
       {/* Category Pills */}
       <div className="flex flex-wrap gap-3">
         {categories.map((cat) => (
@@ -37,8 +39,8 @@ export default function NewsFilters({
             size="sm"
             className={
               activeCategory === cat
-                ? "bg-[#A9802C] hover:bg-[#8a6a22] text-white border-[#A9802C] rounded-xl"
-                : "border-gray-300 hover:bg-gray-100 rounded-xl"
+                ? "rounded-xl border-[#A9802C] bg-[#A9802C] text-white hover:bg-[#8a6a22]"
+                : "rounded-xl border-gray-300 hover:bg-gray-100"
             }
             onClick={() => onCategoryChange(cat)}
           >
@@ -49,19 +51,19 @@ export default function NewsFilters({
 
       {/* Search */}
       <div className="relative w-full md:w-96">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+        <Search className="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400" />
         <Input
           placeholder="Search news & updates..."
-          className="pl-10 pr-10 bg-white border-gray-200 rounded-xl overflow-hidden"
+          className="overflow-hidden rounded-xl border-gray-200 bg-white pr-10 pl-10"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
         />
         {searchQuery && (
           <button
             onClick={() => onSearchChange("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
           >
-            <X className="w-4 h-4" />
+            <X className="h-4 w-4" />
           </button>
         )}
       </div>

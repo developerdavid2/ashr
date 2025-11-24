@@ -22,7 +22,7 @@ export const HighTasteCeramicsHero = () => {
             Luxury Living Redefined
           </p>
           <h2 className="font-kapital mb-4 text-4xl leading-tight sm:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
-            <span className="text-main/90 font-bold">HIGH TASTE </span>{" "}
+            <span className="text-main/80 font-bold">HIGH TASTE </span>{" "}
             <span className="font-bold text-[#A9802C]">CERAMICS</span>
           </h2>
         </div>

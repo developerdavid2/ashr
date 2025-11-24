@@ -92,13 +92,16 @@ const blogItems: BlogItem[] = [
 export function SimtexNews() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 sm:mb-16">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+        <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:mb-16 sm:flex-row sm:items-center">
           <div>
-            <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-black/50 mb-4">
-              LATEST <span style={{ color: "#A9802C" }}>NEWS</span>
+            <h2 className="font-kapital text-main/50 mb-4 text-4xl leading-tight font-light sm:text-5xl md:text-6xl lg:text-7xl">
+              LATEST{" "}
+              <span className="font-bold" style={{ color: "#A9802C" }}>
+                NEWS
+              </span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Stay updated with the latest projects, partnerships, and product
               innovations from Simtex Manhole Cover.
             </p>
@@ -106,14 +109,14 @@ export function SimtexNews() {
 
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 py-3 px-5 sm:py-4 sm:px-6 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
+            className="group inline-flex items-center gap-2 rounded border-2 border-[#A9802C] px-5 py-3 text-xs font-medium text-[#A9802C] transition-all duration-300 hover:bg-[#A9802C] hover:text-white sm:px-6 sm:py-4 sm:text-sm"
           >
             VIEW ALL UPDATES
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((item) => (
             <NewsCard key={item.id} item={item} />
           ))}
@@ -127,13 +130,16 @@ export function SimtexNews() {
 export function SimtexBlogs() {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 sm:mb-16">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:mb-16 sm:flex-row sm:items-center">
           <div>
-            <h2 className="font-kapital font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-black/50 mb-4">
-              INDUSTRY <span style={{ color: "#A9802C" }}>INSIGHTS</span>
+            <h2 className="font-kapital text-main/50 mb-4 text-4xl leading-tight font-light sm:text-5xl md:text-6xl lg:text-7xl">
+              INDUSTRY{" "}
+              <span className="font-bold" style={{ color: "#A9802C" }}>
+                INSIGHTS
+              </span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Expert technical guides, infrastructure insights, and FRP
               technology innovations for modern urban development.
             </p>
@@ -141,10 +147,10 @@ export function SimtexBlogs() {
 
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 py-3 px-5 sm:py-4 sm:px-6 text-[#A9802C] border-2 border-[#A9802C] hover:text-white hover:bg-[#A9802C] text-xs sm:text-sm font-medium transition-all duration-300 group rounded"
+            className="group inline-flex items-center gap-2 rounded border-2 border-[#A9802C] px-5 py-3 text-xs font-medium text-[#A9802C] transition-all duration-300 hover:bg-[#A9802C] hover:text-white sm:px-6 sm:py-4 sm:text-sm"
           >
             EXPLORE MORE BLOGS
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
 

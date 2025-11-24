@@ -95,10 +95,13 @@ export function HighTasteCeramicsNews() {
       <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:mb-16 lg:flex-row lg:items-center">
           <div>
-            <h2 className="font-kapital mb-4 text-4xl leading-tight font-bold text-black/50 sm:text-5xl md:text-6xl lg:text-7xl">
-              LATEST <span style={{ color: "#A9802C" }}>NEWS</span>
+            <h2 className="font-kapital text-main/50 mb-4 text-4xl leading-tight font-light sm:text-5xl md:text-6xl lg:text-7xl">
+              LATEST{" "}
+              <span className="font-bold" style={{ color: "#A9802C" }}>
+                NEWS
+              </span>
             </h2>
-            <p className="max-w-2xl text-lg text-gray-600">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Stay updated with new arrivals, showroom updates, and the latest
               luxury tile collections at High Taste Ceramics.
             </p>
@@ -130,10 +133,13 @@ export function HighTasteCeramicsBlogs() {
       <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:mb-16 lg:flex-row lg:items-center">
           <div>
-            <h2 className="font-kapital mb-4 text-4xl leading-tight font-bold text-black/50 sm:text-5xl md:text-6xl lg:text-7xl">
-              CERAMICS <span style={{ color: "#A9802C" }}>INSIGHTS</span>
+            <h2 className="font-kapital text-main/50 mb-4 text-4xl leading-tight font-light sm:text-5xl md:text-6xl lg:text-7xl">
+              CERAMICS{" "}
+              <span className="font-bold" style={{ color: "#A9802C" }}>
+                INSIGHTS
+              </span>
             </h2>
-            <p className="max-w-2xl text-lg text-gray-600">
+            <p className="font-poppins max-w-2xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Expert guides on tile selection, bathroom design inspiration, and
               luxury ceramic trends for modern homes.
             </p>

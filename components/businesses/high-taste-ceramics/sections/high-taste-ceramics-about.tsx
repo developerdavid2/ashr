@@ -95,7 +95,7 @@ export function HighTasteCeramicsAbout({ logo }: HighTasteCeramicsAboutProps) {
 
           {/* Stat 4 - Highlighted with Gold */}
           <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
-            <h3 className="font-kapital text-4xl font-bold text-[#A9802C] sm:text-4xl lg:text-5xl xl:text-6xl">
+            <h3 className="font-kapital text-3xl font-bold text-[#A9802C] sm:text-4xl lg:text-5xl xl:text-6xl">
               3
             </h3>
             <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">

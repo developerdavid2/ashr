@@ -5,10 +5,10 @@ export function SimtexCTA() {
     <CTASection
       title={
         <>
-          <span className="text-gray-400 font-light">READY TO</span>{" "}
-          <span className="text-[#A9802C]">UPGRADE</span>
-          <br className="hidden sm:block" />
-          <span className="text-gray-400 font-light">YOUR</span>{" "}
+          <span className="text-main/50 font-light">READY TO</span>{" "}
+          <span className="text-[#A9802C]">UPGRADE </span>
+          <br />
+          <span className="text-main/50 font-light">YOUR</span>{" "}
           <span className="text-[#A9802C]">INFRASTRUCTURE</span>
         </>
       }

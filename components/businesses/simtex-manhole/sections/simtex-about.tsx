@@ -11,32 +11,32 @@ export function SimtexAbout({ logo }: AshrRunDriveAboutProps) {
   return (
     <section
       id="ashr-run-drive-about"
-      className="relative py-20 sm:py-28 md:py-36 lg:py-44 overflow-hidden"
+      className="relative overflow-hidden py-20 sm:py-28 md:py-36 lg:py-44"
     >
-      <div className="container px-4 sm:px-6 mx-auto relative z-10 max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Decorative Glow Element */}
-        <div className="size-12 sm:size-16 md:size-20 rounded-full bg-gradient-to-br from-white to-zinc-900/15 absolute -top-6 sm:-top-8 md:-top-10 right-[10%] select-none z-0" />
+        <div className="absolute -top-6 right-[10%] z-0 size-12 rounded-full bg-gradient-to-br from-white to-zinc-900/15 select-none sm:-top-8 sm:size-16 md:-top-10 md:size-20" />
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-start relative z-10">
+        <div className="relative z-10 grid items-start gap-8 sm:gap-12 md:gap-16 lg:grid-cols-2 lg:gap-20">
           {/* LEFT COLUMN */}
           <div className="space-y-6">
             <div className="flex flex-col text-justify">
-              <p className="text-xs sm:text-sm font-medium text-[#A9802C] tracking-wider uppercase mb-3 sm:mb-4">
+              <p className="mb-3 text-xs font-medium tracking-wider text-[#A9802C] uppercase sm:mb-4 sm:text-sm">
                 ABOUT SIMTEX MANHOLE COVER
               </p>
 
-              <h2 className="font-kapital text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight ">
-                <span className="text-gray-400 font-light">BUILT TO LAST</span>
+              <h2 className="font-kapital text-3xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                <span className="text-main/50 font-light">BUILT TO LAST.</span>
                 <br />
-                <span className="text-[#A9802C] font-bold">ENGINEERED</span>
+                <span className="font-bold text-[#A9802C]">ENGINEERED</span>
                 <br />
-                <span className="text-[#A9802C] font-bold">FOR SAFETY</span>
+                <span className="font-bold text-[#A9802C]">FOR SAFETY</span>
               </h2>
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <p className="text-base sm:text-lg font-light leading-relaxed font-poppins text-gray-700">
+              <p className="font-poppins text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
                 Simtex Manhole Cover is Nigeria's leading manufacturer of Fiber
                 Reinforced Plastic (FRP) manhole covers and gully trap covers.
                 Our products combine advanced composite materials with
@@ -49,7 +49,7 @@ export function SimtexAbout({ logo }: AshrRunDriveAboutProps) {
           {/* RIGHT COLUMN */}
           <div className="space-y-6 sm:space-y-8">
             {/* LOGO CONTAINER */}
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] bg-gray-200/50 border border-white/70 backdrop-blur-md rounded-xl shadow-lg flex items-center justify-center">
+            <div className="relative flex h-[300px] w-full items-center justify-center rounded-xl border border-white/70 bg-gray-200/50 shadow-lg backdrop-blur-md sm:h-[400px] md:h-[450px] lg:h-[500px]">
               <Image
                 src={logo}
                 alt="ASHR Designs Logo"
@@ -62,43 +62,43 @@ export function SimtexAbout({ logo }: AshrRunDriveAboutProps) {
         </div>
 
         {/* Stats Grid - Properly Aligned and Responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 pt-10">
+        <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-10">
           {/* Stat 1 */}
-          <div className="flex flex-col gap-y-3 sm:gap-y-4 justify-center items-center text-center ">
-            <h3 className="font-kapital font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-black/50">
+          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
+            <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
               10,000+
             </h3>
-            <p className="text-sm sm:text-base font-poppins font-light text-neutral-400 uppercase tracking-wide">
+            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
               COVERS INSTALLED
             </p>
           </div>
 
           {/* Stat 2 */}
-          <div className="flex flex-col gap-y-3 sm:gap-y-4 justify-center items-center text-center ">
-            <h3 className="font-kapital font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-black/50">
+          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
+            <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
               100+
             </h3>
-            <p className="text-sm sm:text-base font-poppins font-light text-neutral-400 uppercase tracking-wide">
+            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
               ESTATE PROJECTS
             </p>
           </div>
 
           {/* Stat 3 */}
-          <div className="flex flex-col gap-y-3 sm:gap-y-4 justify-center items-center text-center ">
-            <h3 className="font-kapital font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-black/50">
+          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
+            <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
               0%
             </h3>
-            <p className="text-sm sm:text-base font-poppins font-light text-neutral-400 uppercase tracking-wide">
+            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
               THEFT RATE
             </p>
           </div>
 
           {/* Stat 4 - Highlighted with Gold */}
-          <div className="flex flex-col gap-y-3 sm:gap-y-4 justify-center items-center text-center ">
-            <h3 className="font-kapital font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#A9802C]">
+          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
+            <h3 className="font-kapital text-3xl font-bold text-[#A9802C] sm:text-4xl lg:text-5xl xl:text-6xl">
               20+
             </h3>
-            <p className="text-sm sm:text-base font-poppins font-light text-neutral-400 uppercase tracking-wide">
+            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
               YEAR PRODUCT LIFE
             </p>
           </div>

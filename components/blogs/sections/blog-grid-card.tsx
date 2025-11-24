@@ -7,30 +7,30 @@ import * as React from "react";
 
 export default function BlogGridCard({ item }: { item: BlogItem }) {
   return (
-    <Link href={`/blogs/${item.slug}`} className="block font-poppins">
-      <div className="group relative cursor-pointer rounded-xl border border-gray-200 bg-gray-100/50 hover:bg-main/90 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl h-[470px]">
+    <Link href={`/blogs/${item.slug}`} className="font-poppins block">
+      <div className="group hover:bg-main/90 relative h-fit cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-gray-100/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
         {/* IMAGE */}
-        <div className="relative h-40 sm:h-48 w-full rounded-xl overflow-hidden">
+        <div className="relative h-40 w-full overflow-hidden rounded-xl sm:h-48">
           <Image
             src={item.image}
             alt={item.title}
             fill
-            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 p-4 sm:p-6 rounded-xl"
+            className="rounded-xl object-cover p-4 grayscale transition-all duration-500 group-hover:grayscale-0 sm:p-6"
             loading="lazy"
           />
         </div>
 
         <div className="p-6">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="px-3 py-1 text-xs font-medium bg-[#C9A961]/10 group-hover:bg-white/10 text-[#C9A961] rounded-full">
+          <div className="mb-3 flex items-center gap-2">
+            <span className="rounded-full bg-[#C9A961]/10 px-3 py-1 text-xs font-medium text-[#C9A961] group-hover:bg-white/10">
               {item.category}
             </span>
-            <span className="text-xs text-gray-500 flex items-center gap-1 group-hover:text-gray-300">
-              <Clock className="w-3 h-3" /> {item.readTime}
+            <span className="flex items-center gap-1 text-xs text-gray-500 group-hover:text-gray-300">
+              <Clock className="h-3 w-3" /> {item.readTime}
             </span>
           </div>
 
-          <h3 className="text-xl md:text-xl font-semibold text-zinc-900/90 mb-4 group-hover:text-white transition-colors line-clamp-2">
+          <h3 className="mb-4 line-clamp-2 text-xl font-semibold text-zinc-900/90 transition-colors group-hover:text-white md:text-xl">
             <span
               className="[--u:0%] group-hover:[--u:100%]"
               style={{
@@ -45,7 +45,7 @@ export default function BlogGridCard({ item }: { item: BlogItem }) {
             </span>
           </h3>
 
-          <p className="text-gray-500 group-hover:text-gray-300 text-sm line-clamp-2 mb-4">
+          <p className="mb-4 line-clamp-2 text-sm text-gray-500 group-hover:text-gray-300">
             {item.excerpt}
           </p>
 
