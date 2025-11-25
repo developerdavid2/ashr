@@ -52,7 +52,7 @@ export function Hero() {
 
         {/* Heading - Responsive */}
         <h1 className="font-kapital px-4 pt-6 text-3xl leading-tight font-bold text-black/70 sm:pt-8 sm:text-5xl md:pt-10 md:text-6xl lg:text-7xl xl:text-8xl">
-          DRIVING INNOVATION
+          TRANSFORMING INNOVATION
           <br />
           ACROSS INDUSTRIES
         </h1>
