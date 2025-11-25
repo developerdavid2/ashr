@@ -1,4 +1,3 @@
-// app/faq/page.tsx
 "use client";
 
 import * as React from "react";
@@ -62,7 +61,7 @@ export default function FAQPage() {
   return (
     <>
       {/* HERO - Same DNA as News/Blog */}
-      <section className="font-poppins relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <section className="font-poppins relative overflow-hidden bg-linear-to-b from-white to-gray-50">
         <h1
           className="font-mokoto pointer-events-none absolute top-[15%] left-1/2 z-0 -translate-x-1/2 text-[8rem] whitespace-nowrap text-gray-500/12 select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem] xl:text-[25rem]"
           style={{
@@ -118,7 +117,7 @@ export default function FAQPage() {
                       <div className="col-span-2 flex justify-center">
                         <div
                           className={cn(
-                            "size-6 rounded-full bg-gradient-to-br from-[#A9802C] to-[#C9A961] p-1 transition-transform duration-500 sm:size-10 lg:size-16",
+                            "size-6 rounded-full bg-linear-to-br from-[#A9802C] to-[#C9A961] p-1 transition-transform duration-500 sm:size-10 lg:size-16",
                             isOpen && "scale-110",
                           )}
                         >
@@ -167,7 +166,7 @@ export default function FAQPage() {
 
                   {/* Separator Line */}
                   {!isLast && (
-                    <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                    <div className="h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
                   )}
                 </div>
               );
@@ -201,7 +200,7 @@ export default function FAQPage() {
                   className="object-cover transition-transform duration-1000"
                   sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 33vw"
                 />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/70 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <p className="text-lg font-medium text-white">
                     ASHR Project {i + 1}
                   </p>
@@ -219,7 +218,7 @@ export default function FAQPage() {
             {[...galleryImages].reverse().map((src, i) => (
               <div
                 key={i}
-                className="group hover:shadow-3xl relative mx-2 h-56 w-72 overflow-hidden rounded-xl shadow-2xl transition-all duration-500 sm:h-64 sm:w-80 md:h-80 md:w-96 lg:h-96 lg:w-[28rem]"
+                className="group hover:shadow-3xl relative mx-2 h-56 w-72 overflow-hidden rounded-xl shadow-2xl transition-all duration-500 sm:h-64 sm:w-80 md:h-80 md:w-96 lg:h-96 lg:w-md"
               >
                 <Image
                   src={src}
@@ -228,7 +227,7 @@ export default function FAQPage() {
                   className="object-cover transition-transform duration-1000"
                   sizes="(max-width: 640px) 75vw, (max-width: 1024px) 45vw, 35vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
             ))}
           </Marquee>
@@ -237,7 +236,7 @@ export default function FAQPage() {
 
       {/* CTA */}
       <section className="bg-main py-24 text-white lg:py-32">
-        <div className="relative z-10 container mx-auto max-w-screen-xl px-4 text-center sm:px-6 md:max-w-3xl lg:max-w-7xl">
+        <div className="relative z-10 container mx-auto max-w-7xl px-4 text-center sm:px-6 md:max-w-3xl lg:max-w-7xl">
           <h2 className="font-kapital text-3xl leading-tight font-light text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             STILL HAVE{" "}
             <span className="font-bold text-[#C9A961]">QUESTIONS?</span>
@@ -251,7 +250,7 @@ export default function FAQPage() {
             <GoldShineButton
               href="/contact"
               className={cn(
-                "flex w-full flex-col items-center justify-center px-6 py-3 !text-sm sm:w-auto sm:px-8 sm:!text-base md:!text-[1rem]",
+                "flex w-full flex-col items-center justify-center px-6 py-3 !text-sm sm:w-auto sm:px-8 sm:text-base! md:text-[1rem]!",
               )}
             >
               GET IN TOUCH

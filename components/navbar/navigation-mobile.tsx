@@ -72,6 +72,15 @@ export const MobileMenu = () => {
           </SheetHeader>
 
           <nav className="space-y-3">
+            {/* HOME */}
+            <SheetClose asChild>
+              <a
+                href="/"
+                className="text-main/90 block rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 hover:bg-gray-100"
+              >
+                HOME
+              </a>
+            </SheetClose>
             {/* ABOUT */}
             <SheetClose asChild>
               <a

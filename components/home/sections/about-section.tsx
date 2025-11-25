@@ -1,7 +1,6 @@
-import Image from "next/image";
-import * as React from "react";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -9,7 +8,7 @@ export function AboutSection() {
       id="home-about"
       className="relative overflow-hidden py-20 sm:py-28 md:py-36"
     >
-      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Large ABOUT background text - Responsive */}
         <h1
           className="font-mokoto pointer-events-none absolute -top-10 left-0 z-0 text-[6rem] leading-none text-gray-500/8 select-none sm:-top-12 sm:text-[8rem] md:-top-16 md:text-[10rem] lg:-top-20 lg:text-[12rem] xl:text-[15rem]"
@@ -22,7 +21,7 @@ export function AboutSection() {
           ABOUT
         </h1>
 
-        <div className="absolute -top-6 right-[10%] z-0 size-12 rounded-full bg-gradient-to-br from-white to-zinc-900/15 will-change-transform select-none sm:-top-8 sm:size-16 md:-top-10 md:size-18" />
+        <div className="absolute -top-6 right-[10%] z-0 size-12 rounded-full bg-linear-to-br from-white to-zinc-900/15 will-change-transform select-none sm:-top-8 sm:size-16 md:-top-10 md:size-18" />
 
         {/* Content Grid */}
         <div className="relative z-10 grid items-start gap-8 sm:gap-12 md:gap-16 lg:grid-cols-2">
@@ -64,7 +63,7 @@ export function AboutSection() {
             {/* Stats Card - Hidden on mobile, visible on lg+ */}
             <div className="hidden rounded-lg border border-white/60 bg-white/40 p-6 shadow-xl backdrop-blur-md lg:flex lg:flex-col xl:p-8">
               <div className="mb-4 flex items-start gap-3">
-                <ArrowUpRight className="mt-1 h-5 w-5 flex-shrink-0 text-[#A9802C]" />
+                <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-[#A9802C]" />
                 <div>
                   <h3 className="mb-2 text-sm font-medium tracking-wide text-gray-700 uppercase">
                     FIND BESPOKE PIECES THAT DEFINE QUALITY AND ARTISTRY
@@ -94,7 +93,7 @@ export function AboutSection() {
             {/* Stats Card Mobile Version - Only visible on mobile/tablet */}
             <div className="rounded-lg border border-white/60 bg-white/40 p-5 shadow-xl backdrop-blur-md sm:p-6 lg:hidden">
               <div className="mb-3 flex items-start gap-3 sm:mb-4">
-                <ArrowUpRight className="mt-1 h-4 w-4 flex-shrink-0 text-[#A9802C] sm:h-5 sm:w-5" />
+                <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-[#A9802C] sm:h-5 sm:w-5" />
                 <div>
                   <h3 className="mb-2 text-xs font-medium tracking-wide text-gray-700 uppercase sm:text-sm">
                     FIND BESPOKE PIECES THAT DEFINE QUALITY AND ARTISTRY

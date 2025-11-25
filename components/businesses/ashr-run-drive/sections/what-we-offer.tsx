@@ -16,7 +16,7 @@ export const AshrRunDriveOffer = () => {
       id="ashr-run-drive-offer"
       className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28"
     >
-      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Header Content */}
         <div className="mb-8 flex flex-col space-y-4 sm:mb-10 sm:space-y-6 lg:mb-12">
           <ArrowUpRight className="h-8 w-8 text-white sm:h-10 sm:w-10 lg:h-12 lg:w-12" />

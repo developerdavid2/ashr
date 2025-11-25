@@ -26,6 +26,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { cn } from "@/lib/utils";
 
 const subsidiaries = [
   "General Inquiry",
@@ -45,7 +46,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(20, "Message must be at least 20 characters")
-    .max(1000, "Message too long"),
+    .max(1000),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -66,7 +67,6 @@ export default function ContactForm() {
 
   const onSubmit = async (values: FormValues) => {
     setIsLoading(true);
-
     try {
       const res = await fetch("/api/send-email", {
         method: "POST",
@@ -81,21 +81,15 @@ export default function ContactForm() {
             borderRadius: "12px",
             background: "#000",
             color: "#fff",
-            fontWeight: "500",
+            fontWeight: "600",
           },
         });
         form.reset();
-      } else {
-        throw new Error("Failed");
-      }
-    } catch (error) {
+      } else throw new Error();
+    } catch {
       toast.error("Something went wrong. Please try again.", {
         icon: "Error",
-        style: {
-          borderRadius: "12px",
-          background: "#fee",
-          color: "#c33",
-        },
+        style: { borderRadius: "12px", background: "#fee", color: "#c33" },
       });
     } finally {
       setIsLoading(false);
@@ -103,148 +97,171 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-black text-white">
-      <div className="container mx-auto px-auto px-6 lg:px-8 max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="font-kapital text-5xl lg:text-7xl leading-none">
-            Send Us a <span className="text-[#C9A961]">Message</span>
-          </h2>
-          <p className="mt-6 text-xl text-gray-400">
-            We typically respond within a few hours
-          </p>
-        </div>
+    <div className="font-poppins mx-auto w-full max-w-full overflow-hidden">
+      {" "}
+      {/* Controls max width perfectly */}
+      {/* Glassmorphic Card */}
+      <div className="bg-main/5 relative overflow-hidden rounded-2xl border border-white/20 p-8 shadow-2xl shadow-black/30 backdrop-blur-lg sm:p-10 lg:p-12">
+        {/* Subtle inner glow */}
+        <div className="absolute inset-0 bg-linear-to-br from-[#C9A961]/10 via-transparent to-[#A9802C]/5 opacity-60" />
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10">
-            {/* Name */}
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-gray-300">Full Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="John Doe"
-                      className="h-14 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl text-lg focus-visible:ring-[#C9A961]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
+        <div className="relative z-10">
+          {/* Heading */}
+          <div className="mb-12 text-start">
+            <h2 className="font-kapital text-3xl leading-tight font-light text-white sm:text-4xl md:text-5xl">
+              Send Us a{" "}
+              <span className="font-bold text-[#C9A961]">Message</span>
+            </h2>
+            <p className="font-poppins mt-4 max-w-5xl text-sm leading-relaxed font-light text-gray-200 sm:text-base md:text-lg lg:text-xl">
+              We typically respond within a few hours
+            </p>
+          </div>
 
-            {/* Email */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-gray-300">Email Address</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder="john@example.com"
-                      className="h-14 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl text-lg focus-visible:ring-[#C9A961]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Phone */}
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-gray-300">Phone Number</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="+234 800 000 0000"
-                      className="h-14 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl text-lg focus-visible:ring-[#C9A961]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Subsidiary */}
-            <FormField
-              control={form.control}
-              name="subsidiary"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-gray-300">
-                    Which business are you contacting?
-                  </FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              {/* Name */}
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-gray-300">
+                      Full Name
+                    </FormLabel>
                     <FormControl>
-                      <SelectTrigger className="h-14 bg-white/10 border-white/20 text-white rounded-xl text-lg">
-                        <SelectValue placeholder="Select a subsidiary" />
-                      </SelectTrigger>
+                      <Input
+                        placeholder="John Doe"
+                        className="h-10 rounded-xl border-white/20 bg-white/5 px-6 text-base text-white transition-all placeholder:text-gray-500 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent sm:h-14 sm:text-lg"
+                        {...field}
+                      />
                     </FormControl>
-                    <SelectContent>
-                      {subsidiaries.map((sub) => (
-                        <SelectItem key={sub} value={sub} className="text-base">
-                          {sub}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Message */}
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-gray-300">Your Message</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Tell us how we can help you..."
-                      rows={6}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-xl text-lg resize-none focus-visible:ring-[#C9A961]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-400" />
-                </FormItem>
-              )}
-            />
-
-            {/* Submit */}
-            <div className="pt-8 text-center">
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="px-16 py-8 text-xl font-bold bg-[#C9A961] hover:bg-[#b89750] text-black rounded-xl shadow-2xl hover:shadow-[#C9A961]/50 transition-all duration-300"
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-3 h-6 w-6 animate-spin" />
-                    Sending Message...
-                  </>
-                ) : (
-                  "Send Message"
+                    <FormMessage className="text-sm text-red-400" />
+                  </FormItem>
                 )}
-              </Button>
-            </div>
-          </form>
-        </Form>
+              />
+
+              {/* Email */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-gray-300">
+                      Email Address
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder="john@example.com"
+                        className="h-10 rounded-xl border-white/20 bg-white/5 px-6 text-base text-white transition-all placeholder:text-gray-500 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent sm:h-14 sm:text-lg"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-sm text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Phone */}
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-gray-300">
+                      Phone Number
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="+234 800 000 0000"
+                        className="h-10 rounded-xl border-white/20 bg-white/5 px-6 text-base text-white transition-all placeholder:text-gray-500 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent sm:h-14 sm:text-lg"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-sm text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Subsidiary */}
+              <FormField
+                control={form.control}
+                name="subsidiary"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-gray-300">
+                      Which business are you contacting?
+                    </FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="h-14 rounded-xl border-white/20 bg-white/5 px-6 text-lg text-white data-placeholder:text-gray-500">
+                          <SelectValue placeholder="Select a subsidiary" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent className="border-white/20 bg-white/10 backdrop-blur-xl">
+                        {subsidiaries.map((sub) => (
+                          <SelectItem
+                            key={sub}
+                            value={sub}
+                            className={cn(
+                              "cursor-pointer bg-transparent text-white",
+                            )}
+                          >
+                            {sub}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage className="text-sm text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Message */}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-gray-300">
+                      Your Message
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Enter your message (max 1000 characters)"
+                        className="h-32 resize-none rounded-xl border-white/30 bg-white/5 placeholder:font-normal placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-sm text-red-400" />
+                  </FormItem>
+                )}
+              />
+
+              {/* Submit Button */}
+              <div className="w-full pt-6">
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="before:bg-[linear-gradient(45deg,transparent_25%,var(--color-white)_50%,transparent_75%,transparent_100%)]/45 relative flex w-full items-center justify-center rounded-xl bg-linear-to-br from-[#E4C777]/70 via-[#A9802D] via-30% to-[#A9802C] py-6 text-sm font-medium whitespace-nowrap text-white/90 shadow transition-all duration-300 before:absolute before:inset-0 before:rounded-[inherit] before:bg-size-[250%_250%,100%_100%] before:bg-position-[200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:scale-[1.015] hover:brightness-105 hover:before:bg-position-[-100%_0,0_0] hover:before:duration-1400"
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="mr-3 h-7 w-7 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
+                </Button>
+              </div>
+            </form>
+          </Form>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -59,7 +59,7 @@ export function CTASection({
             <GoldShineButton
               href={primaryHref}
               className={cn(
-                "flex w-full flex-col items-center justify-center px-6 py-3 !text-sm sm:w-auto sm:px-8 sm:!text-base md:!text-[1rem]",
+                "flex w-full flex-col items-center justify-center px-6 py-3 text-sm! sm:w-auto sm:px-8 sm:text-base! md:text-[1rem]!",
               )}
             >
               {primaryLabel}

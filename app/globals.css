@@ -1,5 +1,165 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* Layer Switcher Thumbnails */
+.layer-switcher {
+  background: white !important;
+  border-radius: 8px;
+  padding: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+}
+
+.layer-thumbnails {
+  display: flex;
+  gap: 8px;
+}
+
+.layer-btn {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.layer-btn:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.layer-btn.active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Home Button */
+.home-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.home-button:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.home-button:active {
+  background: #e5e7eb;
+}
+
+.home-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0.75rem;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.leaflet-popup-tip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+  max-width: 100%;
+}
+
+/* Control styling */
+.leaflet-control-button {
+  border-radius: 4px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.leaflet-control-button:hover {
+  background-color: #f3f4f6;
+}
+
+.leaflet-control-button:active {
+  background-color: #e5e7eb;
+}
+
+/* Marker styling */
+.leaflet-marker-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Popup close button */
+.leaflet-popup-close-button {
+  color: #6b7280;
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  top: 8px !important;
+  right: 8px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #374151;
+}
+
+/* Container adjustments */
+.leaflet-container a {
+  color: #3b82f6;
+}
+
+.leaflet-container a:hover {
+  color: #2563eb;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -88,7 +248,6 @@
 
 /* ✅ Tailwind v4: Define font families in @theme */
 @theme inline {
-
   /* Custom font utilities */
   --font-kapital: var(--font-kapital), sans-serif;
   --font-kapital-stencil: var(--font-kapital-stencil), sans-serif;
@@ -96,7 +255,6 @@
   --font-mokoto: var(--font-mokoto), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
   --font-poppins: var(--font-poppins), sans-serif;
-
 
   /* Your existing theme variables */
   --color-background: var(--background);
@@ -137,13 +295,55 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Shadow variables */
-  --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+  --shadow-2xs: var(--shadow-x) var(--shadow-y)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur)
+    var(--shadow-spread)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5)
+    var(--shadow-spread)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2)
+    calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4)
+    calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6)
+    calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 100%),
+      transparent
+    );
+  --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8)
+    calc(max(0px, var(--shadow-blur) * 9 - 8px))
+    calc(var(--shadow-spread) - 12px)
+    color-mix(
+      in srgb,
+      var(--shadow-color) calc(var(--shadow-opacity) * 250%),
+      transparent
+    );
   --shadow: var(--shadow-md);
   --color-shadow-color: var(--shadow-color);
   --shadow-opacity: var(--shadow-opacity);
@@ -152,11 +352,9 @@
   --shadow-y: var(--shadow-y);
   --shadow-x: var(--shadow-x);
 
-
-/*  Custom Colour*/
+  /*  Custom Colour*/
   --color-main: oklch(0.223 0.002 286.243);
   --color-gold: oklch(0.748 0.099 86.057);
-
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -177,7 +375,6 @@
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
-
 }
 
 @layer base {
@@ -194,7 +391,6 @@
     animation: spin 12s linear infinite;
   }
 }
-
 
 /* ✅ Tailwind v4: Create custom font utilities */
 @utility font-code {
@@ -229,22 +425,26 @@
   display: block !important;
 }
 @layer base {
-  button:not(:disabled), [role="button"]:not(:disabled) {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     @apply cursor-pointer;
   }
 }
 
-
 /*hero float */
 @keyframes heroFloat {
-  0%   { opacity: 0; transform: translateY(12px) scale(.995); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 .animate-heroFloat {
-  animation: heroFloat .6s cubic-bezier(.22,1,.36,1) both;
+  animation: heroFloat 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-
-
 
 /*AShr Run and Drive Gallery Transition*/
 @keyframes marquee {

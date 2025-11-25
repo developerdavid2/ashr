@@ -61,7 +61,7 @@ export function Hero() {
         <div className="absolute top-[70%] left-[5%] hidden md:block">
           <RotatingTextCircle
             text="ASHR GROUP  •  MULTI INDUSTRY INNOVATION  •  "
-            logoSrc="/logos/ashr-logo.PNG"
+            logoSrc="/logos/ashr-logo.png"
           />
         </div>
 

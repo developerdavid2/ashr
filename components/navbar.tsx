@@ -44,14 +44,14 @@ export function Navbar() {
       {/* Overlay: shown whenever activeMenu != null */}
       {activeMenu && (
         <div
-          className="fixed inset-0 bg-black/40 z-[140] transition-opacity"
+          className="fixed inset-0 z-[140] bg-black/40 transition-opacity"
           onClick={closeMenu}
         />
       )}
 
-      <nav className="fixed top-0 left-0 right-0 z-[200] bg-white/50 backdrop-blur-md font-poppins">
-        <div className="container mx-auto px-2 sm:px-4 relative z-10 max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-7xl">
-          <div className="flex items-center justify-between h-20">
+      <nav className="font-poppins fixed top-0 right-0 left-0 z-[500] bg-white/50 backdrop-blur-md">
+        <div className="relative z-10 container mx-auto max-w-full px-2 sm:max-w-xl sm:px-4 md:max-w-3xl lg:max-w-7xl">
+          <div className="flex h-20 items-center justify-between">
             <Logo />
 
             {/* Desktop Navigation */}
@@ -59,8 +59,14 @@ export function Navbar() {
               <NavigationMenu viewport={false}>
                 <NavigationMenuList className="gap-8">
                   <Link
+                    href="/"
+                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
+                  >
+                    HOME
+                  </Link>
+                  <Link
                     href="/about"
-                    className="font-medium text-gray-700 hover:text-[#D4AF37] transition-colors uppercase"
+                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
                   >
                     About
                   </Link>
@@ -73,19 +79,19 @@ export function Navbar() {
                     }}
                     className="relative"
                   >
-                    <NavigationMenuTrigger className="text-base uppercase font-medium text-gray-700 hover:text-[#D4AF37] data-[state=open]:text-[#D4AF37] bg-transparent">
+                    <NavigationMenuTrigger className="bg-transparent text-base font-medium text-gray-700 uppercase hover:text-[#D4AF37] data-[state=open]:text-[#D4AF37]">
                       Businesses
                     </NavigationMenuTrigger>
 
                     {/* Content MUST also keep menu open while hovered */}
                     <NavigationMenuContent
-                      className="!fixed !left-1/2 !-translate-x-1/2 !w-screen !max-w-none !p-0 z-[150] !top-[calc(100%-0.375rem)] pointer-events-auto"
+                      className="pointer-events-auto !fixed !top-[calc(100%-0.375rem)] !left-1/2 z-[150] !w-screen !max-w-none !-translate-x-1/2 !p-0"
                       onPointerEnter={() => openMenu("business")}
                       onPointerLeave={() => closeMenu()}
                     >
-                      <div className="bg-white shadow-2xl rounded-b-xl pointer-events-auto">
+                      <div className="pointer-events-auto rounded-b-xl bg-white shadow-2xl">
                         <div className="w-full px-8 py-10">
-                          <div className="max-w-7xl mx-auto">
+                          <div className="mx-auto max-w-7xl">
                             <BusinessMegaMenu />
                           </div>
                         </div>
@@ -99,18 +105,18 @@ export function Navbar() {
                     onPointerLeave={() => closeMenu()}
                     className="relative"
                   >
-                    <NavigationMenuTrigger className="text-base font-medium text-gray-700 hover:text-[#D4AF37] data-[state=open]:text-[#D4AF37] uppercase bg-transparent">
+                    <NavigationMenuTrigger className="bg-transparent text-base font-medium text-gray-700 uppercase hover:text-[#D4AF37] data-[state=open]:text-[#D4AF37]">
                       News & Updates | Blogs
                     </NavigationMenuTrigger>
 
                     <NavigationMenuContent
-                      className="!fixed !left-1/2 !-translate-x-1/2 !w-screen !max-w-none !p-0 z-[150] !top-[calc(100%-0.375rem)] pointer-events-auto"
+                      className="pointer-events-auto !fixed !top-[calc(100%-0.375rem)] !left-1/2 z-[150] !w-screen !max-w-none !-translate-x-1/2 !p-0"
                       onPointerEnter={() => openMenu("news")}
                       onPointerLeave={() => closeMenu()}
                     >
-                      <div className="bg-white shadow-2xl rounded-b-xl overflow-hidden">
+                      <div className="overflow-hidden rounded-b-xl bg-white shadow-2xl">
                         <div className="w-full px-8 py-10">
-                          <div className="max-w-7xl mx-auto">
+                          <div className="mx-auto max-w-7xl">
                             <NewsMegaMenu />
                           </div>
                         </div>
@@ -120,7 +126,7 @@ export function Navbar() {
 
                   <a
                     href="/faq"
-                    className="font-medium text-gray-700 hover:text-[#D4AF37] transition-colors uppercase"
+                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
                   >
                     FAQ
                   </a>

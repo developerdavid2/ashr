@@ -1,4 +1,3 @@
-// components/blogs/AuthorSection.tsx
 import Image from "next/image";
 
 const authors = [
