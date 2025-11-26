@@ -56,7 +56,7 @@ export const SimtexOffer = () => {
                   />
                 </div>
                 <div className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md sm:px-4 sm:py-2">
-                  A15 to E600 Rated
+                  A15 to D400 Rated
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export const SimtexOffer = () => {
             </div>
 
             <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
-              A15 → E600
+              A15 → D400
             </h3>
 
             <p className="text-sm leading-relaxed text-gray-300 sm:text-base">
@@ -137,9 +137,7 @@ export const SimtexOffer = () => {
               </div>
 
               <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
-                GULLY TRAP
-                <br />
-                COVERS
+                GULLY COVERS
               </h3>
 
               <p className="text-xs leading-relaxed text-white/80 sm:text-sm">
@@ -167,8 +165,8 @@ export const SimtexOffer = () => {
             </h3>
 
             <p className="mb-6 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base">
-              We manufacture custom dimensions, specific load ratings, and
-              provide professional installation by certified technicians.
+              We manufacture custom dimensions and provide professional
+              installation by certified technicians.
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">

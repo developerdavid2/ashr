@@ -1,14 +1,13 @@
 // app/blogs/page.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import AllBlogsSection from "@/components/blogs/sections/all-blogs-section";
 import BlogHero from "@/components/blogs/sections/blogs-hero";
 import FeaturedBlogCarousel from "@/components/blogs/sections/featured-blog-carousel";
-import AllBlogsSection from "@/components/blogs/sections/all-blogs-section";
-import AuthorSection from "@/components/blogs/sections/author-section";
 import { getAllBlogs, getFeaturedBlogs } from "@/constants/blogs-data";
 import { BlogItem } from "@/types/blogs";
 import { Loader2 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function BlogsPageClient() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,10 +47,10 @@ export default function BlogsPageClient() {
     return (
       <>
         <BlogHero />
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="flex min-h-screen items-center justify-center bg-gray-50">
           <div className="text-center">
-            <Loader2 className="w-16 h-16 animate-spin text-[#C9A961] mx-auto mb-6" />
-            <p className="text-xl text-gray-700 font-medium animate-pulse">
+            <Loader2 className="mx-auto mb-6 h-16 w-16 animate-spin text-[#C9A961]" />
+            <p className="animate-pulse text-xl font-medium text-gray-700">
               Curating the finest insights...
             </p>
           </div>
@@ -66,7 +65,7 @@ export default function BlogsPageClient() {
       <FeaturedBlogCarousel blogs={featuredBlogs} />
       <AllBlogsSection blogs={allBlogs} />
 
-      <AuthorSection />
+      {/* <AuthorSection /> */}
     </>
   );
 }

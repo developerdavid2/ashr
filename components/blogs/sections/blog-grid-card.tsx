@@ -49,7 +49,7 @@ export default function BlogGridCard({ item }: { item: BlogItem }) {
             {item.excerpt}
           </p>
 
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <Image
               src={item.author.avatar}
               alt={item.author.name}
@@ -65,7 +65,7 @@ export default function BlogGridCard({ item }: { item: BlogItem }) {
                 {item.author.role.split(",")[0]}
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

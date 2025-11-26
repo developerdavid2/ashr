@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import WhatsAppButton from "@/components/custom/whatsapp-button";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -83,11 +84,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${code.variable} ${mokoto.variable} ${interVariable.variable} ${poppins.variable} ${kapital.variable} ${kapitalStencil.variable}
-        } font-sans antialiased`}
+        className={` ${code.variable} ${mokoto.variable} ${interVariable.variable} ${poppins.variable} ${kapital.variable} ${kapitalStencil.variable} } font-sans antialiased`}
       >
         <Navbar />
         {children}
+        <Toaster />
         <WhatsAppButton />
         <Footer />
         <Analytics />

@@ -1,6 +1,7 @@
 // app/api/send-email/route.ts
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { EmailTemplate } from "@/components/contact/sections/email-template";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -8,28 +9,28 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, subsidiary, message } = await request.json();
 
-    await resend.emails.send({
-      from: "hellojacobsdavid@gmail.com",
+    const { data, error } = await resend.emails.send({
+      from: "ASHR Group <ionboarding@resend.dev>", // VERIFIED DOMAIN ONLY
       to: "jacobsdavid.dr@gmail.com",
       replyTo: email,
-      subject: `New Contact Form Submission - ${subsidiary}`,
-      html: `
-        <h2>New Message from ASHR Group Website</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Subsidiary:</strong> ${subsidiary}</p>
-        <br/>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br/>")}</p>
-        <br/>
-        <p>Sent from ashrgroup.com.ng</p>
-      `,
+      subject: `New Inquiry: ${subsidiary} – ${name}`,
+      react: EmailTemplate({
+        name,
+        email,
+        phone,
+        subsidiary,
+        message,
+      }) as React.ReactElement,
     });
 
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error("Resend error:", error);
-    return NextResponse.json({ error: "Failed to send" }, { status: 500 });
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, id: data?.id });
+  } catch (err) {
+    console.error("Send error:", err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

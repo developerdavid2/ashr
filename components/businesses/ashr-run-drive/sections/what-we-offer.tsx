@@ -125,7 +125,7 @@ export const AshrRunDriveOffer = () => {
 
           {/*CARD 5*/}
 
-          <div className="relative flex h-[300px] flex-col justify-center overflow-hidden rounded-xl bg-neutral-800 p-8 md:h-[350px] lg:col-span-6">
+          {/* <div className="relative flex h-[300px] flex-col justify-center overflow-hidden rounded-xl bg-neutral-800 p-8 md:h-[350px] lg:col-span-6">
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#C9A961]">
               <RefreshCw className="h-6 w-6 text-white" strokeWidth={2} />
             </div>
@@ -136,37 +136,9 @@ export const AshrRunDriveOffer = () => {
             <p className="leading-relaxed text-white/80">
               Upgrade seamlessly. Get fair value for your current vehicle.
             </p>
-          </div>
+          </div> */}
 
           {/* Card 6: 24/7 Support Card */}
-          <div className="relative h-[300px] overflow-hidden rounded-xl md:h-[350px] lg:col-span-6">
-            {/* inset image */}
-            <div className="relative h-full w-full">
-              <Image
-                src="/businesses/ashr-run-6.jpeg"
-                alt="Luxury Experience"
-                fill
-                className="object-cover"
-                sizes="(max-width:768px) 100vw, 33vw"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Glassmorphism overlay at bottom */}
-            <div className="absolute inset-y-0 left-0 flex w-full flex-col justify-center border-t border-white/20 bg-white/10 p-8 backdrop-blur-2xl lg:w-[60%]">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#C9A961]">
-                <Wrench className="h-6 w-6 text-white" strokeWidth={2} />
-              </div>
-
-              <h3 className="font-kapital mb-2 text-2xl font-bold text-white lg:text-3xl">
-                VEHICLE MAINTENANCE & SERVICE
-              </h3>
-
-              <p className="leading-relaxed text-white/80">
-                Authorized service centers, routine care, warranty support.
-              </p>
-            </div>
-          </div>
         </div>
         {/* Bottom CTA */}
         <div className="mt-10 lg:mt-20">

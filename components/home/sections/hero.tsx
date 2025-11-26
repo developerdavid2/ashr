@@ -42,8 +42,8 @@ export function Hero() {
       <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-4 py-24 text-center sm:px-6 sm:py-32 md:py-40 lg:py-52">
         {/* badge - Responsive */}
         <div className="inline-flex max-w-full items-center gap-1.5 rounded-lg border border-white bg-blue-200/10 p-1.5 drop-shadow-xl backdrop-blur-sm sm:gap-2 sm:rounded-xl sm:p-2">
-          <span className="flex h-[2rem] w-[2rem] flex-shrink-0 items-center justify-center rounded-md bg-white p-1.5 sm:h-[2.5rem] sm:w-[2.5rem] sm:p-2">
-            <IoShieldCheckmarkSharp className="size-[16px] text-[#A9802C] sm:size-[20px]" />
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white p-1.5 sm:h-10 sm:w-10 sm:p-2">
+            <IoShieldCheckmarkSharp className="size-4 text-[#A9802C] sm:size-5" />
           </span>
           <p className="px-1 pr-2 text-[0.65rem] font-medium text-gray-600 sm:px-2 sm:pr-3 sm:text-xs md:text-sm lg:text-base">
             Automotive • Interiors • Industrial Solutions
@@ -52,7 +52,7 @@ export function Hero() {
 
         {/* Heading - Responsive */}
         <h1 className="font-kapital px-4 pt-6 text-3xl leading-tight font-bold text-black/70 sm:pt-8 sm:text-5xl md:pt-10 md:text-6xl lg:text-7xl xl:text-8xl">
-          TRANSFORMING INNOVATION
+          DRIVING INNOVATION
           <br />
           ACROSS INDUSTRIES
         </h1>
@@ -76,7 +76,7 @@ export function Hero() {
           <GoldShineButton
             href="/contact"
             className={cn(
-              "w-full px-4 py-2 !text-sm sm:w-auto sm:px-8 sm:!text-base md:!text-[1rem]",
+              "w-full px-4 py-2 text-sm! sm:w-auto sm:px-8 sm:text-base! md:text-[1rem]!",
             )}
           >
             GET IN TOUCH

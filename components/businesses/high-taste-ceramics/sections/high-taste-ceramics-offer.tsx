@@ -18,7 +18,7 @@ export function HighTasteCeramicsOffer() {
       id="high-taste-ceramics-offer"
       className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28"
     >
-      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
         {/* Header Content */}
         <div className="mb-8 flex flex-col space-y-4 sm:mb-10 sm:space-y-6 lg:mb-12">
           <h2 className="font-kapital text-4xl leading-tight font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
@@ -29,9 +29,9 @@ export function HighTasteCeramicsOffer() {
           </h2>
 
           <p className="max-w-5xl text-base leading-relaxed font-light text-gray-300 sm:text-lg md:text-xl">
-            From Italian-inspired ceramic tiles to luxury bathroom suites and
-            designer fittings— every piece in our collection is curated to
-            elevate your spaces with timeless elegance.
+            From exquisite Spanish, Chinese, and Indian ceramic tiles to luxury
+            bathroom suites and designer fittings—every piece is carefully
+            curated to beautify your spaces with timeless elegance.
           </p>
         </div>
 

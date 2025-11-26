@@ -29,24 +29,6 @@ const leadershipTeam = [
     role: "Technical Director",
     image: "/leaders/leader-4.jpeg",
   },
-  {
-    id: 5,
-    name: "David Thompson",
-    role: "Operations Director",
-    image: "/leaders/leader-5.jpeg",
-  },
-  {
-    id: 6,
-    name: "Fatima Hassan",
-    role: "Strategy Director",
-    image: "/leaders/leader-6.jpeg",
-  },
-  {
-    id: 7,
-    name: "James Anderson",
-    role: "Innovation Director",
-    image: "/leaders/leader-7.jpeg",
-  },
 ];
 
 export const AboutLeadership = () => {

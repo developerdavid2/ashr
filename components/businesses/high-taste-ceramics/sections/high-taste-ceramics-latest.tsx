@@ -28,7 +28,7 @@ type BlogItem = {
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    title: "2025 Italian Tile Collection Now in Stock",
+    title: "2025 Spanish Tile Collection Now in Stock",
     category: "Ceramics",
     date: "2025-11-05",
     image:

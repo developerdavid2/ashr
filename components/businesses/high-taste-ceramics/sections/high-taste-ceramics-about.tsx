@@ -62,44 +62,24 @@ export function HighTasteCeramicsAbout({ logo }: HighTasteCeramicsAboutProps) {
         </div>
 
         {/* Stats Grid - Properly Aligned and Responsive */}
-        <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-10">
+        <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 sm:gap-8 lg:gap-10">
           {/* Stat 1 */}
           <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
             <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
-              500+
+              1000+
             </h3>
             <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
               Product Designs
             </p>
           </div>
 
-          {/* Stat 2 */}
-          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
-            <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
-              200+
-            </h3>
-            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
-              Luxury Projects
-            </p>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
-            <h3 className="font-kapital text-main/50 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
-              15+
-            </h3>
-            <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
-              International Brands
-            </p>
-          </div>
-
           {/* Stat 4 - Highlighted with Gold */}
           <div className="flex flex-col items-center justify-center gap-y-3 text-center sm:gap-y-4">
             <h3 className="font-kapital text-3xl font-bold text-[#A9802C] sm:text-4xl lg:text-5xl xl:text-6xl">
-              3
+              1
             </h3>
             <p className="font-poppins text-sm font-light tracking-wide text-neutral-400 uppercase sm:text-base">
-              Premium Showrooms
+              Premium Showroom
             </p>
           </div>
         </div>

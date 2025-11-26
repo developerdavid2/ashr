@@ -61,7 +61,7 @@ export function AboutSection() {
           {/* Right Column - Stats & Image */}
           <div className="space-y-6 sm:space-y-8">
             {/* Stats Card - Hidden on mobile, visible on lg+ */}
-            <div className="hidden rounded-lg border border-white/60 bg-white/40 p-6 shadow-xl backdrop-blur-md lg:flex lg:flex-col xl:p-8">
+            {/* <div className="hidden rounded-lg border border-white/60 bg-white/40 p-6 shadow-xl backdrop-blur-md lg:flex lg:flex-col xl:p-8">
               <div className="mb-4 flex items-start gap-3">
                 <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-[#A9802C]" />
                 <div>
@@ -76,7 +76,7 @@ export function AboutSection() {
                 traditions that define both the present and the future of
                 industry.
               </p>
-            </div>
+            </div> */}
 
             {/* Image - Responsive height */}
             <div className="relative h-[300px] w-full overflow-hidden rounded-xl shadow-lg sm:h-[400px] md:h-[450px] lg:mb-0 lg:h-[500px]">

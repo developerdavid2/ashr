@@ -5,8 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Loader2 } from "lucide-react";
-import { toast } from "react-hot-toast";
+import { CheckCircle2, Loader2, XCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,6 +26,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 const subsidiaries = [
   "General Inquiry",
@@ -75,21 +75,29 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
-        toast.success("Thank you! We'll respond within 24 hours.", {
-          icon: "Success",
+        toast.success("Message sent successfully!", {
+          description: "We'll get back to you within 24 hours.",
+          icon: <CheckCircle2 className="h-5 w-5 text-lime-600" />,
           style: {
-            borderRadius: "12px",
-            background: "#000",
-            color: "#fff",
-            fontWeight: "600",
+            background: "rgba(255, 254, 253, 0.95)",
+            backdropFilter: "blur(12px)",
+            color: "#000",
           },
+          duration: 5000,
         });
         form.reset();
-      } else throw new Error();
+      } else {
+        throw new Error();
+      }
     } catch {
-      toast.error("Something went wrong. Please try again.", {
-        icon: "Error",
-        style: { borderRadius: "12px", background: "#fee", color: "#c33" },
+      toast.error("Failed to send message", {
+        description: "Please try again or reach us via WhatsApp.",
+        icon: <XCircle className="h-5 w-5 text-red-400" />,
+        style: {
+          background: "rgba(254, 242, 242, 0.95)",
+          backdropFilter: "blur(12px)",
+          color: "#000",
+        },
       });
     } finally {
       setIsLoading(false);
@@ -232,7 +240,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         placeholder="Enter your message (max 1000 characters)"
-                        className="h-32 resize-none rounded-xl border-white/30 bg-white/5 placeholder:font-normal placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent"
+                        className="h-32 resize-none rounded-xl border-white/30 bg-white/5 text-white placeholder:font-normal placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-[#C9A961] focus-visible:ring-offset-1 focus-visible:ring-offset-transparent"
                         {...field}
                       />
                     </FormControl>

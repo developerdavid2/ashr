@@ -78,7 +78,7 @@ const blogItems: BlogItem[] = [
   },
   {
     id: 2,
-    title: "Understanding Load Ratings: A15 to E600 Explained",
+    title: "Understanding Load Ratings: A15 to D400 Explained",
     category: "Industrial",
     readTime: "5 Min Read",
     date: "2025-10-20",
@@ -129,7 +129,7 @@ export function SimtexNews() {
 // Blogs Section
 export function SimtexBlogs() {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-24 lg:py-32">
+    <section className="bg-linear-to-b from-gray-50 to-white py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:mb-16 sm:flex-row sm:items-center">
           <div>

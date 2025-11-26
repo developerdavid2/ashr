@@ -28,7 +28,7 @@ export const HighTasteCeramicsHero = () => {
         </div>
 
         {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative mx-auto aspect-[16/9] w-full max-w-[1000px] overflow-hidden">
+        <div className="relative mx-auto aspect-video w-full max-w-[1000px] overflow-hidden">
           <Image
             src="/our-businesses/high-ceramic-hero.png"
             alt="ASHR Designs"
@@ -41,8 +41,8 @@ export const HighTasteCeramicsHero = () => {
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-poppins mb-4 text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
             Premium ceramic tiles, designer sanitary wares, and sophisticated
-            bathroom fittings. Transform your spaces with Italian-inspired
-            luxury and timeless elegance.
+            bathroom fittings. Transform your spaces with Spanish, China, or
+            Indian-inspired luxury.
           </p>
           {/* CTA */}
           <div className="mb-8 flex h-full w-full flex-col items-center justify-center gap-3 px-4 sm:mb-10 sm:gap-4 md:mb-12 md:flex-row">
