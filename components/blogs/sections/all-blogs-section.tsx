@@ -27,8 +27,7 @@ export default function AllBlogsSection({ blogs }: { blogs: BlogItem[] }) {
       result = result.filter(
         (b) =>
           b.title.toLowerCase().includes(q) ||
-          b.excerpt.toLowerCase().includes(q) ||
-          b.author.name.toLowerCase().includes(q),
+          b.excerpt.toLowerCase().includes(q),
       );
     }
 
@@ -47,13 +46,13 @@ export default function AllBlogsSection({ blogs }: { blogs: BlogItem[] }) {
   }, [category, search]);
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="font-kapital font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-neutral-700">
+    <section className="bg-white py-20 lg:py-32">
+      <div className="container mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="font-kapital text-3xl leading-tight font-bold text-neutral-700 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             All insights
           </h2>
-          <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700">
+          <p className="font-poppins text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
             Explore our complete collection of expert articles
           </p>
         </div>
@@ -66,12 +65,12 @@ export default function AllBlogsSection({ blogs }: { blogs: BlogItem[] }) {
         />
 
         {filtered.length === 0 ? (
-          <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed font-poppins text-gray-700">
+          <p className="font-poppins text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
             No blogs found matching your criteria.
           </p>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {paginatedBlogs.map((blog) => (
                 <BlogGridCard key={blog.id} item={blog} />
               ))}

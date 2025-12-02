@@ -15,11 +15,11 @@ export interface BlogItem {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content?: string;
   image: string;
   category: BlogCategory;
-  date: string;
+  date?: string;
   readTime: string;
   featured?: boolean;
-  author: Author;
+  author?: Author;
 }

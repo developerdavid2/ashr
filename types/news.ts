@@ -1,3 +1,4 @@
+// types/news.ts
 export type Category =
   | "All"
   | "Automotive"
@@ -10,9 +11,10 @@ export type NewsItem = {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content?: string; // ← now optional (for cards)
   image: string;
   category: Category;
-  date: string; // ISO string
+  date: string;
   featured?: boolean;
+  contentImages?: string[]; // ← added for lightbox
 };
