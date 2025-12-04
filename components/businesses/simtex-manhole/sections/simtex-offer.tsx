@@ -34,7 +34,7 @@ export const SimtexOffer = () => {
           <div className="group relative h-[450px] overflow-hidden rounded-xl sm:h-[500px] md:col-span-2 md:h-[550px] lg:col-span-7 lg:row-span-2 lg:h-[620px]">
             <div className="relative h-full w-full">
               <Image
-                src="/businesses/simtex-1.jpeg"
+                src="/businesses/simtex-1.jpg"
                 alt="FRP Manhole Cover Installation"
                 fill
                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0"

@@ -71,11 +71,18 @@ export default function NewsArticlePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const openLightbox = (index: number) => {
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
+  // Use a counter to force re-render every time
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
 
+  const openLightbox = (index: number) => {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: index + 1, // FsLightbox is 1-indexed
+    });
+  };
   return (
     <div className="sm:px-6 sm:py-32">
       {/* HERO — IDENTICAL TO BLOG */}
@@ -110,7 +117,6 @@ export default function NewsArticlePage() {
           </div>
         </div>
       </section>
-
       {/* LONG-FORM MAIN CONTENT */}
       <section className="font-poppins py-16 leading-relaxed">
         <div className="container mx-auto max-w-4xl px-6 lg:px-8">
@@ -133,7 +139,7 @@ export default function NewsArticlePage() {
             </p>
 
             {/* POWERFUL QUOTE */}
-            <blockquote className="my-16 rounded-r-2xl border-l-[8px] border-[#C9A961] bg-gradient-to-r from-[#C9A961]/10 to-transparent py-10 pr-8 pl-10 text-2xl leading-relaxed font-medium text-[#C9A961] italic shadow-2xl md:text-3xl">
+            <blockquote className="my-16 rounded-r-2xl border-l-8 border-[#C9A961] bg-gradient-to-r from-[#C9A961]/10 to-transparent py-10 pr-8 pl-10 text-2xl leading-relaxed font-medium text-[#C9A961] italic shadow-2xl md:text-3xl">
               “This isn’t just about tiles. This is about bringing the soul of
               Valencia and the spirit of Africa into every home that dares to be
               extraordinary.”
@@ -145,8 +151,8 @@ export default function NewsArticlePage() {
 
             {/* IMAGE 1 */}
             <div
-              className="my-16 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
-              onClick={() => openLightbox(0)}
+              className="my-12 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              onClick={() => openLightbox(0)} // or (1) for second image
             >
               <Image
                 src={currentNews.contentImages![0]}
@@ -269,14 +275,12 @@ export default function NewsArticlePage() {
           </div>
         </div>
       </section>
-
-      {/* LIGHTBOX */}
+      // Replace FsLightbox
       <FsLightbox
-        toggler={lightboxOpen}
+        toggler={lightboxController.toggler}
         sources={currentNews.contentImages || []}
-        sourceIndex={lightboxIndex}
+        slide={lightboxController.slide}
       />
-
       {/* RELATED NEWS */}
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-6 lg:px-8">
@@ -299,7 +303,6 @@ export default function NewsArticlePage() {
           </div>
         </div>
       </section>
-
       {/* SUBSCRIBE */}
       <section className="bg-main py-16 md:py-24">
         <div className="container mx-auto px-6 text-center">

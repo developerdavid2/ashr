@@ -73,10 +73,17 @@ export default function BlogPostPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [email, setEmail] = useState("");
+  // Use a counter to force re-render every time
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
 
   const openLightbox = (index: number) => {
-    setLightboxIndex(index);
-    setLightboxOpen(!lightboxOpen);
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: index + 1, // FsLightbox is 1-indexed
+    });
   };
 
   const handleSubscribe = (e: React.FormEvent) => {
@@ -167,7 +174,7 @@ export default function BlogPostPage() {
             {/* Image 1 - Clickable */}
             <div
               className="my-12 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
-              onClick={() => openLightbox(0)}
+              onClick={() => openLightbox(0)} // or (1) for second image
             >
               <Image
                 src={blogData.contentImages[0]}
@@ -302,9 +309,9 @@ export default function BlogPostPage() {
 
       {/* LIGHTBOX */}
       <FsLightbox
-        toggler={lightboxOpen}
+        toggler={lightboxController.toggler}
         sources={blogData.contentImages}
-        sourceIndex={lightboxIndex}
+        slide={lightboxController.slide}
       />
 
       {/* RELATED INSIGHTS - LIGHT BACKGROUND */}

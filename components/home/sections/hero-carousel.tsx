@@ -22,7 +22,7 @@ export function HeroCarousel() {
     "/home-hero/hero-ceramic.png",
     "/home-hero/hero-interior.webp",
     "/home-hero/hero-car.png",
-    "/home-hero/hero-gully.png",
+    "/home-hero/hero-manhole.png",
   ];
 
   const [api, setApi] = React.useState<CarouselApi>();
@@ -42,7 +42,7 @@ export function HeroCarousel() {
   }, [api]);
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="mx-auto w-full max-w-3xl">
       <Carousel
         plugins={[plugin.current]}
         opts={{ loop: true }}
@@ -51,7 +51,7 @@ export function HeroCarousel() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative w-full max-w-[1000px] aspect-[16/9] mx-auto overflow-hidden">
+              <div className="relative mx-auto aspect-[16/9] w-full max-w-[1000px] overflow-hidden">
                 <Image
                   src={src}
                   alt="hero"
@@ -70,7 +70,7 @@ export function HeroCarousel() {
 
       {/* dots */}
 
-      <div className="flex justify-center mt-5 gap-2">
+      <div className="mt-5 flex justify-center gap-2">
         {images.map((_, index) => {
           const isActive = current === index;
 
@@ -78,10 +78,7 @@ export function HeroCarousel() {
             <button
               key={index}
               onClick={() => api?.scrollTo(index)}
-              className={`
-          h-2 rounded-full transition-all duration-500
-          ${isActive ? "w-8 bg-[#C9A961]" : "w-2 bg-black/30 hover:bg-white/50"}
-        `}
+              className={`h-2 rounded-full transition-all duration-500 ${isActive ? "w-8 bg-[#C9A961]" : "w-2 bg-black/30 hover:bg-white/50"} `}
             />
           );
         })}

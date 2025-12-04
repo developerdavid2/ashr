@@ -29,9 +29,9 @@ export const SimtexHero = () => {
         </div>
 
         {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative mx-auto aspect-4/3 w-full max-w-[800px] overflow-hidden">
+        <div className="relative mx-auto aspect-4/3 w-full max-w-[600px] overflow-hidden">
           <Image
-            src="/our-businesses/simtex-hero.webp"
+            src="/our-businesses/simtex-hero.png"
             alt="ASHR Designs"
             fill
             className="object-cover"
