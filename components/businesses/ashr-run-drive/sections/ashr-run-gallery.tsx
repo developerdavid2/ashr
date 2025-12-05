@@ -90,7 +90,6 @@ const vehicleImages = [
 ];
 
 export const AshrRunDriveGallery = () => {
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   // Flatten images for the lightbox
   const allImages = useMemo(() => {
     return vehicleImages.flat().map((img) => ({
