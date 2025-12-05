@@ -1,10 +1,24 @@
-import React from "react";
+// app/businesses/ashr-designs/page.tsx
+import { generateMetadata } from "@/components/seo/page-seo";
+import { Metadata } from "next";
 import { AshrDesignsHero } from "@/components/businesses/ashr-designs/sections/ashr-designs-hero";
 import { AshrDesignsAbout } from "@/components/businesses/ashr-designs/sections/ashr-designs-about";
 import { AshrDesignsOffer } from "@/components/businesses/ashr-designs/sections/ashr-designs-offer";
 import { AshrDesignsGallery } from "@/components/businesses/ashr-designs/sections/ashr-designs-gallery";
 import AshrDesignsNewsAndBlogs from "@/components/businesses/ashr-designs/sections/ashr-designs-latest";
 import { AshrDesignsCTA } from "@/components/businesses/ashr-designs/sections/ashr-designs-cta";
+
+// ————————————————————————
+// PREMIUM SEO FOR ASHR DESIGNS
+// ————————————————————————
+export const metadata: Metadata = generateMetadata({
+  title: "ASHR Designs – Luxury Interior Design & Bespoke Furniture in Nigeria",
+  description:
+    "Transform your space with ASHR Designs — Nigeria’s leading luxury interior design studio. Bespoke furniture, premium finishes, and African-inspired contemporary aesthetics in Lagos and Abuja.",
+  image: "https://ashrgroup.com.ng/og-designs.jpg", // ← Create this 1200×630 image
+  url: "/businesses/ashr-designs",
+  type: "website",
+});
 
 const Page = () => {
   return (

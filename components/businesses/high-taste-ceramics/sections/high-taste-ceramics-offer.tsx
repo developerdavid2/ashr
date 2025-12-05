@@ -6,11 +6,11 @@ import {
   Droplets,
   Home,
   Layers,
-  Link,
   Package,
   Palette,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 
 export function HighTasteCeramicsOffer() {
   return (

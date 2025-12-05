@@ -233,7 +233,7 @@ export const SimtexGallery = () => {
         <div className="mb-12 flex flex-col space-y-6 sm:mb-16">
           <h2 className="font-kapital text-4xl leading-tight font-light text-white sm:text-5xl md:text-6xl lg:text-7xl">
             PRODUCT{" "}
-            <span className="font-bold" style={{ color: "#A9802C" }}>
+            <span className="font-bold" style={{ color: "#C9A961" }}>
               GALLERY
             </span>
           </h2>
@@ -247,7 +247,7 @@ export const SimtexGallery = () => {
       </div>
 
       {/* Marquee Gallery Container */}
-      <div className="relative container mx-auto w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)]">
+      <div className="relative container mx-auto w-full items-center justify-center overflow-hidden">
         {/* Mobile (2 Columns) - Uses a combination of columns for a better height spread */}
         <div className="flex h-[600px] w-full px-4 sm:hidden">
           {/* Group 1: Columns 0 & 3 */}

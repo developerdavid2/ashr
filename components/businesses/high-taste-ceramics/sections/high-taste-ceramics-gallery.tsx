@@ -271,7 +271,7 @@ export const HighTasteCeramicsGallery = () => {
         </div>
 
         {/* Tablet (3 Columns) */}
-        <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_4%,black_96%,transparent_100%)] sm:flex lg:hidden">
+        <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden sm:flex lg:hidden">
           {/* ... (Columns 0, 1, 2) Same as your original code, just using new ImageCard */}
           <div className="group">
             <Marquee
@@ -325,7 +325,7 @@ export const HighTasteCeramicsGallery = () => {
         </div>
 
         {/* Desktop (4 Columns) */}
-        <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)] lg:flex">
+        <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden lg:flex">
           {/* ... (Columns 0, 1, 2, 3) Same as your original code */}
           <div className="group">
             <Marquee

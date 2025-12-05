@@ -15,9 +15,11 @@ const categories = [
   "Events",
 ] as const;
 
+type Category = (typeof categories)[number];
+
 type Props = {
-  activeCategory: string;
-  onCategoryChange: (cat: (typeof categories)[number]) => void;
+  activeCategory: Category;
+  onCategoryChange: (cat: Category) => void;
   searchQuery: string;
   onSearchChange: (q: string) => void;
 };
@@ -31,7 +33,7 @@ export default function NewsFilters({
   return (
     <div className="font-poppins mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">
       {/* Category Pills */}
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         {categories.map((cat) => (
           <Button
             key={cat}
@@ -39,7 +41,7 @@ export default function NewsFilters({
             size="sm"
             className={
               activeCategory === cat
-                ? "rounded-xl border-[#A9802C] bg-[#A9802C] text-white hover:bg-[#8a6a22]"
+                ? "rounded-xl border-[#C9A961] bg-[#C9A961] text-white hover:bg-[#d4b86a]"
                 : "rounded-xl border-gray-300 hover:bg-gray-100"
             }
             onClick={() => onCategoryChange(cat)}
@@ -54,7 +56,7 @@ export default function NewsFilters({
         <Search className="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400" />
         <Input
           placeholder="Search news & updates..."
-          className="overflow-hidden rounded-xl border-gray-200 bg-white pr-10 pl-10"
+          className="rounded-xl border-gray-200 bg-white pr-10 pl-10"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
         />

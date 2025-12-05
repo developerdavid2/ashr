@@ -118,7 +118,7 @@ export default function FeaturedBlogCarousel({
                             </span>
                           </h3>
 
-                          <div className="mb-6 flex items-center gap-3">
+                          {/* <div className="mb-6 flex items-center gap-3">
                             <Image
                               src={blog.author.avatar}
                               alt={blog.author.name}
@@ -134,7 +134,7 @@ export default function FeaturedBlogCarousel({
                                 {blog.author.role.split(",")[0]}
                               </p>
                             </div>
-                          </div>
+                          </div> */}
 
                           {/* CTA */}
                           <div className="flex translate-y-6 items-center gap-3 font-medium text-white opacity-0 transition-all duration-500 group-hover:translate-y-1 group-hover:opacity-100 md:mt-6 lg:group-hover:translate-y-0">
