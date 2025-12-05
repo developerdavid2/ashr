@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "leaflet/dist/leaflet.css";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 .leaflet-container {
   height: 400px;
@@ -444,4 +445,45 @@
 }
 .animate-heroFloat {
   animation: heroFloat 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Luxury Gold Theme Override */
+.fancybox__container {
+  --fancybox-bg: rgba(15, 15, 15, 0.95) !important; /* Dark overlay */
+  --fancybox-accent: #c9a961 !important; /* Gold accents */
+  --fancybox-button-bg: rgba(201, 169, 97, 0.9) !important; /* Gold buttons */
+  --fancybox-button-color: #000 !important; /* Black text on gold */
+  --fancybox-thumbs-bg: rgba(0, 0, 0, 0.8) !important; /* Dark thumbs */
+  --fancybox-caption-bg: rgba(
+    201,
+    169,
+    97,
+    0.95
+  ) !important; /* Gold caption bg */
+  --fancybox-caption-color: #000 !important; /* Black caption text */
+  --fancybox-thumbs-width: 120px !important; /* Thumb size */
+  --fancybox-thumbs-height: 80px !important;
+  font-family: "Poppins", sans-serif !important; /* Your font */
+  font-size: larger !important;
+}
+
+.fancybox__caption {
+  font-family: "mokoto", serif !important; /* Your heading font */
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Fade Effect (Built-in) */
+.fancybox__container {
+  animation: fancybox-fade-in 0.3s ease-out !important;
+}
+
+@keyframes fancybox-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

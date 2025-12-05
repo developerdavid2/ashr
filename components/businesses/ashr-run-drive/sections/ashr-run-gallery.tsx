@@ -2,10 +2,10 @@
 
 import { Marquee } from "@/components/ui/marquee";
 import Image from "next/image";
-import { useState, useMemo } from "react";
-import FsLightbox from "fslightbox-react";
+import { useEffect, useMemo } from "react";
+import { useState } from "react";
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
-// ... (Keep your vehicleImages array exactly as it is) ...
 const vehicleImages = [
   [
     {
@@ -90,27 +90,25 @@ const vehicleImages = [
 ];
 
 export const AshrRunDriveGallery = () => {
-  // LIGHTBOX STATE — use a counter to force re-render
-  const [lightboxController, setLightboxController] = useState({
-    toggler: false,
-    slide: 0,
-  });
-
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  // Flatten images for the lightbox
   const allImages = useMemo(() => {
-    return vehicleImages.flat().map((img, index) => ({
-      ...img,
-      _id: `${img.src}-${index}`, // unique ID even if src repeats
+    return vehicleImages.flat().map((img) => ({
+      src: img.src,
+      thumb: img.src,
+      caption: img.alt,
+      // Fancybox needs these as data attributes for proper aspect ratio
+      type: "image",
     }));
   }, []);
 
-  // Extract sources and captions
-  const lightboxSources = allImages.map((img) => img.src);
-  const lightboxCaptions = allImages.map((img) => img.alt);
+  // 2. Updated Open Function
   const openLightbox = (columnIndex: number, imageIndex: number) => {
     const clickedImage = vehicleImages[columnIndex][imageIndex];
 
-    // Find correct index using the original nested structure
+    // Calculate the global index to open the correct slide
     let globalIndex = 0;
+    let found = false;
     for (let col = 0; col < vehicleImages.length; col++) {
       for (let row = 0; row < vehicleImages[col].length; row++) {
         if (
@@ -118,27 +116,35 @@ export const AshrRunDriveGallery = () => {
           col === columnIndex &&
           row === imageIndex
         ) {
-          setLightboxController({
-            toggler: !lightboxController.toggler,
-            slide: globalIndex + 1,
-          }); // +1 because FsLightbox is 1-indexed
-          return;
+          found = true;
+          break;
         }
         globalIndex++;
       }
+      if (found) break;
     }
+
+    // 3. Trigger Fancybox
+    Fancybox.show(allImages, {
+      startIndex: globalIndex,
+      mainClass: "ashr-fancybox-container", // Custom class for styling
+
+      Carousel: {
+        infinite: true,
+        transition: "fade",
+      },
+    });
   };
 
   const ImageCard = ({ image, columnIndex, imageIndex }: any) => {
     const [hovered, setHovered] = useState(false);
-
     return (
       <div
         className="group relative cursor-zoom-in overflow-hidden rounded-2xl transition-all duration-500"
         style={{ aspectRatio: `${image.width}/${image.height}` }}
+        onClick={() => openLightbox(columnIndex, imageIndex)}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        onClick={() => openLightbox(columnIndex, imageIndex)}
       >
         <Image
           src={image.src}
@@ -175,7 +181,7 @@ export const AshrRunDriveGallery = () => {
           </div>
         </div>
 
-        {/* Title overlay */}
+        {/* Title overlay (Keep this if you want it visible on the thumbnail card itself) */}
         <div
           className={`absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4 transition-opacity ${hovered ? "opacity-100" : "opacity-0"}`}
         >
@@ -189,6 +195,31 @@ export const AshrRunDriveGallery = () => {
 
   return (
     <>
+      {/* ADD THIS CSS GLOBALLY OR IN A CSS MODULE TO MATCH YOUR OLD CAPTION STYLE 
+         Fancybox renders outside this React tree, so we use global CSS targeting the class we passed.
+      */}
+      <style jsx global>{`
+        .ashr-fancybox-container .fancybox__caption {
+          font-family: "Mokoto", sans-serif; /* Your custom font */
+          text-transform: uppercase;
+          color: #c9a961;
+          font-size: 2rem;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(10px);
+          padding: 1rem 2rem;
+          border-radius: 9999px;
+          margin-bottom: 20px;
+          display: inline-block;
+          max-width: 90%;
+        }
+        .ashr-fancybox-container .fancybox__caption-container {
+          display: flex;
+          justify-content: center;
+          pointer-events: none;
+        }
+      `}</style>
+
       <section
         className="relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
         id="ashr-run-drive-gallery"
@@ -249,6 +280,7 @@ export const AshrRunDriveGallery = () => {
 
         {/* Tablet (3 Columns) */}
         <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_4%,black_96%,transparent_100%)] sm:flex lg:hidden">
+          {/* ... (Columns 0, 1, 2) Same as your original code, just using new ImageCard */}
           <div className="group">
             <Marquee
               pauseOnHover
@@ -265,7 +297,6 @@ export const AshrRunDriveGallery = () => {
               ))}
             </Marquee>
           </div>
-
           <div className="group">
             <Marquee
               pauseOnHover
@@ -283,7 +314,6 @@ export const AshrRunDriveGallery = () => {
               ))}
             </Marquee>
           </div>
-
           <div className="group">
             <Marquee
               pauseOnHover
@@ -304,6 +334,7 @@ export const AshrRunDriveGallery = () => {
 
         {/* Desktop (4 Columns) */}
         <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)] lg:flex">
+          {/* ... (Columns 0, 1, 2, 3) Same as your original code */}
           <div className="group">
             <Marquee
               pauseOnHover
@@ -320,7 +351,6 @@ export const AshrRunDriveGallery = () => {
               ))}
             </Marquee>
           </div>
-
           <div className="group">
             <Marquee
               pauseOnHover
@@ -338,7 +368,6 @@ export const AshrRunDriveGallery = () => {
               ))}
             </Marquee>
           </div>
-
           <div className="group">
             <Marquee
               pauseOnHover
@@ -355,7 +384,6 @@ export const AshrRunDriveGallery = () => {
               ))}
             </Marquee>
           </div>
-
           <div className="group">
             <Marquee
               pauseOnHover
@@ -376,14 +404,7 @@ export const AshrRunDriveGallery = () => {
         </div>
       </section>
 
-      {/* LIGHTBOX — THE CORRECT WAY */}
-      <FsLightbox
-        toggler={lightboxController.toggler}
-        sources={lightboxSources}
-        captions={lightboxCaptions}
-        slide={lightboxController.slide} // 1-indexed!
-        type="image"
-      />
+      {/* NO MORE FSLIGHTBOX COMPONENT HERE! */}
     </>
   );
 };

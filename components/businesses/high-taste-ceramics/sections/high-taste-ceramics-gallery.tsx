@@ -1,31 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { Marquee } from "@/components/ui/marquee";
+import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
+import { Fancybox } from "@fancyapps/ui";
 
-// Ceramics & Tiles Gallery Images
+// High Taste Ceramics Images
 const ceramicsImages = [
   // Column 1
   [
     {
-      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=800&fit=crop",
-      alt: "Luxury Bathroom with Italian Tiles",
+      src: "/high-taste-ceramics/high-taste-1.jpg",
+      alt: "Creavit Wall hung WCs",
       width: 600,
       height: 800,
     },
     {
-      src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&h=400&fit=crop",
-      alt: "Modern Bathroom Design",
+      src: "/high-taste-ceramics/high-taste-2.jpg",
+      alt: "Premium fittings and Stylish furniture",
       width: 600,
       height: 400,
     },
     {
-      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=700&fit=crop",
-      alt: "Marble Effect Floor Tiles",
+      src: "/high-taste-ceramics/high-taste-3.jpg",
+      alt: "Creavit RAYA Anthracite 100cm Vanity Set",
       width: 600,
       height: 700,
     },
@@ -33,20 +31,20 @@ const ceramicsImages = [
   // Column 2
   [
     {
-      src: "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&h=500&fit=crop",
-      alt: "Spa-Style Bathroom",
+      src: "/high-taste-ceramics/high-taste-4.jpg",
+      alt: "Creavit Round Wash Hand Basin",
       width: 600,
       height: 500,
     },
     {
-      src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=600&h=800&fit=crop",
-      alt: "Contemporary Tile Installation",
+      src: "/high-taste-ceramics/high-taste-5.jpg",
+      alt: "Creavit Handicapped WC, Washbasin & Accessories",
       width: 600,
       height: 800,
     },
     {
-      src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&h=600&fit=crop",
-      alt: "Luxury Bathroom Fittings",
+      src: "/high-taste-ceramics/high-taste-6.jpg",
+      alt: "Creavit Vanity Set",
       width: 600,
       height: 600,
     },
@@ -54,20 +52,20 @@ const ceramicsImages = [
   // Column 3
   [
     {
-      src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=700&fit=crop",
-      alt: "Kitchen Backsplash Tiles",
+      src: "/high-taste-ceramics/high-taste-7.jpg",
+      alt: "Luxurious Showers",
       width: 600,
       height: 700,
     },
     {
-      src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=500&fit=crop",
-      alt: "Master Bathroom Suite",
+      src: "/high-taste-ceramics/high-taste-8.jpg",
+      alt: "Luxurious Bathtubs",
       width: 600,
       height: 500,
     },
     {
-      src: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=800&fit=crop",
-      alt: "Premium Floor Tiles",
+      src: "/high-taste-ceramics/high-taste-9.jpg",
+      alt: "Premium Kitchen Fittings",
       width: 600,
       height: 800,
     },
@@ -75,20 +73,20 @@ const ceramicsImages = [
   // Column 4
   [
     {
-      src: "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=600&h=600&fit=crop",
-      alt: "Designer Sanitaryware",
+      src: "/high-taste-ceramics/high-taste-10.jpg",
+      alt: "Glossy Tiles Fittings",
       width: 600,
       height: 600,
     },
     {
-      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=750&fit=crop",
-      alt: "Wall Tile Installation",
+      src: "/high-taste-ceramics/high-taste-11.jpg",
+      alt: "Modern Pivot Doors",
       width: 600,
       height: 750,
     },
     {
-      src: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&h=500&fit=crop",
-      alt: "Ceramic Tile Showroom",
+      src: "/high-taste-ceramics/high-taste-12.jpg",
+      alt: "Staturio Contesa",
       width: 600,
       height: 500,
     },
@@ -96,176 +94,307 @@ const ceramicsImages = [
 ];
 
 export const HighTasteCeramicsGallery = () => {
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  // Flatten images for Fancybox
+  const allImages = useMemo(() => {
+    return ceramicsImages.flat().map((img) => ({
+      src: img.src,
+      thumb: img.src,
+      caption: img.alt,
+      type: "image",
+    }));
+  }, []);
 
-  const ImageCard = ({ image, columnIndex, imageIndex }: any) => (
-    <div
-      className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-2xl transition-all duration-300",
-        hoveredImage === `${columnIndex}-${imageIndex}`
-          ? "drop-shadow-[0px_8px_16px_rgba(169,128,44,0.4)]"
-          : "drop-shadow-[0px_2px_4px_rgba(0,0,0,0.1)]",
-      )}
-      onMouseEnter={() => setHoveredImage(`${columnIndex}-${imageIndex}`)}
-      onMouseLeave={() => setHoveredImage(null)}
-    >
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-        className="h-auto w-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
-        loading="lazy"
-      />
+  // Open Fancybox at correct index
+  const openLightbox = (columnIndex: number, imageIndex: number) => {
+    const clickedImage = ceramicsImages[columnIndex][imageIndex];
 
-      {/* Overlay on Hover */}
-      <div className="absolute inset-0 flex items-end rounded-2xl bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="text-white">
-          <h4 className="mb-1 text-xl font-bold">{image.alt}</h4>
-          <p className="text-sm text-white/80">View Gallery →</p>
+    // Calculate the global index to open the correct slide
+    let globalIndex = 0;
+    let found = false;
+    for (let col = 0; col < ceramicsImages.length; col++) {
+      for (let row = 0; row < ceramicsImages[col].length; row++) {
+        if (
+          ceramicsImages[col][row].src === clickedImage.src &&
+          col === columnIndex &&
+          row === imageIndex
+        ) {
+          found = true;
+          break;
+        }
+        globalIndex++;
+      }
+      if (found) break;
+    }
+
+    // 3. Trigger Fancybox
+    Fancybox.show(allImages, {
+      startIndex: globalIndex,
+      mainClass: "ashr-fancybox-container", // Custom class for styling
+
+      Carousel: {
+        infinite: true,
+        transition: "fade",
+      },
+    });
+  };
+
+  const ImageCard = ({ image, columnIndex, imageIndex }: any) => {
+    const [hovered, setHovered] = useState(false);
+
+    return (
+      <div
+        className="group relative cursor-zoom-in overflow-hidden rounded-2xl transition-all duration-500"
+        style={{ aspectRatio: `${image.width}/${image.height}` }}
+        onClick={() => openLightbox(columnIndex, imageIndex)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          className={`h-full w-full rounded-2xl object-cover transition-transform duration-700 ${
+            hovered ? "scale-110" : "scale-100"
+          }`}
+          loading="lazy"
+        />
+
+        {/* Hover Overlay */}
+        <div
+          className={`pointer-events-none absolute inset-0 flex items-center justify-center rounded-2xl bg-black/60 opacity-0 transition-opacity duration-300 ${
+            hovered ? "opacity-100" : ""
+          }`}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <svg
+              className="h-12 w-12 text-[#C9A961]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <p className="text-sm font-medium text-white">Click to view</p>
+          </div>
+        </div>
+
+        {/* Title overlay */}
+        <div
+          className={`absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4 transition-opacity ${hovered ? "opacity-100" : "opacity-0"}`}
+        >
+          <h4 className="font-poppins font-semibold text-white uppercase text-shadow-lg">
+            {image.alt}
+          </h4>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
-    <section
-      className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-24 lg:py-32"
-      id="high-taste-ceramics-gallery"
-    >
-      <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
-        {/* Header */}
-        <div className="mb-12 flex flex-col space-y-6 sm:mb-16">
-          <h2 className="font-kapital text-main/50 text-4xl leading-tight font-light sm:text-5xl md:text-6xl lg:text-7xl">
-            OUR{" "}
-            <span className="font-bold" style={{ color: "#A9802C" }}>
-              COLLECTIONS
-            </span>
-          </h2>
+    <>
+      {/* CUSTOM STYLING FOR HIGH TASTE CERAMICS */}
+      <style jsx global>{`
+        .high-taste-fancybox .fancybox__caption {
+          font-family: "Mokoto", serif !important;
+          text-transform: uppercase;
+          color: #c9a961 !important;
+          font-size: 1.8rem !important;
+          font-weight: bold !important;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(12px);
+          padding: 1.2rem 3rem !important;
+          border-radius: 9999px;
+          border: 2px solid #c9a961;
+          box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+          margin-bottom: 20px;
+        }
+        .high-taste-fancybox .fancybox__thumbs .fancybox__thumb {
+          border: 3px solid transparent;
+          transition: all 0.3s ease;
+        }
+        .high-taste-fancybox .fancybox__thumbs .is-active .fancybox__thumb {
+          border-color: #c9a961 !important;
+        }
+      `}</style>
 
-          <p className="font-poppins max-w-5xl text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
-            Discover our curated selection of luxury Italian tiles, premium
-            bathroom fittings, and designer sanitaryware.
-          </p>
+      <section
+        className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-24 lg:py-32"
+        id="high-taste-ceramics-gallery"
+      >
+        <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6">
+          <div className="mb-16 text-center">
+            <h2 className="font-kapital text-4xl text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
+              OUR <span className="font-bold text-[#C9A961]">COLLECTIONS</span>
+            </h2>
+            <p className="mx-auto mt-6 max-w-4xl text-lg font-light text-gray-700">
+              Discover our curated selection of luxury Italian tiles, premium
+              bathroom fittings, and designer sanitaryware.
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile Gallery - 2 Columns */}
-      <div className="relative container mx-auto flex h-[600px] w-full items-center justify-center overflow-hidden sm:hidden">
-        {/* Column 1 */}
-        <Marquee pauseOnHover vertical className="[--duration:25s]">
-          {ceramicsImages[0].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={0}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
+        {/* Mobile (2 Columns) */}
+        <div className="flex h-[700px] gap-4 px-4 sm:hidden">
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              className="[--duration:25s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[0].map((image, idx) => (
+                <div key={idx} className="mb-8 last:mb-0">
+                  <ImageCard image={image} columnIndex={0} imageIndex={idx} />
+                </div>
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              reverse
+              className="[--duration:30s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[1].map((image, idx) => (
+                <div key={idx} className="mb-8 last:mb-0">
+                  <ImageCard image={image} columnIndex={1} imageIndex={idx} />
+                </div>
+              ))}
+            </Marquee>
+          </div>
+        </div>
 
-        {/* Column 2 */}
-        <Marquee pauseOnHover vertical reverse className="[--duration:30s]">
-          {ceramicsImages[1].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={1}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-      </div>
+        {/* Tablet (3 Columns) */}
+        <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_4%,black_96%,transparent_100%)] sm:flex lg:hidden">
+          {/* ... (Columns 0, 1, 2) Same as your original code, just using new ImageCard */}
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              className="[--duration:30s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[0].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={0}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              reverse
+              className="[--duration:35s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[1].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={1}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              className="[--duration:28s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[2].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={2}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+        </div>
 
-      {/* Tablet Gallery - 3 Columns */}
-      <div className="relative container mx-auto hidden h-[800px] w-full items-center justify-center overflow-hidden sm:flex lg:hidden">
-        {/* Column 1 */}
-        <Marquee pauseOnHover vertical className="[--duration:30s]">
-          {ceramicsImages[0].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={0}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-
-        {/* Column 2 */}
-        <Marquee pauseOnHover vertical reverse className="[--duration:35s]">
-          {ceramicsImages[1].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={1}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-
-        {/* Column 3 */}
-        <Marquee pauseOnHover vertical className="[--duration:28s]">
-          {ceramicsImages[2].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={2}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-      </div>
-
-      {/* Desktop Gallery - 4 Columns */}
-      <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden lg:flex">
-        {/* Column 1 - Scrolling Down */}
-        <Marquee pauseOnHover vertical className="[--duration:35s]">
-          {ceramicsImages[0].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={0}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-
-        {/* Column 2 - Scrolling Up */}
-        <Marquee pauseOnHover vertical reverse className="[--duration:40s]">
-          {ceramicsImages[1].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={1}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-
-        {/* Column 3 - Scrolling Down */}
-        <Marquee pauseOnHover vertical className="[--duration:30s]">
-          {ceramicsImages[2].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={2}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-
-        {/* Column 4 - Scrolling Up */}
-        <Marquee pauseOnHover vertical reverse className="[--duration:38s]">
-          {ceramicsImages[3].map((image, idx) => (
-            <ImageCard
-              key={idx}
-              image={image}
-              columnIndex={3}
-              imageIndex={idx}
-            />
-          ))}
-        </Marquee>
-      </div>
-    </section>
+        {/* Desktop (4 Columns) */}
+        <div className="relative container mx-auto hidden h-[1000px] w-full items-center justify-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_3%,black_97%,transparent_100%)] lg:flex">
+          {/* ... (Columns 0, 1, 2, 3) Same as your original code */}
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              className="[--duration:35s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[0].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={0}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              reverse
+              className="[--duration:40s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[1].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={1}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              className="[--duration:30s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[2].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={2}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+          <div className="group">
+            <Marquee
+              pauseOnHover
+              vertical
+              reverse
+              className="[--duration:38s] group-hover:[animation-play-state:paused]"
+            >
+              {ceramicsImages[3].map((image, idx) => (
+                <ImageCard
+                  key={idx}
+                  image={image}
+                  columnIndex={3}
+                  imageIndex={idx}
+                />
+              ))}
+            </Marquee>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
