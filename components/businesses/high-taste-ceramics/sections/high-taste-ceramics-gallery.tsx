@@ -10,19 +10,19 @@ const ceramicsImages = [
   // Column 1
   [
     {
-      src: "/high-taste-ceramics/high-taste-1.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206777/high-taste-1_wtgci1.jpg",
       alt: "Creavit Wall hung WCs",
       width: 600,
       height: 800,
     },
     {
-      src: "/high-taste-ceramics/high-taste-2.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206778/high-taste-2_u1w9kz.jpg",
       alt: "Premium fittings and Stylish furniture",
       width: 600,
       height: 400,
     },
     {
-      src: "/high-taste-ceramics/high-taste-3.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206777/high-taste-3_kzw0lu.jpg",
       alt: "Creavit RAYA Anthracite 100cm Vanity Set",
       width: 600,
       height: 700,
@@ -31,19 +31,19 @@ const ceramicsImages = [
   // Column 2
   [
     {
-      src: "/high-taste-ceramics/high-taste-4.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206777/high-taste-4_cbeuox.jpg",
       alt: "Creavit Round Wash Hand Basin",
       width: 600,
       height: 500,
     },
     {
-      src: "/high-taste-ceramics/high-taste-5.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206778/high-taste-5_h4ycfw.jpg",
       alt: "Creavit Handicapped WC, Washbasin & Accessories",
       width: 600,
       height: 800,
     },
     {
-      src: "/high-taste-ceramics/high-taste-6.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206778/high-taste-6_avk0hg.jpg",
       alt: "Creavit Vanity Set",
       width: 600,
       height: 600,
@@ -52,19 +52,19 @@ const ceramicsImages = [
   // Column 3
   [
     {
-      src: "/high-taste-ceramics/high-taste-7.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206780/high-taste-7_j1gcxk.jpg",
       alt: "Luxurious Showers",
       width: 600,
       height: 700,
     },
     {
-      src: "/high-taste-ceramics/high-taste-8.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206783/high-taste-8_afyeuv.jpg",
       alt: "Luxurious Bathtubs",
       width: 600,
       height: 500,
     },
     {
-      src: "/high-taste-ceramics/high-taste-9.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206786/high-taste-9_rdjvfy.jpg",
       alt: "Premium Kitchen Fittings",
       width: 600,
       height: 800,
@@ -73,19 +73,19 @@ const ceramicsImages = [
   // Column 4
   [
     {
-      src: "/high-taste-ceramics/high-taste-10.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206787/high-taste-10_kq0gqn.jpg",
       alt: "Glossy Tiles Fittings",
       width: 600,
       height: 600,
     },
     {
-      src: "/high-taste-ceramics/high-taste-11.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206788/high-taste-11_b9t2dt.jpg",
       alt: "Modern Pivot Doors",
       width: 600,
       height: 750,
     },
     {
-      src: "/high-taste-ceramics/high-taste-12.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206775/high-taste-12_d3h4y2.jpg",
       alt: "Staturio Contesa",
       width: 600,
       height: 500,

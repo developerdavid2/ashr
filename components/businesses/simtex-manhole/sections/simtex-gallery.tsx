@@ -11,26 +11,26 @@ const productImages = [
   // Column 1 (Target Height: ~2250)
   [
     {
-      src: "/simtex/simtex-1.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201678/simtex-1_bseq4f.jpg",
       alt: "10X10 Simtex FRP Manhole Cover",
       width: 600,
       height: 800,
     },
     {
-      src: "/simtex/simtex-3.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201687/simtex-3_xp3h1v.jpg",
       alt: "18×18 Inch Simtex FRP Square Manhole Cover",
       width: 600,
       height: 700,
     },
     {
-      src: "/simtex/simtex-8.jpg",
-      alt: "E-203/HL (Cockroach with Hole)",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201680/simtex-8_qu5ect.jpg",
+      alt: "24×24 Inch Simtex FRP Square Manhole Cover",
       width: 600,
       height: 500,
     },
     {
-      src: "/simtex/simtex-12.png",
-      alt: "12 MM Kohler Rack Bolts",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201685/simtex-12_lsvwxz.jpg",
+      alt: "45x45cm - C250 Simtex FRP Water Gully Cover",
       width: 600,
       height: 500,
     },
@@ -38,20 +38,20 @@ const productImages = [
   // Column 2 (Target Height: ~2450)
   [
     {
-      src: "/simtex/simtex-2.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201683/simtex-2_rweqdn.jpg",
       alt: "12×12 Inch Simtex FRP Square Manhole Cover",
       width: 600,
       height: 900,
     },
     {
-      src: "/simtex/simtex-5.jpeg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201679/simtex-5_vlak1j.jpg",
       alt: "15 X 27 Water Gully Cover",
       width: 600,
       height: 800,
     },
     {
-      src: "/simtex/simtex-10.jpeg",
-      alt: "5/8 (15MM) Wall Hung Rack Bolts",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201682/simtex-10_wlceyg.jpg",
+      alt: "30×30 Inch Simtex FRP Square Manhole Cover ",
       width: 600,
       height: 600,
     },
@@ -59,26 +59,26 @@ const productImages = [
   // Column 3 (Target Height: ~2150)
   [
     {
-      src: "/simtex/simtex-4.png",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201681/simtex-4_osbzqy.png",
       alt: "22.6 X 22.6 Water Gully Cover",
       width: 600,
       height: 500,
     },
     {
-      src: "/simtex/simtex-7.jpg",
-      alt: "B-001 (2 Pc) SS Floor Trap",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201680/simtex-7_de2xxr.jpg",
+      alt: "28 × 28 Inch Simtex FRP Square Manhole Cover ",
       width: 600,
       height: 700,
     },
     {
-      src: "/simtex/simtex-9.jpg",
-      alt: "I-003 (Cockroach)",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201682/simtex-9_igdai1.jpg",
+      alt: "78cm Round Heavy Duty Simtex FRP Manhole Cover",
       width: 600,
       height: 800,
     },
     {
-      src: "/simtex/simtex-11.jpeg",
-      alt: "3/8 (10MM) Wash Basin Rack Bolts",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201683/simtex-11_vqtgoh.jpg",
+      alt: "60 X 60cm Simtex FRP Manhole Cover",
       width: 600,
       height: 750,
     },
@@ -87,21 +87,21 @@ const productImages = [
   [
     // Column 4 only has one image in the 4-column layout to fill space
     {
-      src: "/simtex/simtex-6.jpg",
-      alt: "A-003/HL SS Floor Trap (Cockroach with Hole) ",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765201682/simtex-6_artuch.jpg",
+      alt: "15×15 Inch Simtex FRP Square Manhole Cover ",
       width: 600,
       height: 600,
     },
     // Adding placeholder for balance in 4-column layout
     {
-      src: "/simtex/simtex-2.jpg",
-      alt: "Simtex Filler 1",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206407/simtex-13_pynmmx.jpg",
+      alt: "78×78 Inch Simtex FRP Square Manhole Cover",
       width: 600,
       height: 600,
     },
     {
-      src: "/simtex/simtex-5.jpeg",
-      alt: "Simtex Filler 2",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765206316/simtex-14_xglzjg.png",
+      alt: "40 x 40 2.5-T SIMTEX FRP (Gray) MANHOLE COVER",
       width: 600,
       height: 700,
     },
@@ -116,9 +116,7 @@ export const SimtexGallery = () => {
       ...productImages[0].slice(0, 3), // Simtex 1, 3, 8
       ...productImages[1].slice(0, 3), // Simtex 2, 5, 10
       ...productImages[2].slice(0, 3), // Simtex 4, 7, 9
-      ...productImages[3].slice(0, 1), // Simtex 6
-      productImages[0][3], // Simtex 12
-      productImages[2][3], // Simtex 11
+      ...productImages[3].slice(0, 3), // Simtex 6
     ];
 
     // Ensure only unique and real images are in the lightbox array

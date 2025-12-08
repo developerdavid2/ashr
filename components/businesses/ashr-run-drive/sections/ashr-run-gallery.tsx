@@ -1,27 +1,26 @@
 "use client";
 
 import { Marquee } from "@/components/ui/marquee";
-import Image from "next/image";
-import { useEffect, useMemo } from "react";
-import { useState } from "react";
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+import Image from "next/image";
+import { useMemo, useState } from "react";
 
 const vehicleImages = [
   [
     {
-      src: "/ashr-run-drive/ashr-run-drive-1.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199329/ashr-run-drive-1_gpvssi.jpg",
       alt: "Range Rover Velar 2018 R-Dynamic",
       width: 600,
       height: 700,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-2.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199329/ashr-run-drive-2_mgc8t2.jpg",
       alt: "Mercedes-Benz GLC300 2020",
       width: 600,
       height: 400,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-3.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199330/ashr-run-drive-3_sx2fb3.jpg",
       alt: "Lexus GX460 premium 2012",
       width: 600,
       height: 800,
@@ -29,19 +28,19 @@ const vehicleImages = [
   ],
   [
     {
-      src: "/ashr-run-drive/ashr-run-drive-4.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199330/ashr-run-drive-4_kh3ks1.jpg",
       alt: "Mitsubishi L200 2024 brand new 4x4",
       width: 600,
       height: 500,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-5.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199331/ashr-run-drive-5_gxfpqp.jpg",
       alt: "Toyota Prado VXR 2021",
       width: 600,
       height: 700,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-6.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199330/ashr-run-drive-6_h0kxdc.jpg",
       alt: "Reg. Lexus GX460 2015 Premium Edition",
       width: 600,
       height: 600,
@@ -49,19 +48,19 @@ const vehicleImages = [
   ],
   [
     {
-      src: "/ashr-run-drive/ashr-run-drive-7.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199331/ashr-run-drive-7_e25w8u.jpg",
       alt: "Lexus RX350 2016",
       width: 600,
       height: 700,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-8.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199331/ashr-run-drive-8_eyjoi8.jpg",
       alt: "Mercedes-Benz GLE 450 AMG 2016 Pearl White",
       width: 600,
       height: 500,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-9.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199331/ashr-run-drive-9_mujac9.jpg",
       alt: "Exeed 300T 2.0L by Chery 2024",
       width: 600,
       height: 800,
@@ -69,19 +68,19 @@ const vehicleImages = [
   ],
   [
     {
-      src: "/ashr-run-drive/ashr-run-drive-10.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199329/ashr-run-drive-10_a5aj0d.jpg",
       alt: "Porsche 911 Turbo 2015 560HP",
       width: 600,
       height: 600,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-11.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199331/ashr-run-drive-11_oussig.jpg",
       alt: "Premium SUVMercedes-Benz GLE53 AMG 2021",
       width: 600,
       height: 750,
     },
     {
-      src: "/ashr-run-drive/ashr-run-drive-12.jpg",
+      src: "https://res.cloudinary.com/damkwypfe/image/upload/v1765199330/ashr-run-drive-12_qpdq3n.jpg",
       alt: "LEXUS LS460 2012 luxury edition",
       width: 600,
       height: 500,
