@@ -1,8 +1,9 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
+
 import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useState } from "react";
 
 interface GalleryImage {
   src: string;
@@ -14,14 +15,12 @@ interface GalleryImage {
 interface MasonryGalleryProps {
   images: GalleryImage[];
   animated?: boolean;
-  animationSpeed?: "slow" | "normal" | "fast";
   pauseOnHover?: boolean;
 }
 
 export function MasonryGallery({
   images,
-  animated = false,
-  animationSpeed = "normal",
+  animated = true,
   pauseOnHover = true,
 }: MasonryGalleryProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -41,27 +40,10 @@ export function MasonryGallery({
   const xlColumns = splitIntoColumns(images, 5);
   const xxlColumns = splitIntoColumns(images, 6);
 
-  const getDuration = () => {
-    switch (animationSpeed) {
-      case "slow":
-        return "60s";
-      case "fast":
-        return "20s";
-      default:
-        return "50s";
-    }
-  };
-
   const renderImageCard = (img: GalleryImage, imgIndex: number) => (
     <div
       key={`img-${imgIndex}`}
-      className="relative overflow-hidden rounded transition-all duration-300 ease-in-out shrink-0"
-      style={{
-        filter:
-          hoveredIndex === imgIndex
-            ? "drop-shadow(0px 5px 5px rgba(0,0,0,0.4))"
-            : "drop-shadow(0px 2px 2px rgba(0,0,0,0.4))",
-      }}
+      className="relative overflow-hidden rounded-xl"
       onMouseEnter={() => setHoveredIndex(imgIndex)}
       onMouseLeave={() => setHoveredIndex(null)}
     >
@@ -70,7 +52,7 @@ export function MasonryGallery({
         alt={img.alt}
         width={img.width}
         height={img.height}
-        className="w-full h-auto rounded"
+        className="h-full w-full rounded-xl object-cover transition-transform duration-700 hover:scale-105"
         loading="lazy"
       />
     </div>
@@ -83,77 +65,74 @@ export function MasonryGallery({
   ) => {
     if (!animated) {
       return (
-        <div
-          key={columnIndex}
-          className="flex flex-col gap-[var(--masonry-gap)]"
-        >
-          {columnImages.map((img, imgIndex) => renderImageCard(img, imgIndex))}
+        <div className="flex flex-col">
+          {columnImages.map((img, i) => renderImageCard(img, i))}
         </div>
       );
     }
 
     return (
-      <Marquee
-        key={columnIndex}
-        vertical
-        reverse={isReversed}
-        pauseOnHover={pauseOnHover}
-        repeat={4}
-        className={cn(
-          "h-full [--gap:var(--masonry-gap)]",
-          `[--duration:${getDuration()}]`,
-        )}
-      >
-        {columnImages.map((img, imgIndex) => renderImageCard(img, imgIndex))}
-      </Marquee>
+      <div className="group">
+        <Marquee
+          vertical
+          reverse={isReversed}
+          pauseOnHover={pauseOnHover}
+          repeat={7}
+          className="[--duration:26s] [--gap:1.5rem] group-hover:[animation-play-state:paused]"
+        >
+          {columnImages.map((img, i) => renderImageCard(img, i))}
+        </Marquee>
+      </div>
     );
   };
 
   return (
-    <div className="w-full mx-auto relative overflow-hidden [--masonry-gap:0.8rem] opacity-70">
-      {/* Mobile */}
+    <div
+      className="relative mx-auto w-full max-w-full overflow-hidden px-4 opacity-90"
+      style={{
+        maskImage:
+          "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
+      }}
+    >
       <div
-        className={`grid grid-cols-2 md:hidden ${animated ? "h-[600px] overflow-hidden" : ""}`}
-      >
-        {mobileColumns.map((column, index) =>
-          renderColumn(column, index, index % 2 === 1),
+        className={cn(
+          "grid w-full grid-cols-2 md:hidden",
+          animated && "h-[700px]",
         )}
+      >
+        {mobileColumns.map((col, i) => renderColumn(col, i, i % 2 === 1))}
       </div>
-
-      {/* Tablet */}
       <div
-        className={`hidden md:grid lg:hidden grid-cols-3 ${animated ? "h-[600px] overflow-hidden" : ""}`}
-      >
-        {tabletColumns.map((column, index) =>
-          renderColumn(column, index, index % 2 === 1),
+        className={cn(
+          "hidden w-full grid-cols-3 md:grid lg:hidden",
+          animated && "h-[800px]",
         )}
+      >
+        {tabletColumns.map((col, i) => renderColumn(col, i, i % 2 === 1))}
       </div>
-
-      {/* Desktop */}
       <div
-        className={`hidden lg:grid xl:hidden grid-cols-4 ${animated ? "h-[700px] overflow-hidden" : ""}`}
-      >
-        {desktopColumns.map((column, index) =>
-          renderColumn(column, index, index % 2 === 1),
+        className={cn(
+          "hidden w-full grid-cols-4 lg:grid xl:hidden",
+          animated && "h-[950px]",
         )}
+      >
+        {desktopColumns.map((col, i) => renderColumn(col, i, i % 2 === 1))}
       </div>
-
-      {/* XL */}
       <div
-        className={`hidden xl:grid 2xl:hidden grid-cols-5 ${animated ? "h-[700px] overflow-hidden" : ""}`}
-      >
-        {xlColumns.map((column, index) =>
-          renderColumn(column, index, index % 2 === 1),
+        className={cn(
+          "hidden w-full grid-cols-5 xl:grid 2xl:hidden",
+          animated && "h-[1050px]",
         )}
+      >
+        {xlColumns.map((col, i) => renderColumn(col, i, i % 2 === 1))}
       </div>
-
-      {/* 2XL */}
       <div
-        className={`hidden 2xl:grid grid-cols-6 ${animated ? "h-[1200px] overflow-hidden" : ""}`}
-      >
-        {xxlColumns.map((column, index) =>
-          renderColumn(column, index, index % 2 === 1),
+        className={cn(
+          "hidden w-full grid-cols-6 2xl:grid",
+          animated && "h-[1200px]",
         )}
+      >
+        {xxlColumns.map((col, i) => renderColumn(col, i, i % 2 === 1))}
       </div>
     </div>
   );
