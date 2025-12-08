@@ -31,7 +31,7 @@ const businesses: BusinessType[] = [
   {
     name: "Simtex Manhole Cover",
     description: "Fiber Reinforced Plastic manhole covers & gully covers.",
-    image: "/home-business/manhole.jpeg",
+    image: "/home-business/manhole.jpg",
     logo: "/logos/simtex-white.webp",
     href: "/businesses/simtex-manhole",
   },
