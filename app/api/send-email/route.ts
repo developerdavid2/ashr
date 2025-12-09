@@ -10,8 +10,8 @@ export async function POST(request: Request) {
     const { name, email, phone, subsidiary, message } = await request.json();
 
     const { data, error } = await resend.emails.send({
-      from: "ASHR Group <ionboarding@resend.dev>", // VERIFIED DOMAIN ONLY
-      to: "jacobsdavid.dr@gmail.com",
+      from: "ASHR Group <onboarding@ashrgroup.com.ng>", // VERIFIED DOMAIN ONLY
+      to: "info@ashrgroup.com.ng",
       replyTo: email,
       subject: `New Inquiry: ${subsidiary} – ${name}`,
       react: EmailTemplate({

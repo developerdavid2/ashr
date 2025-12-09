@@ -202,10 +202,11 @@ export default function ContactForm() {
                     </FormLabel>
                     <Select
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
+                      key={field.value || "empty"}
+                      value={field.value || undefined}
                     >
                       <FormControl>
-                        <SelectTrigger className="h-14 rounded-xl border-white/20 bg-white/5 px-6 text-lg text-white data-placeholder:text-gray-500">
+                        <SelectTrigger className="h-14 rounded-xl border-white/20 bg-white/5 px-6 text-base text-white data-placeholder:text-gray-500">
                           <SelectValue placeholder="Select a subsidiary" />
                         </SelectTrigger>
                       </FormControl>
