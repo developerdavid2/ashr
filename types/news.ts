@@ -11,10 +11,24 @@ export type NewsItem = {
   slug: string;
   title: string;
   excerpt: string;
-  content?: string; // ← now optional (for cards)
+  content?: string; // optional for cards
   image: string;
   category: Category;
   date: string;
   featured?: boolean;
-  contentImages?: string[]; // ← added for lightbox
+  contentImages?: string[]; // for lightbox
+
+  // New optional fields for enhanced content
+  author?: string;
+  authorTitle?: string;
+  blockquote?: {
+    text: string;
+    author: string;
+    authorTitle: string;
+  };
+  sections?: {
+    heading: string;
+    content: string[];
+  }[];
+  tags?: string[];
 };

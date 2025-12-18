@@ -1,46 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { EnhancedNewsItem, getAllNews } from "@/constants/news-data";
 
-type NewsItem = {
-  id: number;
-  title: string;
-  category: string;
-  date: string;
-  image: string;
-  href: string;
-};
-
-const newsItems: NewsItem[] = [
-  {
-    id: 1,
-    title: "ASHR Run and Drive adds new models",
-    category: "Company",
-    date: "2024-03-15",
-    image: "/news/news-car.webp",
-    href: "/news/ashr-new-models",
-  },
-  {
-    id: 2,
-    title: "High Taste Ceramics launches new luxury tiles collection.",
-    category: "Company",
-    date: "2024-03-10",
-    image: "/news/news-ceramics.jpeg",
-    href: "/news/automotive-expansion",
-  },
-  {
-    id: 3,
-    title: "Simtex expands industrial partnerships across Nigeria.",
-    category: "Company",
-    date: "2024-03-05",
-    image: "/news/news-manhole.jpg",
-    href: "/news/lagos-showroom",
-  },
-];
-
-export function NewsCard({ item }: { item: NewsItem }) {
+export function NewsCard({ item }: { item: EnhancedNewsItem }) {
   return (
-    <Link href={item.href} className="block">
+    <Link href={`/news/${item.slug}`} className="block">
       <div className="group/card hover:bg-main/90 relative h-[320px] cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-gray-100/50 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:h-[350px]">
         {/* IMAGE */}
         <div className="relative h-40 w-full overflow-hidden sm:h-48">
@@ -105,6 +73,26 @@ export function NewsCard({ item }: { item: NewsItem }) {
 }
 
 export default function NewsSection() {
+  const [newsItems, setNewsItems] = useState<EnhancedNewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadNews = async () => {
+      try {
+        const allNews = await getAllNews();
+        // Get the first 3 most recent news items
+        const recentNews = allNews.slice(0, 3);
+        setNewsItems(recentNews);
+      } catch (error) {
+        console.error("Error loading news:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadNews();
+  }, []);
+
   return (
     <section className="font-poppins bg-gradient-to-b from-gray-50 to-white py-20 sm:py-28 md:py-36">
       <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
@@ -121,11 +109,22 @@ export default function NewsSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {newsItems.map((item) => (
-            <NewsCard key={item.id} item={item} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-[320px] animate-pulse rounded-xl bg-gray-200 sm:h-[350px]"
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {newsItems.map((item) => (
+              <NewsCard key={item.id} item={item} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
