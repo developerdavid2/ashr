@@ -1,5 +1,3 @@
-// app/about/page.tsx
-import { Metadata } from "next";
 import { CoreValues } from "@/components/about/sections/about-core-values";
 import AboutCTASection from "@/components/about/sections/about-cta-section";
 import { AboutHero } from "@/components/about/sections/about-hero";
@@ -8,9 +6,6 @@ import { AboutMissionVision } from "@/components/about/sections/about-mission-vi
 import { AboutOverview } from "@/components/about/sections/about-overview";
 import { generateMetadata } from "@/components/seo/page-seo";
 
-// ————————————————————————
-// ELITE SEO & METADATA FOR ABOUT PAGE
-// ————————————————————————
 export const metadata = generateMetadata({
   title: "About ASHR Group – Vision, Legacy & Excellence in Luxury Nigeria",
   description:

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const businesses = [
   {
-    title: "ASHR Run and Drive",
+    title: "ASHR Run 'N' Drive",
     tagline: "…feel the difference",
     description:
       "Trusted car sales and automotive solutions tailored to your lifestyle and budget.",

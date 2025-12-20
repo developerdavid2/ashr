@@ -14,7 +14,7 @@ export interface BusinessType {
 
 const businesses: BusinessType[] = [
   {
-    name: "ASHR Run and Drive",
+    name: "ASHR Run 'N' Drive",
     description: "Car dealership, sales of individual & fleet vehicles.",
     image: "/home-business/ashr.jpeg",
     logo: "/logos/ashr-run-drive.png",

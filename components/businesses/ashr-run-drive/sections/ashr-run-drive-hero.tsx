@@ -26,7 +26,7 @@ export const AshrRunDriveHero = () => {
           <h2 className="font-kapital mb-4 text-4xl leading-tight sm:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
             <span className="text-main/80 font-bold">ASHR RUN </span>
             <span className="font-kapital-stencil text-main/80 font-light">
-              AND{" "}
+              'N'{" "}
             </span>
             <span className="font-bold text-[#A9802C]">DRIVE</span>
           </h2>
@@ -46,8 +46,9 @@ export const AshrRunDriveHero = () => {
         {/* Description Text */}
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-poppins mb-4 text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
-            A diversified company delivering quality solutions across
-            automotive, interiors, ceramics, and industrial products.
+            Quality cars. Flexible solutions. Trusted service. Whether you need
+            a personal vehicle or a complete fleet, ASHR Run N Drive delivers
+            automotive solutions that move you forward.
           </p>
           {/* CTA */}
           <div className="mb-8 flex h-full w-full flex-col items-center justify-center gap-3 px-4 sm:mb-10 sm:gap-4 md:mb-12 md:flex-row">

@@ -1,5 +1,3 @@
-import * as React from "react";
-
 export function BusinessesHero() {
   return (
     <section
@@ -36,7 +34,7 @@ export function BusinessesHero() {
             <p className="font-poppins text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
               Our businesses are independently strong — but united by one
               standard: engineering trust, delivering quality, and shaping
-              better experiences across Africa.
+              better experiences across Nigeria.
             </p>
           </div>
         </div>

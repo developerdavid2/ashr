@@ -29,9 +29,9 @@ export const SimtexHero = () => {
         </div>
 
         {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative mx-auto aspect-4/3 w-full max-w-[600px] overflow-hidden">
+        <div className="relative mx-auto aspect-2456/1628 w-full max-w-[500px] overflow-hidden lg:max-w-[600px]">
           <Image
-            src="/our-businesses/simtex-hero.png"
+            src="/our-businesses/manhole-hero.png"
             alt="ASHR Designs"
             fill
             className="object-cover"
@@ -39,7 +39,7 @@ export const SimtexHero = () => {
         </div>
 
         {/* Description Text */}
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto mt-6 max-w-4xl text-center">
           <p className="font-poppins mb-4 text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
             Premium Fiber Reinforced Plastic (FRP) manhole and gully covers.
           </p>

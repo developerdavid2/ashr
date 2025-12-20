@@ -10,9 +10,6 @@ import { WhyChooseUs } from "@/components/home/sections/why-choose-us";
 import BlogsSection from "@/components/home/sections/blogs-section";
 import { generateMetadata } from "@/components/seo/page-seo";
 
-// ————————————————————————
-// PREMIUM SEO & METADATA
-// ————————————————————————
 export const metadata = generateMetadata({
   title: "ASHR Group – Redefining Luxury in Automotive, Interiors & Industry",
   description:

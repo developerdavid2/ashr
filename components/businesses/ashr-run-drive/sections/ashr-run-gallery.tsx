@@ -181,7 +181,7 @@ export const AshrRunDriveGallery = () => {
 
         {/* Title overlay (Keep this if you want it visible on the thumbnail card itself) */}
         <div
-          className={`absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4 transition-opacity ${hovered ? "opacity-100" : "opacity-0"}`}
+          className={`absolute right-0 bottom-0 left-0 bg-linear-to-t from-black/80 to-transparent p-4 transition-opacity ${hovered ? "opacity-100" : "opacity-0"}`}
         >
           <h4 className="font-poppins font-semibold text-white uppercase text-shadow-lg">
             {image.alt}
@@ -222,7 +222,7 @@ export const AshrRunDriveGallery = () => {
         className="relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
         id="ashr-run-drive-gallery"
       >
-        <div className="relative z-10 container mx-auto max-w-screen-xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
+        <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 md:max-w-3xl lg:max-w-7xl">
           <div className="mb-12 flex flex-col space-y-6 sm:mb-16">
             <h2 className="font-kapital text-3xl leading-tight font-light text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               OUR{" "}

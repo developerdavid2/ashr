@@ -1,9 +1,8 @@
 // components/blogs/BlogGridCard.tsx
+import { BlogItem } from "@/types/blogs";
+import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Clock } from "lucide-react";
-import { BlogItem } from "@/types/blogs";
-import * as React from "react";
 
 export default function BlogGridCard({ item }: { item: BlogItem }) {
   return (

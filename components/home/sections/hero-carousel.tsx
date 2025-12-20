@@ -19,10 +19,10 @@ export function HeroCarousel() {
   );
 
   const images = [
-    "/home-hero/hero-ceramic.png",
+    "/home-hero/hero-wc.png",
     "/home-hero/hero-interior.webp",
-    "/home-hero/hero-car.png",
-    "/home-hero/hero-manhole.png",
+    "/home-hero/hero-gle.png",
+    "/home-hero/hero-simtex.png",
   ];
 
   const [api, setApi] = React.useState<CarouselApi>();
@@ -51,7 +51,7 @@ export function HeroCarousel() {
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
-              <div className="relative mx-auto aspect-[16/9] w-full max-w-[1000px] overflow-hidden">
+              <div className="relative mx-auto aspect-2456/1628 w-full max-w-[1000px] overflow-hidden">
                 <Image
                   src={src}
                   alt="hero"

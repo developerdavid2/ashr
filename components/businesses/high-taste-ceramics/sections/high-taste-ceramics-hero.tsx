@@ -27,25 +27,29 @@ export const HighTasteCeramicsHero = () => {
           </h2>
         </div>
 
-        {/* Hero Image with Responsive Heights using Tailwind */}
-        <div className="relative mx-auto aspect-video w-full max-w-[1000px] overflow-hidden">
-          <Image
-            src="/our-businesses/high-ceramic-hero.png"
-            alt="ASHR Designs"
-            fill
-            className="object-cover"
-          />
+        {/* Hero Image - Maintains original proportions (426 x 363) */}
+        <div className="relative mx-auto w-full max-w-md sm:mb-10 sm:max-w-lg">
+          <div className="relative aspect-[400/363] w-full overflow-hidden rounded-lg">
+            <Image
+              src="/our-businesses/high-taste-hero.png"
+              alt="High Taste Ceramics - Luxury tiles and bathroom fittings"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 500px, (max-width: 1024px) 600px, 700px"
+            />
+          </div>
         </div>
 
         {/* Description Text */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-poppins mb-4 text-base leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
+          <p className="font-poppins mb-6 text-base leading-relaxed font-light text-gray-700 sm:mb-8 sm:text-lg md:text-xl">
             Premium ceramic tiles, designer sanitary wares, and sophisticated
-            bathroom fittings. Transform your spaces with Spanish, China, or
-            Indian-inspired luxury.
+            bathroom fittings. Transform your spaces with Spanish, China, Turkey
+            or Indian-inspired luxury.
           </p>
           {/* CTA */}
-          <div className="mb-8 flex h-full w-full flex-col items-center justify-center gap-3 px-4 sm:mb-10 sm:gap-4 md:mb-12 md:flex-row">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-3 px-4 sm:gap-4 md:flex-row">
             <Link
               href="/contact"
               className="group inline-flex w-full items-center justify-center gap-2 rounded border-2 bg-[#A9802C] px-6 py-3 text-xs font-medium text-white transition-all duration-300 hover:bg-[#A9802C]/60 sm:text-sm md:w-auto md:text-base"

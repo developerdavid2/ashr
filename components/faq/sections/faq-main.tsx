@@ -3,51 +3,51 @@
 
 import { GoldShineButton } from "@/components/custom/gold-shine-button";
 import { Marquee } from "@/components/ui/marquee";
-import Image from "next/image";
 import { ArrowRight, Minus, Plus } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const faqs = [
   {
     question: "What makes ASHR Group different from other conglomerates?",
     answer:
-      "We are a fully integrated African luxury ecosystem — from automotive distribution and industrial manufacturing to premium ceramics and bespoke interior design. Every division upholds the same uncompromising standard of excellence, innovation, and sustainability.",
+      "We are a fully integrated Nigerian luxury ecosystem — from automotive distribution and industrial manufacturing to premium ceramics and bespoke interior design. Every division upholds the same uncompromising standard of excellence, innovation, and sustainability.",
   },
-  {
-    question: "Where are ASHR products manufactured?",
-    answer:
-      "Our ceramics and industrial products are proudly manufactured in state-of-the-art facilities across Nigeria and Ghana. Automotive vehicles are sourced from globally trusted OEM partners and customized to African specifications. All interior solutions are designed and handcrafted in Lagos.",
-  },
+  // {
+  //   question: "Where are ASHR products manufactured?",
+  //   answer:
+  //     "Our ceramics and industrial products are proudly manufactured in state-of-the-art facilities across Nigeria and Ghana. Automotive vehicles are sourced from globally trusted OEM partners and customized to NIgerian specifications. All interior solutions are designed and handcrafted in Lagos.",
+  // },
   {
     question: "Do you offer interior design consultations?",
     answer:
-      "Yes. ASHR Designs provides complimentary design consultations for projects above ₦50M. Our team handles everything from concept to installation — kitchens, wardrobes, lighting, flooring, and full residential/commercial fit-outs.",
+      "Yes. ASHR Designs provides complimentary design consultations for projects. Our team handles everything from concept to installation — kitchens, wardrobes, lighting, flooring, and full residential/commercial fit-outs.",
   },
   {
     question: "Are your ceramic tiles suitable for outdoor use?",
     answer:
-      "Absolutely. High Taste Ceramics produces porcelain and anti-slip tiles specifically engineered for African climates — extreme heat, heavy rain, and high traffic. All come with 25+ year warranties.",
+      "Absolutely. High Taste Ceramics produces porcelain and anti-slip tiles specifically engineered for African climates — extreme heat, heavy rain, and high traffic. All come with 30+ year warranties.",
   },
-  {
-    question: "How can I become an authorized dealer or distributor?",
-    answer:
-      "We selectively partner with established businesses that share our values. Submit your inquiry via the Contact page and our partnerships team will respond within 48 hours.",
-  },
-  {
-    question: "What is your sustainability commitment?",
-    answer:
-      "Zero-waste manufacturing, recycled ocean plastic furniture, solar-powered factories, and community reforestation programs. Sustainability is not marketing — it’s embedded in our DNA.",
-  },
+  // {
+  //   question: "How can I become an authorized dealer or distributor?",
+  //   answer:
+  //     "We selectively partner with established businesses that share our values. Submit your inquiry via the Contact page and our partnerships team will respond within 48 hours.",
+  // },
+  // {
+  //   question: "What is your sustainability commitment?",
+  //   answer:
+  //     "Zero-waste manufacturing, recycled ocean plastic furniture, solar-powered factories, and community reforestation programs. Sustainability is not marketing — it’s embedded in our DNA.",
+  // },
 ];
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+  "https://res.cloudinary.com/damkwypfe/image/upload/v1765206787/high-taste-10_kq0gqn.jpg",
   "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-  "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80",
-  "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=80",
+  "https://res.cloudinary.com/damkwypfe/image/upload/v1765201687/simtex-3_xp3h1v.jpg",
+  "https://res.cloudinary.com/damkwypfe/image/upload/v1765199330/ashr-run-drive-4_kh3ks1.jpg",
   "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80",
-  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+  "https://res.cloudinary.com/damkwypfe/image/upload/v1765201685/simtex-12_lsvwxz.jpg",
+  "https://res.cloudinary.com/damkwypfe/image/upload/v1765199329/ashr-run-drive-2_mgc8t2.jpg",
   "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80",
 ];
 
@@ -142,11 +142,6 @@ export default function FAQMain() {
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <p className="text-lg font-medium text-white">
-                    ASHR Project {i + 1}
-                  </p>
-                </div>
               </div>
             ))}
           </Marquee>

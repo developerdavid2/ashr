@@ -13,7 +13,7 @@ export function AshrRunDriveCTA() {
         </>
       }
       description="Whether you're upgrading your personal vehicle or building a corporate fleet, ASHR Run and Drive delivers quality, transparency, and exceptional service every step of the way."
-      primaryHref="/contact"
+      primaryHref="tel:+2349096666610"
       primaryLabel="SPEAK WITH AN ADVISOR"
       secondaryHref="/businesses"
       secondaryLabel="EXPLORE MORE BUSINESS"

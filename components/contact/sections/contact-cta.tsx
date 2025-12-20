@@ -31,7 +31,7 @@ export default function ContactCTA() {
 
             <div className="font-poppins mb-8 flex w-full max-w-md flex-col justify-center gap-3 px-4 sm:mb-10 sm:max-w-none sm:gap-4 md:mb-12 md:flex-row">
               <GoldShineButton
-                href="/contact"
+                href="tel:+234 909 666 6610"
                 className={cn(
                   "flex w-full flex-col items-center justify-center px-6 py-3 text-sm! sm:w-auto sm:px-8 sm:text-base! md:text-[1rem]!",
                 )}

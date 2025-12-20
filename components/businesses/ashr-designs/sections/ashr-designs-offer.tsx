@@ -149,7 +149,7 @@ export const AshrDesignsOffer = () => {
               </h3>
 
               <p className="leading-relaxed text-white/80">
-                Turnkey interior solutions from concept to completion. We handle
+                Interior solutions from concept to completion. We handle
                 everything.
               </p>
             </div>

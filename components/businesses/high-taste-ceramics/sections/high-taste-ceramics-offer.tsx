@@ -29,9 +29,9 @@ export function HighTasteCeramicsOffer() {
           </h2>
 
           <p className="max-w-5xl text-base leading-relaxed font-light text-gray-300 sm:text-lg md:text-xl">
-            From exquisite Spanish, Chinese, and Indian ceramic tiles to luxury
-            bathroom suites and designer fittings—every piece is carefully
-            curated to beautify your spaces with timeless elegance.
+            From exquisite Spanish, Chinese, and Indian ceramic tiles to Turkey
+            luxury bathroom suites and designer fittings—every piece is
+            carefully curated to beautify your spaces with timeless elegance.
           </p>
         </div>
 
@@ -59,8 +59,7 @@ export function HighTasteCeramicsOffer() {
               </h3>
 
               <p className="leading-relaxed text-white/80">
-                Italian-inspired designs. Floor & wall tiles. 30x30cm to
-                120x240cm sizes.
+                Luxury designs. Floor & wall tiles of varying dimensions.
               </p>
             </div>
           </div>

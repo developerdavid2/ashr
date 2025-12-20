@@ -16,11 +16,13 @@ import { useState } from "react";
 import Logo from "@/components/custom/logo";
 import Link from "next/link";
 import { GoldShineButton } from "@/components/custom/gold-shine-button";
+import { usePathname } from "next/navigation";
 
 type ActiveMenu = "business" | "news" | null;
 
 export function Navbar() {
   const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
+  const pathname = usePathname();
 
   let closeTimer: NodeJS.Timeout | null = null;
 
@@ -60,13 +62,21 @@ export function Navbar() {
                 <NavigationMenuList className="gap-8">
                   <Link
                     href="/"
-                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
+                    className={`font-medium uppercase transition-colors hover:text-[#D4AF37] ${
+                      pathname === "/"
+                        ? "font-bold text-[#D4AF37]"
+                        : "text-gray-700"
+                    }`}
                   >
                     HOME
                   </Link>
                   <Link
                     href="/about"
-                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
+                    className={`font-medium uppercase transition-colors hover:text-[#D4AF37] ${
+                      pathname === "/about"
+                        ? "font-bold text-[#D4AF37]"
+                        : "text-gray-700"
+                    }`}
                   >
                     About
                   </Link>
@@ -126,7 +136,11 @@ export function Navbar() {
 
                   <a
                     href="/faq"
-                    className="font-medium text-gray-700 uppercase transition-colors hover:text-[#D4AF37]"
+                    className={`font-medium uppercase transition-colors hover:text-[#D4AF37] ${
+                      pathname === "/faq"
+                        ? "font-bold text-[#D4AF37]"
+                        : "text-gray-700"
+                    }`}
                   >
                     FAQ
                   </a>

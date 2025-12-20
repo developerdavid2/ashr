@@ -1,7 +1,6 @@
-import React from "react";
-import { BusinessesHero } from "@/components/businesses/sections/businesses-hero";
-import { BusinessesGrid } from "@/components/businesses/sections/businesses-grid";
 import BusinessCTASection from "@/components/businesses/sections/business-cta";
+import { BusinessesGrid } from "@/components/businesses/sections/businesses-grid";
+import { BusinessesHero } from "@/components/businesses/sections/businesses-hero";
 import { generateMetadata } from "@/components/seo/page-seo";
 import { Metadata } from "next";
 

@@ -1,4 +1,3 @@
-// app/blogs/page.tsx
 import { generateMetadata } from "@/components/seo/page-seo";
 import BlogHero from "@/components/blogs/sections/blogs-hero";
 import BlogsMain from "@/components/blogs/sections/blogs-main";

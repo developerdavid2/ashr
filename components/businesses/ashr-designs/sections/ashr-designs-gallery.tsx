@@ -235,10 +235,9 @@ export const AshrDesignsGallery = () => {
               </span>
             </h2>
             <p className="font-poppins max-w-5xl text-sm leading-relaxed font-light text-gray-700 sm:text-base md:text-lg lg:text-xl">
-              Explore our portfolio of completed interior design projects across
-              Lagos and beyond. From luxury kitchens to complete home
-              renovations, every space tells a story of craftsmanship and
-              attention to detail.
+              Explore our portfolio of completed interior design projects. From
+              luxury kitchens to complete home renovations, every space tells a
+              story of craftsmanship and attention to detail.
             </p>
           </div>
         </div>

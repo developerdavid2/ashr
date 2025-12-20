@@ -38,10 +38,10 @@ export function HighTasteCeramicsAbout({ logo }: HighTasteCeramicsAboutProps) {
             <div className="space-y-4 sm:space-y-6">
               <p className="font-poppins text-sm leading-relaxed font-light text-gray-700 sm:text-lg md:text-xl">
                 High Taste Ceramics brings world-class luxury to Nigerian homes
-                and commercial spaces. As a premier supplier of Italian-inspired
-                ceramic tiles, designer sanitary wares, and premium bathroom
-                fittings, we help architects, interior designers, and discerning
-                homeowners create spaces that reflect sophistication and style.
+                and commercial spaces. As a premier supplier of ceramic tiles,
+                designer sanitary wares, and premium bathroom fittings, we help
+                architects, interior designers, and discerning homeowners create
+                spaces that reflect sophistication and style.
               </p>
             </div>
           </div>
