@@ -25,7 +25,7 @@ export default function Page() {
         <BusinessSection />
         <AboutSection />
       </div>
-      <NewsSection />
+      {/* <NewsSection /> */}
       <BlogsSection />
       <WhyChooseUs />
       <TrustedBrandsSection />

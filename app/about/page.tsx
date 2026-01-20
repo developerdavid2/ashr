@@ -36,7 +36,7 @@ export default function Page() {
       </div>
 
       <CoreValues />
-      <AboutLeadership />
+      {/* <AboutLeadership /> */}
       <AboutCTASection />
     </main>
   );
