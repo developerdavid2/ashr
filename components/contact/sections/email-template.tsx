@@ -61,9 +61,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 </Section>
                 <Section style={column}>
                   <Text style={label}>EMAIL ADDRESS</Text>
-                  <Link href={`mailto:${email}`} style={emailLink}>
+                  <Text style={emailLink}>
                     <span style={emailIcon}>✉</span> {email}
-                  </Link>
+                  </Text>
                 </Section>
               </Section>
 
@@ -71,9 +71,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               <Section style={row}>
                 <Section style={column}>
                   <Text style={label}>PHONE NUMBER</Text>
-                  <Link href={`tel:${phone}`} style={phoneLink}>
+                  <Text style={phoneLink}>
                     <span style={phoneIcon}>📞</span> {phone}
-                  </Link>
+                  </Text>
                 </Section>
                 <Section style={column}>
                   <Text style={label}>BUSINESS UNIT</Text>
@@ -114,9 +114,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
               {/* Reply Button */}
               <Section style={buttonSection}>
-                <Link href={`mailto:${email}`} style={replyButton}>
-                  ↩ Reply to Inquiry
-                </Link>
+                <Text style={replyButton}>Reply to Inquiry: {email}</Text>
               </Section>
             </Section>
 
