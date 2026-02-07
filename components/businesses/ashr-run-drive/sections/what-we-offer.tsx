@@ -1,12 +1,4 @@
-import React from "react";
-import {
-  ArrowUpRight,
-  Car,
-  CreditCard,
-  RefreshCw,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react";
+import { ArrowUpRight, Car, CreditCard, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
