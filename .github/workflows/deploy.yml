@@ -1,18 +1,15 @@
-# .github/workflows/deploy.yml
 name: Deploy to Vercel
 
-# Run on push to main AND on pull requests
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-# This is the magic fix you found — gives the action permission to comment
 permissions:
-  contents: read # needed for checkout
-  pull-requests: write # needed to post preview URL comment on PRs
-  deployments: write # optional but nice for Vercel status
+  contents: read
+  pull-requests: write
+  deployments: write
 
 jobs:
   deploy:
@@ -20,21 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # helps with commit info
+          fetch-depth: 0
 
-      # Push Resend key to Vercel (only needed once, but safe to run every time)
-      - name: Sync ENV vars to Vercel
-        uses: dkershner6/vercel-set-env-action@v3
-        with:
-          token: ${{ secrets.VERCEL_TOKEN }}
-          projectName: ashr # ← your exact Vercel project name
-          envVariableKeys: RESEND_API_KEY
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          TARGET_RESEND_API_KEY: production,preview,development
-          TYPE_RESEND_API_KEY: encrypted
-
-      # Deploy (production on main, preview on PRs)
       - name: Deploy to Vercel
         id: vercel-deploy
         uses: amondnet/vercel-action@v25
@@ -42,11 +26,10 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
-          vercel-args: "--prod" # forces production on main
+          vercel-args: "--prod"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          github-comment: true # posts nice comment with preview URL
+          github-comment: true
 
-      # Optional: Show preview URL in job summary (visible even without comment)
       - name: Show Preview URL
         if: github.event_name == 'pull_request'
         run: |
