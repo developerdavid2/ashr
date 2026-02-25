@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const subsidiaries = [
   "General Inquiry",
@@ -68,27 +69,32 @@ export default function ContactForm() {
   const onSubmit = async (values: FormValues) => {
     setIsLoading(true);
     try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
+      const templateParams = {
+        from_name: values.name,
+        from_email: values.email,
+        from_number: values.phone,
+        subsidiary: values.subsidiary,
+        message: values.message,
+      };
 
-      if (res.ok) {
-        toast.success("Message sent successfully!", {
-          description: "We'll get back to you within 24 hours.",
-          icon: <CheckCircle2 className="h-5 w-5 text-lime-600" />,
-          style: {
-            background: "rgba(255, 254, 253, 0.95)",
-            backdropFilter: "blur(12px)",
-            color: "#000",
-          },
-          duration: 5000,
-        });
-        form.reset();
-      } else {
-        throw new Error();
-      }
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
+        templateParams,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY || "",
+      );
+
+      toast.success("Message sent successfully!", {
+        description: "We'll get back to you within 24 hours.",
+        icon: <CheckCircle2 className="h-5 w-5 text-lime-600" />,
+        style: {
+          background: "rgba(255, 254, 253, 0.95)",
+          backdropFilter: "blur(12px)",
+          color: "#000",
+        },
+        duration: 5000,
+      });
+      form.reset();
     } catch {
       toast.error("Failed to send message", {
         description: "Please try again or reach us via WhatsApp.",
