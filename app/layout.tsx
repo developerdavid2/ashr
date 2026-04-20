@@ -84,7 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${code.variable} ${mokoto.variable} ${interVariable.variable} ${poppins.variable} ${kapital.variable} ${kapitalStencil.variable} } hidden font-sans antialiased`}
+        className={` ${code.variable} ${mokoto.variable} ${interVariable.variable} ${poppins.variable} ${kapital.variable} ${kapitalStencil.variable} } font-sans antialiased`}
       >
         <Navbar />
         {children}
