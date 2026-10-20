@@ -11,7 +11,7 @@ import { Toaster } from "@/components/ui/sonner";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins", // Changed to be consistent
+  variable: "--font-poppins",
   display: "swap",
 });
 // Initialize local fonts

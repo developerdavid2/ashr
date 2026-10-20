@@ -54,7 +54,9 @@ export function Navbar() {
       <nav className="font-poppins fixed top-0 right-0 left-0 z-[500] bg-white/50 backdrop-blur-md">
         <div className="relative z-10 container mx-auto max-w-full px-2 sm:max-w-xl sm:px-4 md:max-w-3xl lg:max-w-7xl">
           <div className="flex h-20 items-center justify-between">
-            <Logo />
+            <Link href="/" className="flex items-center" aria-label="ASHR Group Home">
+              <Logo />
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:block">

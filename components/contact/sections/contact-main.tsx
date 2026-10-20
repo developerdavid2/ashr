@@ -4,24 +4,7 @@
 import ContactForm from "@/components/contact/sections/contact-form";
 import ContactInfo from "@/components/contact/sections/contact-info";
 import ContactCTA from "@/components/contact/sections/contact-cta";
-import dynamic from "next/dynamic";
-import { Loader2Icon } from "lucide-react";
-
-// Lazy load map only on client
-const ContactMapLazy = dynamic(
-  () => import("@/components/contact/sections/contact-map"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-full flex-col items-center justify-center gap-y-4 rounded-3xl bg-neutral-800/60 backdrop-blur-sm">
-        <Loader2Icon className="size-14 animate-spin text-white/70" />
-        <span className="text-lg font-medium text-white/90">
-          Loading Map...
-        </span>
-      </div>
-    ),
-  },
-);
+import { ContactMap } from "@/components/contact/sections/contact-map-section";
 
 export default function ContactMain() {
   return (
@@ -42,7 +25,7 @@ export default function ContactMain() {
             <div className="flex h-full min-h-0 flex-col">
               <p className="font-poppins mb-10 max-w-3xl text-center text-base leading-relaxed font-light text-gray-200 sm:text-lg lg:text-start lg:text-xl">
                 Our team would love to connect with you and learn more about how
-                we can support your vision. Let’s start a conversation.
+                we can support your vision. Let's start a conversation.
               </p>
 
               <div className="mb-12">
@@ -51,9 +34,7 @@ export default function ContactMain() {
 
               {/* Map — Takes remaining space */}
               <div className="min-h-0 flex-1">
-                <div className="h-full min-h-[320px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-                  <ContactMapLazy />
-                </div>
+                <ContactMap />
               </div>
             </div>
           </div>
